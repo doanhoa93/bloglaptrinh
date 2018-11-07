@@ -20,7 +20,7 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:mysql://127.0.0.1/spring_blog_dev?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
-    password: Quanghoa1993
+    password:
 
     hikari:
       data-source-properties:
@@ -37,3 +37,4 @@ logging:
   level:
     org.springframework.web: ERROR
     com.raysmond.blog: DEBUG
+
