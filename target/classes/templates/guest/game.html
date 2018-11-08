@@ -1,0 +1,52 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{template/guest/layout}">
+<head>
+    <meta charset="utf-8">
+    <title>Trò chơi</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="container oi_page_holder oi_wide oi_top-line-is-two">
+    <!--<section layout:fragment="top">
+        <div class="oi_top_line">
+            <div>
+                <div class="oi_top_line_holder">
+                    <div class="container oi_container_holder_Đông Anh">
+                        <div class="row">
+                            <div class="col-md-6 col-xs-6">
+                                &lt;!&ndash; navigation &ndash;&gt;
+                                <nav>
+                                    <a class="visible-xs" href="#" id="oi_top_line_show_menu"><i class="fa fa-bars"></i></a>
+                                    <div class="menu-main-menu-container">
+                                        <ul id="menu-main-menu" class="oi_topline_menu">
+                                            <li class="current-menu-choose1"><a th:href="@{/}">Trang chủ</a></li>
+                                            <li class="current-menu-choose2"><a th:href="@{/gioi-thieu}">Giới thiệu</a></li>
+                                            <li class="current-menu-choose3"><a th:href="@{/lien-he}">Liên hệ</a></li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                                &lt;!&ndash; navigation &ndash;&gt;
+                            </div>
+                            <div class="col-md-6 col-xs-6">
+                                <div style="margin: auto;float: right">
+                                    <a th:href="@{/tro-choi}" title="Đăng kí" style="cursor: pointer" >Danh sách trò chơi</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+    <section layout:fragment="feature"></section>
+    <section layout:fragment="header"></section>
+    <section layout:fragment="content">
+        <iframe src="http://www.gamedesign.jp/index_en.html" style="width: 100%;height: 1800px;overflow: hidden;">
+            <p>Your browser does not support iframes.</p>
+        </iframe>
+    </section>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<meta charset="utf-8">
+	<title>Around the world</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" th:href="@{/resources/images/favicon.ico}">
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link th:href="@{/resources/assets/bootstrap/css/bootstrap.min.css}" rel="stylesheet" media='all'/>
+	<link th:href="@{/resources/assets/css/main_style.css}" rel="stylesheet" media='all'/>
+	<link th:href="@{/resources/css/style.css}" rel="shortcut icon"/>
+	<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans:400,700'>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/emojione/1.5.2/assets/sprites/emojione.sprites.css" media="screen">
+	<link th:href="@{/resources/css/emojionearea.min.css}" rel="stylesheet" media='all'/>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="http://mervick.github.io/lib/google-code-prettify/skins/tomorrow.css" media="screen">
+	<style>
+		.loginBtn {
+			box-sizing: border-box;
+			position: relative;
+			/* width: 13em;  - apply for fixed size */
+			margin: 0.2em;
+			padding: 0 15px 0 46px;
+			border: none;
+			text-align: left;
+			line-height: 34px;
+			white-space: nowrap;
+			border-radius: 0.2em;
+			font-size: 16px;
+			color: #FFF;
+		}
+		.loginBtn:before {
+			content: "";
+			box-sizing: border-box;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 34px;
+			height: 100%;
+		}
+		.loginBtn:focus {
+			outline: none;
+		}
+		.loginBtn:active {
+			box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+		}
+
+
+		/* Facebook */
+		.loginBtn--facebook {
+			background-color: #4C69BA;
+			background-image: linear-gradient(#4C69BA, #3B55A0);
+			/*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
+			text-shadow: 0 -1px 0 #354C8C;
+		}
+		.loginBtn--facebook:before {
+			border-right: #364e92 1px solid;
+			background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 6px no-repeat;
+		}
+		.loginBtn--facebook:hover,
+		.loginBtn--facebook:focus {
+			background-color: #5B7BD5;
+			background-image: linear-gradient(#5B7BD5, #4864B1);
+		}
+
+
+		/* Google */
+		.loginBtn--google {
+			/*font-family: "Roboto", Roboto, arial, sans-serif;*/
+			background: #DD4B39;
+		}
+		.loginBtn--google:before {
+			border-right: #BB3F30 1px solid;
+			background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
+		}
+		.loginBtn--google:hover,
+		.loginBtn--google:focus {
+			background: #E74B37;
+		}
+	</style>
+</head>
+<body>
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '458120557969764',
+            cookie     : true,
+            xfbml      : true,
+            version    : 'v2.11'
+        });
+
+        FB.AppEvents.logPageView();
+
+    };
+
+
+    function checkLoginState() {
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+        });
+    }
+
+    function testAPI() {
+        console.log('Welcome!  Fetching your information.... ');
+        FB.api('/me', function(response) {
+
+        });
+    }
+
+    function statusChangeCallback(response) {
+        if (response.status === 'connected') {
+            var accessToken = response.authResponse.accessToken;
+            window.location.href = 'login-facebook?accessToken='+accessToken;
+        } else {
+            FB.login(function(response) {
+                if(response.authResponse) {
+                    var accessToken = response.authResponse.accessToken;
+                    window.location.href = 'login-facebook?accessToken='+accessToken;
+                }
+            },{scope:'email'});
+        }
+    }
+
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.11&appId=458120557969764';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<div id="preloader"><div id="status"></div></div>
+
+<div class="container oi_page_holder oi_wide oi_top-line-is-two">
+	<section layout:fragment="top">
+		<div class="oi_top_line">
+			<div>
+				<div class="oi_top_line_holder">
+					<div class="container oi_container_holder_Đông Anh">
+						<div class="row">
+							<div class="col-md-6 col-xs-6">
+								<!-- navigation -->
+								<nav>
+									<a class="visible-xs" href="#" id="oi_top_line_show_menu"><i class="fa fa-bars"></i></a>
+									<div class="menu-main-menu-container">
+										<ul id="menu-main-menu" class="oi_topline_menu">
+											<li class="current-menu-choose1"><a th:href="@{/}">Trang chủ</a></li>
+											<li class="current-menu-choose2"><a th:href="@{/gioi-thieu}">Giới thiệu</a></li>
+											<li class="current-menu-choose3"><a th:href="@{/lien-he}">Liên hệ</a></li>
+											<li class="current-menu-choose3"><a href="http://bloglaptrinh.herokuapp.com/tro-choi">Trò chơi</a></li>
+										</ul>
+									</div>
+								</nav>
+								<!-- navigation -->
+							</div>
+							<div class="col-md-6 col-xs-6">
+								<div style="margin: auto;float: right" th:if="${session.loginId == null}">
+									<a title="Đăng nhập" style="cursor: pointer" data-toggle="modal" data-target="#myModalSignin"><img id="imgSignin" style="width: 18px;height: 18px" th:src="@{/resources/images/signin.png}"/></a>
+									<a th:href="@{/register?view}" title="Đăng kí" style="cursor: pointer" ><img id="imgSignup" style="width: 18px;height: 18px" th:src="@{/resources/images/signup.png}"/></a>
+								</div>
+								<div style="margin: auto;float: right" th:if="${session.loginId != null}">
+									Xin chào : <p th:text="${session.loginId}"/> / <a th:href="@{/signout}">Đăng xuất</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="myModalSignin" tabindex="-1" role="dialog" aria-labelledby="myModalSigninLabel">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title" id="myModalSigninLabel">Đăng nhập</h4>
+											</div>
+											<div class="modal-body">
+												Chức năng chưa hỗ trợ...
+											</div>
+											<div class="modal-footer">
+												<button class="loginBtn loginBtn--facebook" onclick="checkLoginState();" >
+													Đăng nhập với Facebook
+												</button>
+
+												<button class="loginBtn loginBtn--google">
+													Đăng nhập với Google
+												</button>
+												<div class="fb-like" data-share="true" data-width="450" data-show-faces="true" ></div>
+												<div class="clear"></div>
+												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-primary">Save changes</button>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section layout:fragment="header">
+		<div class="oi_inner_header">
+
+			<div class="oi_standard_header_holder">
+				<div class="oi_wide">
+					<div class="oi_standard_header_holder_holder">
+						<div class="row">
+							<div class="col-md-2 col-xs-8 col-xs-push-2 col-md-push-5">
+								<div class="oi_center_header_logo_holder oi_logo">
+									<a href="#">
+										<canvas id="canvas" width="100" height="100"
+												style="background-color:#F8F8F8">
+										</canvas>
+										<!--<img class="img-responsive" th:src="@{/resources/images/logocenter.png}" alt="REVEX"/>-->
+									</a>
+								</div>
+							</div>
+							<div class="col-xs-12 clearfix visible-xs">
+								<a class="visible-xs" href="#" id="oi_main_show_menu"><i class="fa fa-bars"></i></a>
+							</div>
+							<div class="col-md-5 col-xs-12 col-md-pull-2">
+								<div class="oi_center_header_menu_holder_left">
+									<div class="oi_menu_titles hidden-xs">
+										<span>Stuff from my work</span>
+									</div>
+									<div class="menu-stuff-from-my-work-container">
+										<ul id="menu-stuff-from-my-work" class="oi_menu_all oi_menu_left oi_menu-center-two">
+											<li><a href="#">C/C++</a></li>
+											<li><a href="#">Java</a></li>
+											<li><a href="#">C#</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-5 col-xs-12">
+								<div class="oi_center_header_menu_holder_right">
+									<div class="oi_menu_titles hidden-xs">
+										<span>Real life</span>
+									</div>
+									<div class="menu-real-life-container">
+										<ul id="menu-real-life" class="oi_menu_all oi_menu_right oi_menu-center-two">
+											<li><a href="#">PHP</a></li>
+											<li><a href="#">Python</a></li>
+											<li><a href="#">Ngôn ngữ khác</a>
+												<ul class="sub-menu">
+													<li><a href="#">Javascript</a></li>
+													<li><a href="#">Rails</a></li>
+													<li><a href="#">Golang</a></li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!--<div class="col-md-12 col-xs-12 hidden-xs">
+								<div class="oi_hello_text text-center">
+									<h1>Hello! My name is <span class="colored">Hòa</span><br>
+										I’m a java developer and i live in Ha Noi.</h1>
+								</div>
+							</div>-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section layout:fragment="feature">
+
+	</section>
+	<section layout:fragment="content"></section>
+	<footer layout:fragment="footer">
+		<div class="oi_main_footer_holder">
+			<!-- I Footer -->
+			<div class="oi_footer">
+				<div class="oi_footer_container">
+					<!-- III Footer -->
+					<div class="oi_footer-iii">
+						<div class="oi_footer-iii_container">
+							<div class="oi_footer-iii_holder">
+								<div class="container">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="oi_footer-iii_widget">
+												<div class="textwidget">
+													<!--<div class="text-center m20">
+														<img th:src="@{/resources/images/logo2.png}" width="150" alt="Đông Anh"/>
+													</div>-->
+													<div style="text-align:center">
+														Copyright © 2018. Design and coding by <a href="https://www.facebook.com/quanghoa93" target="_blank">Quang Hòa</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+
+<script th:src="@{/resources/assets/js/jquery-1.11.2.min.js}"></script>
+<script th:src="@{/resources/assets/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/resources/assets/photoswipe/photoswipe.min.js}"></script>
+<script th:src="@{/resources/assets/photoswipe/photoswipe-ui-default.min.js}"></script>
+<script th:src="@{/resources/assets/photoswipe/photoswipe-init.js}"></script>
+<script th:src="@{/resources/assets/js/owl.carousel.min.js}"></script>
+<script th:src="@{/resources/assets/js/custom.js}"></script>
+<script th:src="@{/resources/assets/js/spectragram.min.js}"></script>
+
+
+
+
+<script type="text/javascript" src="http://mervick.github.io/lib/google-code-prettify/prettify.js"></script>
+<script th:src="@{/resources/js/emojionearea.min.js}"></script>
+<script type="text/javascript">
+    jQuery(function($) {
+        $("#msg").emojioneArea({
+            autoHideFilters: true
+        });
+    });
+
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    var radius = canvas.height / 2;
+    ctx.translate(radius, radius);
+    radius = radius * 0.90
+    setInterval(drawClock, 1000);
+
+    function drawClock() {
+        drawFace(ctx, radius);
+        drawNumbers(ctx, radius);
+        drawTime(ctx, radius);
+    }
+
+    function drawFace(ctx, radius) {
+        var grad;
+        ctx.beginPath();
+        ctx.arc(0, 0, radius, 0, 2*Math.PI);
+        ctx.fillStyle = 'white';
+        ctx.fill();
+        grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
+        grad.addColorStop(0, '#333');
+        grad.addColorStop(0.5, 'white');
+        grad.addColorStop(1, '#333');
+        ctx.strokeStyle = grad;
+        ctx.lineWidth = radius*0.1;
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+        ctx.fillStyle = '#333';
+        ctx.fill();
+    }
+
+    function drawNumbers(ctx, radius) {
+        var ang;
+        var num;
+        ctx.font = radius*0.15 + "px arial";
+        ctx.textBaseline="middle";
+        ctx.textAlign="center";
+        for(num = 1; num < 13; num++){
+            ang = num * Math.PI / 6;
+            ctx.rotate(ang);
+            ctx.translate(0, -radius*0.85);
+            ctx.rotate(-ang);
+            ctx.fillText(num.toString(), 0, 0);
+            ctx.rotate(ang);
+            ctx.translate(0, radius*0.85);
+            ctx.rotate(-ang);
+        }
+    }
+
+    function drawTime(ctx, radius){
+        var now = new Date();
+        var hour = now.getHours();
+        var minute = now.getMinutes();
+        var second = now.getSeconds();
+        //hour
+        hour=hour%12;
+        hour=(hour*Math.PI/6)+
+            (minute*Math.PI/(6*60))+
+            (second*Math.PI/(360*60));
+        drawHand(ctx, hour, radius*0.5, radius*0.07);
+        //minute
+        minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+        drawHand(ctx, minute, radius*0.8, radius*0.07);
+        // second
+        second=(second*Math.PI/30);
+        drawHand(ctx, second, radius*0.9, radius*0.02);
+    }
+
+    function drawHand(ctx, pos, length, width) {
+        ctx.beginPath();
+        ctx.lineWidth = width;
+        ctx.lineCap = "round";
+        ctx.moveTo(0,0);
+        ctx.rotate(pos);
+        ctx.lineTo(0, -length);
+        ctx.stroke();
+        ctx.rotate(-pos);
+    }
+</script>
+<!-- footer -->
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+	<!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+	<div class="pswp__bg"></div>
+
+	<!-- Slides wrapper with overflow:hidden. -->
+	<div class="pswp__scroll-wrap">
+
+		<!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+		<div class="pswp__container">
+			<div class="pswp__item"></div>
+			<div class="pswp__item"></div>
+			<div class="pswp__item"></div>
+		</div>
+
+		<!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+		<div class="pswp__ui pswp__ui--hidden">
+
+			<div class="pswp__top-bar">
+
+				<!--  Controls are self-explanatory. Order can be changed. -->
+
+				<div class="pswp__counter"></div>
+
+				<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+				<button class="pswp__button pswp__button--share" title="Share"></button>
+
+				<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+				<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+				<!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+				<!-- element will get class pswp__preloader-active when preloader is running -->
+				<div class="pswp__preloader">
+					<div class="pswp__preloader__icn">
+						<div class="pswp__preloader__cut">
+							<div class="pswp__preloader__donut"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+				<div class="pswp__share-tooltip"></div>
+			</div>
+
+			<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+			</button>
+
+			<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+			</button>
+
+			<div class="pswp__caption">
+				<div class="pswp__caption__center"></div>
+			</div>
+
+		</div>
+	</div>
+</div>
+<section layout:fragment="js"></section>
+</body>
+</html>

@@ -2,7 +2,6 @@ package com.bloglaptrinh.app.elasticsearch;
 
 
 import com.bloglaptrinh.app.model.Document;
-import com.bloglaptrinh.app.prop.ConfigProps;
 import com.google.gson.Gson;
 import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.action.index.IndexRequest;
@@ -29,7 +28,7 @@ import java.util.Date;
 
 import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
 public class ElasticsearchConfig {
-
+/*
     private final ConfigProps props;
     private final Gson gson;
 
@@ -138,5 +137,5 @@ public class ElasticsearchConfig {
         }
 
         return null;
-    }
+    }*/
 }

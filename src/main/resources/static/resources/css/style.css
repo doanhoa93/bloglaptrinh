@@ -1,0 +1,15 @@
+h2{
+    color: red;
+}
+
+a{
+    cursor: pointer !important;
+}
+
+#imgSignup{
+    cursor: pointer !important;
+}
+
+#imgSignin{
+    cursor: pointer !important;
+}

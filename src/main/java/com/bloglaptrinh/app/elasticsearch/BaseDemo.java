@@ -48,14 +48,14 @@ public class BaseDemo {
 
     @SuppressWarnings({"unchecked", "resource"})
     public static void main(String[] args) throws IOException {
-        // 先?建client，?个参数分?是：cluster.name 固定参数代表后面参数的含?，集群名称
-        // client.transport.sniff 表示?置自?探?集群的集群?点
+        // ?????client?C????Q????????Fcluster.name ???Q????\?@??Q???I????C?W?Q????
+        // client.transport.sniff ?\????u????T??W?Q?I?W?Q??_
         Settings settings = Settings.builder()
                 .put("cluster.name", "youmeek-cluster")
                 .put("client.transport.sniff", true)
                 .build();
 
-        //?个?点的写法
+        //?????_?I??@
         //TransportClient transportClient = new PreBuiltTransportClient(settings).addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("192.168.1.127"), 9300));
         TransportClient transportClient = new PreBuiltTransportClient(Settings.EMPTY)
                 .addTransportAddress(new TransportAddress(InetAddress.getByName("localhost"), 9300))
@@ -87,15 +87,15 @@ public class BaseDemo {
 
 
     /**
-     * ?建
+     * ???
      *
      * @param transportClient
      */
     private static void create(TransportClient transportClient) throws IOException {
         IndexResponse indexResponse = transportClient.prepareIndex("product_index", "product", "1").setSource(XContentFactory.jsonBuilder()
                 .startObject()
-                .field("product_name", "?利浦??牙刷 HX6700-1")
-                .field("product_desc", "前 1000 名?刷?，6 月 1 日 0 点火爆??，618 ????峰 48 小?")
+                .field("product_name", "????Y????? HX6700-1")
+                .field("product_desc", "?O 1000 ???????C6 ?? 1 ?? 0 ?_?Δ????C618 ?????? 48 ???")
                 .field("price", 399.00)
                 .field("created_date_time", new SimpleDateFormat("yyyyMMdd'T'HHmmss.SSSZ").format(new Date()))
                 .field("last_modified_date_time", new SimpleDateFormat("yyyyMMdd'T'HHmmss.SSSZ").format(new Date()))
@@ -104,8 +104,8 @@ public class BaseDemo {
 
         IndexResponse indexResponse2 = transportClient.prepareIndex("product_index", "product", "2").setSource(XContentFactory.jsonBuilder()
                 .startObject()
-                .field("product_name", "?利浦??牙刷 HX6700-2")
-                .field("product_desc", "前 1000 名?刷?，6 月 1 日 0 点火爆??，618 ????峰 48 小?")
+                .field("product_name", "????Y????? HX6700-2")
+                .field("product_desc", "?O 1000 ???????C6 ?? 1 ?? 0 ?_?Δ????C618 ?????? 48 ???")
                 .field("price", 399.00)
                 .field("created_date_time", new SimpleDateFormat("yyyyMMdd'T'HHmmss.SSSZ").format(new Date()))
                 .field("last_modified_date_time", new SimpleDateFormat("yyyyMMdd'T'HHmmss.SSSZ").format(new Date()))
@@ -114,8 +114,8 @@ public class BaseDemo {
 
         IndexResponse indexResponse3 = transportClient.prepareIndex("product_index", "product", "3").setSource(XContentFactory.jsonBuilder()
                 .startObject()
-                .field("product_name", "?利浦??牙刷 HX6700-3")
-                .field("product_desc", "前 1000 名?刷?，6 月 1 日 0 点火爆??，618 ????峰 48 小?")
+                .field("product_name", "????Y????? HX6700-3")
+                .field("product_desc", "?O 1000 ???????C6 ?? 1 ?? 0 ?_?Δ????C618 ?????? 48 ???")
                 .field("price", 399.00)
                 .field("created_date_time", new SimpleDateFormat("yyyyMMdd'T'HHmmss.SSSZ").format(new Date()))
                 .field("last_modified_date_time", new SimpleDateFormat("yyyyMMdd'T'HHmmss.SSSZ").format(new Date()))
@@ -124,8 +124,8 @@ public class BaseDemo {
 
         IndexResponse indexResponse4 = transportClient.prepareIndex("product_index", "product", "4").setSource(XContentFactory.jsonBuilder()
                 .startObject()
-                .field("product_name", "?利浦??牙刷 HX6700-4")
-                .field("product_desc", "前 1000 名?刷?，6 月 1 日 0 点火爆??，618 ????峰 48 小?")
+                .field("product_name", "????Y????? HX6700-4")
+                .field("product_desc", "?O 1000 ???????C6 ?? 1 ?? 0 ?_?Δ????C618 ?????? 48 ???")
                 .field("price", 399.00)
                 .field("created_date_time", new SimpleDateFormat("yyyyMMdd'T'HHmmss.SSSZ").format(new Date()))
                 .field("last_modified_date_time", new SimpleDateFormat("yyyyMMdd'T'HHmmss.SSSZ").format(new Date()))
@@ -134,8 +134,8 @@ public class BaseDemo {
 
         IndexResponse indexResponse5 = transportClient.prepareIndex("product_index", "product", "5").setSource(XContentFactory.jsonBuilder()
                 .startObject()
-                .field("product_name", "?利浦??牙刷 HX6700-5")
-                .field("product_desc", "前 1000 名?刷?，6 月 1 日 0 点火爆??，618 ????峰 48 小?")
+                .field("product_name", "????Y????? HX6700-5")
+                .field("product_desc", "?O 1000 ???????C6 ?? 1 ?? 0 ?_?Δ????C618 ?????? 48 ???")
                 .field("price", 399.00)
                 .field("created_date_time", new SimpleDateFormat("yyyyMMdd'T'HHmmss.SSSZ").format(new Date()))
                 .field("last_modified_date_time", new SimpleDateFormat("yyyyMMdd'T'HHmmss.SSSZ").format(new Date()))
@@ -144,7 +144,7 @@ public class BaseDemo {
     }
 
     /**
-     * 批量?建
+     * ??????
      *
      * @param transportClient
      */
@@ -154,8 +154,8 @@ public class BaseDemo {
         IndexRequestBuilder indexRequestBuilder1 = transportClient.prepareIndex("product_index", "product", "1")
                 .setSource(XContentFactory.jsonBuilder()
                         .startObject()
-                        .field("product_name", "?利浦??牙刷 HX6700-1")
-                        .field("product_desc", "前 1000 名?刷?，6 月 1 日 0 点火爆??，618 ????峰 48 小?")
+                        .field("product_name", "????Y????? HX6700-1")
+                        .field("product_desc", "?O 1000 ???????C6 ?? 1 ?? 0 ?_?Δ????C618 ?????? 48 ???")
                         .field("price", 399.00)
                         .field("created_date_time", new SimpleDateFormat("yyyyMMdd'T'HHmmss.SSSZ").format(new Date()))
                         .field("last_modified_date_time", new SimpleDateFormat("yyyyMMdd'T'HHmmss.SSSZ").format(new Date()))
@@ -165,8 +165,8 @@ public class BaseDemo {
         IndexRequestBuilder indexRequestBuilder2 = transportClient.prepareIndex("product_index", "product", "2")
                 .setSource(XContentFactory.jsonBuilder()
                         .startObject()
-                        .field("product_name", "?利浦??牙刷 HX6700-2")
-                        .field("product_desc", "前 1000 名?刷?，6 月 1 日 0 点火爆??，618 ????峰 48 小?")
+                        .field("product_name", "????Y????? HX6700-2")
+                        .field("product_desc", "?O 1000 ???????C6 ?? 1 ?? 0 ?_?Δ????C618 ?????? 48 ???")
                         .field("price", 399.00)
                         .field("created_date_time", new SimpleDateFormat("yyyyMMdd'T'HHmmss.SSSZ").format(new Date()))
                         .field("last_modified_date_time", new SimpleDateFormat("yyyyMMdd'T'HHmmss.SSSZ").format(new Date()))
@@ -176,8 +176,8 @@ public class BaseDemo {
         IndexRequestBuilder indexRequestBuilder3 = transportClient.prepareIndex("product_index", "product", "3")
                 .setSource(XContentFactory.jsonBuilder()
                         .startObject()
-                        .field("product_name", "?利浦??牙刷 HX6700-3")
-                        .field("product_desc", "前 1000 名?刷?，6 月 1 日 0 点火爆??，618 ????峰 48 小?")
+                        .field("product_name", "????Y????? HX6700-3")
+                        .field("product_desc", "?O 1000 ???????C6 ?? 1 ?? 0 ?_?Δ????C618 ?????? 48 ???")
                         .field("price", 399.00)
                         .field("created_date_time", new SimpleDateFormat("yyyyMMdd'T'HHmmss.SSSZ").format(new Date()))
                         .field("last_modified_date_time", new SimpleDateFormat("yyyyMMdd'T'HHmmss.SSSZ").format(new Date()))
@@ -196,7 +196,7 @@ public class BaseDemo {
     }
 
     /**
-     * 批量更新
+     * ???X?V
      *
      * @param transportClient
      */
@@ -206,19 +206,19 @@ public class BaseDemo {
         UpdateRequestBuilder updateRequestBuilder1 = transportClient.prepareUpdate("product_index", "product", "1")
                 .setDoc(XContentFactory.jsonBuilder()
                         .startObject()
-                        .field("product_name", "更新后的商品名称1")
+                        .field("product_name", "?X?V?@?I???i????1")
                         .endObject());
 
         UpdateRequestBuilder updateRequestBuilder2 = transportClient.prepareUpdate("product_index", "product", "2")
                 .setDoc(XContentFactory.jsonBuilder()
                         .startObject()
-                        .field("product_name", "更新后的商品名称2")
+                        .field("product_name", "?X?V?@?I???i????2")
                         .endObject());
 
         UpdateRequestBuilder updateRequestBuilder3 = transportClient.prepareUpdate("product_index", "product", "3")
                 .setDoc(XContentFactory.jsonBuilder()
                         .startObject()
-                        .field("product_name", "更新后的商品名称3")
+                        .field("product_name", "?X?V?@?I???i????3")
                         .endObject());
 
 
@@ -233,7 +233,7 @@ public class BaseDemo {
     }
 
     /**
-     * 批量?除
+     * ??????
      *
      * @param transportClient
      */
@@ -256,45 +256,45 @@ public class BaseDemo {
     }
 
     /**
-     * ?取?个?象（ID）
+     * ?????????iID?j
      *
      * @param transportClient
      * @throws IOException
      */
     private static void query(TransportClient transportClient) throws IOException {
         GetResponse getResponse = transportClient.prepareGet("product_index", "product", "1").get();
-        logger.info("--------------------------------：" + getResponse.getSourceAsString());
+        logger.info("--------------------------------?F" + getResponse.getSourceAsString());
     }
 
     /**
-     * ?? match ?个字段
+     * ?? match ??????i
      *
      * @param transportClient
      * @throws IOException
      */
     private static void queryByMatchOneParam(TransportClient transportClient) throws IOException {
         SearchResponse searchResponse = transportClient.prepareSearch("product_index").setTypes("product")
-                .setQuery(QueryBuilders.matchQuery("product_name", "?利浦"))
+                .setQuery(QueryBuilders.matchQuery("product_name", "????Y"))
                 .get();
 
         for (SearchHit searchHit : searchResponse.getHits().getHits()) {
-            logger.info("--------------------------------：" + searchHit.getSourceAsString());
+            logger.info("--------------------------------?F" + searchHit.getSourceAsString());
         }
     }
 
     /**
-     * ?? match 多个字段
+     * ?? match ???????i
      *
      * @param transportClient
      * @throws IOException
      */
     private static void queryByMatchMoreParam(TransportClient transportClient) throws IOException {
         SearchResponse searchResponse = transportClient.prepareSearch("product_index").setTypes("product")
-                .setQuery(QueryBuilders.multiMatchQuery("?利浦", "product_name", "product_desc"))
+                .setQuery(QueryBuilders.multiMatchQuery("????Y", "product_name", "product_desc"))
                 .get();
 
         for (SearchHit searchHit : searchResponse.getHits().getHits()) {
-            logger.info("--------------------------------：" + searchHit.getSourceAsString());
+            logger.info("--------------------------------?F" + searchHit.getSourceAsString());
         }
     }
 
@@ -306,11 +306,11 @@ public class BaseDemo {
      */
     private static void queryByTerm(TransportClient transportClient) throws IOException {
         SearchResponse searchResponse = transportClient.prepareSearch("product_index").setTypes("product")
-                .setQuery(QueryBuilders.termQuery("product_name.keyword", "?利浦"))
+                .setQuery(QueryBuilders.termQuery("product_name.keyword", "????Y"))
                 .get();
 
         for (SearchHit searchHit : searchResponse.getHits().getHits()) {
-            logger.info("--------------------------------：" + searchHit.getSourceAsString());
+            logger.info("--------------------------------?F" + searchHit.getSourceAsString());
         }
     }
 
@@ -322,11 +322,11 @@ public class BaseDemo {
      */
     private static void queryByPrefix(TransportClient transportClient) throws IOException {
         SearchResponse searchResponse = transportClient.prepareSearch("product_index").setTypes("product")
-                .setQuery(QueryBuilders.prefixQuery("product_name", "?利"))
+                .setQuery(QueryBuilders.prefixQuery("product_name", "???"))
                 .get();
 
         for (SearchHit searchHit : searchResponse.getHits().getHits()) {
-            logger.info("--------------------------------：" + searchHit.getSourceAsString());
+            logger.info("--------------------------------?F" + searchHit.getSourceAsString());
         }
     }
 
@@ -338,7 +338,7 @@ public class BaseDemo {
      */
     private static void queryByBool(TransportClient transportClient) throws IOException {
         QueryBuilder queryBuilder = QueryBuilders.boolQuery()
-                .must(QueryBuilders.matchQuery("product_name", "?利浦"))
+                .must(QueryBuilders.matchQuery("product_name", "????Y"))
                 .should(QueryBuilders.rangeQuery("created_date_time").gte("2017-01-01").lte("2017-12-31"))
                 .filter(QueryBuilders.rangeQuery("price").gte(150).lte(400));
 
@@ -347,12 +347,12 @@ public class BaseDemo {
                 .get();
 
         for (SearchHit searchHit : searchResponse.getHits().getHits()) {
-            logger.info("--------------------------------：" + searchHit.getSourceAsString());
+            logger.info("--------------------------------?F" + searchHit.getSourceAsString());
         }
     }
 
     /**
-     * ?取多个?象（根据ID）
+     * ????????i????ID?j
      *
      * @param transportClient
      * @throws IOException
@@ -374,20 +374,20 @@ public class BaseDemo {
                 resultJSON = getResponse.getSourceAsString();
             }
         }
-        logger.info("--------------------------------：" + resultJSON);
+        logger.info("--------------------------------?F" + resultJSON);
     }
 
     /**
-     * Scroll ?取多个?象
+     * Scroll ????????
      *
      * @param transportClient
      * @throws IOException
      */
     private static void queryByScroll(TransportClient transportClient) throws IOException {
 
-        //setSize 是?置?批??多少条数据
+        //setSize ????u????????????
         SearchResponse searchResponse = transportClient.prepareSearch("product_index").setTypes("product")
-                .setQuery(QueryBuilders.termQuery("product_name", "?利浦"))
+                .setQuery(QueryBuilders.termQuery("product_name", "????Y"))
                 .setScroll(new TimeValue(60000))
                 .setSize(3)
                 .get();
@@ -396,7 +396,7 @@ public class BaseDemo {
 
         do {
             for (SearchHit searchHit : searchResponse.getHits().getHits()) {
-                //打印???果，或者做其他?理
+                //????????C????????????
                 logger.info("count=" + ++count);
                 logger.info(searchHit.getSourceAsString());
             }
@@ -408,14 +408,14 @@ public class BaseDemo {
     }
 
     /**
-     * 通?模板文件?行??
+     * ???????????s??
      *
      * @param transportClient
      * @throws IOException
      */
     private static void queryByTemplate(TransportClient transportClient) throws IOException {
-        //模板文件需要放在：Elasticsearch 安装目?下的：config/scripts 目?下，比如我有一个：query_template_1.mustache
-        //????到模板中，参数是按?序的，模板内容如下。
+        //?????????v????FElasticsearch ??????????I?Fconfig/scripts ??????C??@??L???Fquery_template_1.mustache
+        //???????????C?Q??????????I?C?????e?@???B
 		/*
 		{
 			"from": {{from}},
@@ -431,7 +431,7 @@ public class BaseDemo {
         Map<String, Object> scriptParams = new HashMap<String, Object>();
         scriptParams.put("from", 0);
         scriptParams.put("size", 10);
-        scriptParams.put("product_name", "?利浦");
+        scriptParams.put("product_name", "????Y");
 
         SearchResponse searchResponse = new SearchTemplateRequestBuilder(transportClient)
                 .setScript("query_template_1")
@@ -442,12 +442,12 @@ public class BaseDemo {
                 .getResponse();
 
         for (SearchHit searchHit : searchResponse.getHits().getHits()) {
-            logger.info("--------------------------------：" + searchHit.getSourceAsString());
+            logger.info("--------------------------------?F" + searchHit.getSourceAsString());
         }
     }
 
     /**
-     * 修改
+     * ?C??
      *
      * @param transportClient
      * @throws IOException
@@ -456,52 +456,52 @@ public class BaseDemo {
         UpdateResponse updateResponse = transportClient.prepareUpdate("product_index", "product", "1")
                 .setDoc(XContentFactory.jsonBuilder()
                         .startObject()
-                        .field("product_name", "?利浦??牙刷 HX6700 促??惠")
+                        .field("product_name", "????Y????? HX6700 ??????")
                         .endObject())
                 .get();
-        logger.info("--------------------------------：" + updateResponse.getResult());
+        logger.info("--------------------------------?F" + updateResponse.getResult());
 
     }
 
     /**
-     * ?除
+     * ???
      *
      * @param transportClient
      * @throws IOException
      */
     private static void delete(TransportClient transportClient) throws IOException {
         DeleteResponse deleteResponse = transportClient.prepareDelete("product_index", "product", "1").get();
-        logger.info("--------------------------------：" + deleteResponse.getResult());
+        logger.info("--------------------------------?F" + deleteResponse.getResult());
     }
 
     //============================================================================================================
 
     /**
-     * 多个条件??
+     * ??????????
      *
      * @param transportClient
      * @throws IOException
      */
     private static void queryMore(TransportClient transportClient) throws IOException {
         SearchResponse searchResponse = transportClient.prepareSearch("product_index").setTypes("product")
-                .setQuery(QueryBuilders.matchQuery("product_name", "?利浦"))
+                .setQuery(QueryBuilders.matchQuery("product_name", "????Y"))
                 .setPostFilter(QueryBuilders.rangeQuery("price").from(300).to(400))
                 .setFrom(0).setSize(1)
                 .get();
 
         SearchHit[] searchHits = searchResponse.getHits().getHits();
         for (int i = 0; i < searchHits.length; i++) {
-            logger.info("--------------------------------：" + searchHits[i].getSourceAsString());
+            logger.info("--------------------------------?F" + searchHits[i].getSourceAsString());
         }
     }
 
     //============================================================================================================
 
     /**
-     * 聚合分析
-     * 1. 先分?
-     * 2. 子分?
-     * 3. 最后算出子分?的平均?
+     * ???????
+     * 1. ???
+     * 2. ?q???
+     * 3. ??@?Z?o?q????I?????
      *
      * @param transportClient
      * @throws IOException
@@ -521,16 +521,16 @@ public class BaseDemo {
         Iterator<StringTerms.Bucket> productGroupByPriceIterator = productGroupByPrice.getBuckets().iterator();
         while (productGroupByPriceIterator.hasNext()) {
             Terms.Bucket productGroupByPriceBucket = productGroupByPriceIterator.next();
-            logger.info("--------------------------------：" + productGroupByPriceBucket.getKey() + ":" + productGroupByPriceBucket.getDocCount());
+            logger.info("--------------------------------?F" + productGroupByPriceBucket.getKey() + ":" + productGroupByPriceBucket.getDocCount());
 
             Histogram productGroupByPrice1 = (Histogram) productGroupByPriceBucket.getAggregations().asMap().get("product_group_by_price");
             Iterator<org.elasticsearch.search.aggregations.bucket.histogram.Histogram.Bucket> groupByCreateDateTimeIterator = (Iterator<Histogram.Bucket>) productGroupByPrice1.getBuckets().iterator();
             while (groupByCreateDateTimeIterator.hasNext()) {
                 Histogram.Bucket groupByCreateDateTimeBucket = groupByCreateDateTimeIterator.next();
-                logger.info("--------------------------------：" + groupByCreateDateTimeBucket.getKey() + ":" + groupByCreateDateTimeBucket.getDocCount());
+                logger.info("--------------------------------?F" + groupByCreateDateTimeBucket.getKey() + ":" + groupByCreateDateTimeBucket.getDocCount());
 
                 Avg avgPrice = (Avg) groupByCreateDateTimeBucket.getAggregations().asMap().get("product_avg_price");
-                logger.info("--------------------------------：" + avgPrice.getValue());
+                logger.info("--------------------------------?F" + avgPrice.getValue());
             }
         }
 
