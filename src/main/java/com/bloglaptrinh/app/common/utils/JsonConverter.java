@@ -1,6 +1,6 @@
 package com.bloglaptrinh.app.common.utils;
 
-import com.bloglaptrinh.app.common.entity.PaggingResult;
+import com.bloglaptrinh.app.domain.PaggingResult;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.reflect.TypeToken;

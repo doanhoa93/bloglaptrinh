@@ -1,7 +1,9 @@
 package com.bloglaptrinh.app.service;
 
-import com.bloglaptrinh.app.model.User;
+import com.bloglaptrinh.app.domain.User;
 import org.springframework.data.domain.Page;
+
+import java.util.List;
 
 public interface UserService {
 
@@ -9,5 +11,5 @@ public interface UserService {
 
     public User getByEmail(String email);
 
-    public Page<User> getUsers(int pageNumber, int pageSize);
+    public List<User> getUsers(int pageNumber, int pageSize);
 }

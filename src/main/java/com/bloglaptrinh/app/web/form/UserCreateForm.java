@@ -1,7 +1,6 @@
 package com.bloglaptrinh.app.web.form;
 
 import com.bloglaptrinh.app.common.constant.Constant;
-import com.bloglaptrinh.app.common.entity.User;
 import com.bloglaptrinh.app.common.validator.FieldMatch;
 import org.hibernate.validator.constraints.Email;
 
@@ -67,13 +66,4 @@ public class UserCreateForm implements Serializable {
         this.email = email;
     }
 
-    public User convertToUser(){
-        User user = new User();
-        user.setLoginId(this.loginId);
-        user.setLoginPassword(this.loginPassword);
-        user.setFirstName("");
-        user.setLastName("");
-        user.setEmail(this.email);
-        return user;
-    }
 }

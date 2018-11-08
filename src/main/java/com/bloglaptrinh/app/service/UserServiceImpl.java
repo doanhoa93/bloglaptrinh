@@ -1,6 +1,6 @@
 package com.bloglaptrinh.app.service;
 
-import com.bloglaptrinh.app.model.User;
+import com.bloglaptrinh.app.domain.User;
 import com.bloglaptrinh.app.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,17 +47,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Page<User> getUsers(int pageNumber, int pageSize) {
-        PageRequest pageRequest = PageRequest.of(pageNumber - 1, pageSize);
-        Specification<User> specification = new Specification<User>() {
-            List<Predicate> predicates = new ArrayList<>();
-            @Override
-            public Predicate toPredicate(Root<User> root, CriteriaQuery<?> cq, CriteriaBuilder cb) {
-
-                return cb.and(predicates.toArray(new Predicate[0]));
-            }
-
-        };
-        return userRepository.findAll(specification, pageRequest);
+    public List<User> getUsers(int pageNumber, int pageSize) {
+        return userRepository.findAll();
     }
 }

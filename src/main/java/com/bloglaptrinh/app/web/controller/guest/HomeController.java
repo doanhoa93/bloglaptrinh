@@ -1,7 +1,7 @@
 package com.bloglaptrinh.app.web.controller.guest;
 
-import com.bloglaptrinh.app.common.entity.PaggingResult;
-import com.bloglaptrinh.app.model.User;
+import com.bloglaptrinh.app.domain.PaggingResult;
+import com.bloglaptrinh.app.domain.User;
 import com.bloglaptrinh.app.service.UserService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.inject.Inject;
@@ -66,8 +65,8 @@ public class HomeController {
     @GetMapping("getuser")
     public String get(Model model, @RequestParam(required = false,defaultValue = "1") int pageNumber,
                       @RequestParam(required = false,defaultValue = "50") int pageSize){
-        Page<User> users = userService.getUsers(pageNumber,pageSize);
-        model.addAttribute("users", users.getContent());
+        User users = userService.getByEmail("hoa9x3@gmail.com");
+        model.addAttribute("users", users);
 
         return "admin/index";
     }

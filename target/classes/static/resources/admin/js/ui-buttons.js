@@ -1,1 +1,0 @@
-/*! light-blue - v3.1.0 - 2014-12-06 */$(function(){function a(){$("button").tooltip(),$(".selectpicker").selectpicker()}a(),PjaxApp.onPageLoad(a)});

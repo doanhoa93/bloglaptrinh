@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 @RequestMapping("admin_")
 public class PostCreateController {
+
     @PostMapping("post-create")
     public String newPost(@RequestParam String body, @RequestParam String title){
 
