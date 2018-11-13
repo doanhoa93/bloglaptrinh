@@ -2,163 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee906873-307a-4d49-8745-92d438d3dc4f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/config/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/DataSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/CustomError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/CustomResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/service/PostService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/service/PostServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/utils/Md5PasswordEncoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/AjaxController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/froala_editor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/froala_editor.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/froala_editor.pkgd.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/froala_editor.pkgd.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/froala_style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/froala_style.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/char_counter.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/char_counter.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/code_view.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/code_view.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/colors.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/colors.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/draggable.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/draggable.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/emoticons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/emoticons.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/file.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/file.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/fullscreen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/fullscreen.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/help.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/help.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/image.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/image.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/image_manager.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/image_manager.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/line_breaker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/line_breaker.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/quick_insert.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/quick_insert.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/special_characters.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/special_characters.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/table.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/table.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/video.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/video.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/themes/dark.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/themes/dark.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/themes/gray.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/themes/gray.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/themes/red.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/themes/red.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/themes/royal.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/themes/royal.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/third_party/embedly.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/third_party/embedly.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/third_party/font_awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/third_party/font_awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/third_party/image_tui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/third_party/image_tui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/third_party/spell_checker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/third_party/spell_checker.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/froala_editor.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/froala_editor.pkgd.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/ar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/bs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/cs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/da.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/de.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/el.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/en_ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/en_gb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/et.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/fa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/fi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/fr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/he.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/hr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/hu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/id.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/ja.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/ko.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/ku.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/me.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/nb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/nl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/pl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/pt_br.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/pt_pt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/ro.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/ru.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/sk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/sr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/sv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/th.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/tr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/uk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/vi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/zh_cn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/zh_tw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/align.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/char_counter.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/code_beautifier.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/code_view.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/colors.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/draggable.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/emoticons.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/entities.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/file.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/font_family.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/font_size.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/forms.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/fullscreen.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/help.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/image.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/image_manager.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/inline_class.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/inline_style.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/line_breaker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/line_height.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/link.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/lists.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/paragraph_format.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/paragraph_style.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/print.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/quick_insert.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/quote.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/save.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/special_characters.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/table.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/url.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/video.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/word_paste.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/third_party/embedly.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/third_party/font_awesome.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/third_party/image_aviary.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/third_party/image_tui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/third_party/spell_checker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/post/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/common/constant/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/common/constant/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/AjaxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/AjaxController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostCreateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostCreateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/form/UserCreateForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/form/UserCreateForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/scss/bootstrap/_reboot.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/scss/bootstrap/_reboot.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/scss/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/post/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/post/new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/template/admin/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/template/admin/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/post/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/post/new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/template/admin/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/template/admin/layout.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -198,7 +44,7 @@
           <entry key="css" value="6" />
           <entry key="gitignore" value="1" />
           <entry key="html" value="44" />
-          <entry key="java" value="204" />
+          <entry key="java" value="205" />
           <entry key="jpg" value="1" />
           <entry key="js" value="11" />
           <entry key="json" value="1" />
@@ -216,7 +62,7 @@
           <entry key="CSS" value="6" />
           <entry key="HTML" value="44" />
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="204" />
+          <entry key="JAVA" value="205" />
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="11" />
           <entry key="PLAIN_TEXT" value="1" />
@@ -233,7 +79,7 @@
           <entry key="dummy" value="26" />
           <entry key="gitignore" value="2" />
           <entry key="html" value="965" />
-          <entry key="java" value="1137" />
+          <entry key="java" value="1140" />
           <entry key="js" value="1" />
           <entry key="properties" value="24" />
           <entry key="regexp" value="10" />
@@ -246,7 +92,7 @@
         <counts>
           <entry key="CSS" value="3" />
           <entry key="HTML" value="965" />
-          <entry key="JAVA" value="1137" />
+          <entry key="JAVA" value="1140" />
           <entry key="JavaScript" value="1" />
           <entry key="PLAIN_TEXT" value="28" />
           <entry key="Properties" value="24" />
@@ -264,11 +110,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#354#355#0" expanded="true" />
@@ -281,8 +127,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/AjaxController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="87" column="8" lean-forward="true" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
+            <state relative-caret-position="60">
+              <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3287#3303#0" expanded="true" />
@@ -310,11 +156,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/post/create.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="147" column="43" lean-forward="true" selection-start-line="147" selection-start-column="43" selection-end-line="147" selection-end-column="43" />
+            <state relative-caret-position="675">
+              <caret line="150" column="52" lean-forward="true" selection-start-line="150" selection-start-column="52" selection-end-line="150" selection-end-column="52" />
               <folding>
                 <element signature="e#4813#4838#0" expanded="true" />
                 <element signature="e#5514#5534#0" expanded="true" />
@@ -328,7 +174,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostCreateController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="222">
-              <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -337,8 +183,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/DataSet.java">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostDetailController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -484,10 +334,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/config/SecurityConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/guest/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/template/admin/layout.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostCreateController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/AjaxController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/admin/post/create.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/AjaxController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostCreateController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostController.java" />
       </list>
     </option>
   </component>
@@ -799,18 +649,18 @@
       <workItem from="1541990713550" duration="12581000" />
       <workItem from="1542006360048" duration="6607000" />
       <workItem from="1542075505713" duration="604000" />
-      <workItem from="1542079292568" duration="16210000" />
+      <workItem from="1542079292568" duration="16314000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64839000" />
+    <option name="totallyTimeSpent" value="64943000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="24" width="1867" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25809994" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25809994" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -818,7 +668,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3294979" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3294979" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39958158" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39958158" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -861,13 +711,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostCreateController.java</url>
-          <line>26</line>
+          <line>25</line>
           <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostController.java</url>
-          <line>33</line>
+          <line>32</line>
           <properties />
           <option name="timeStamp" value="16" />
         </line-breakpoint>
@@ -882,13 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
           <caret line="217" selection-start-line="217" selection-end-line="217" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostDetailController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1159,28 +1002,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#354#355#0" expanded="true" />
-            <element signature="e#394#395#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostCreateController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.2.RELEASE/spring-web-5.1.2.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -1195,18 +1016,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/AjaxController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="87" column="8" lean-forward="true" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3287#3303#0" expanded="true" />
-            <element signature="e#3491#3499#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1512">
@@ -1216,12 +1025,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/post/create.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="147" column="43" lean-forward="true" selection-start-line="147" selection-start-column="43" selection-end-line="147" selection-end-column="43" />
+        <state relative-caret-position="675">
+          <caret line="150" column="52" lean-forward="true" selection-start-line="150" selection-start-column="52" selection-end-line="150" selection-end-column="52" />
           <folding>
             <element signature="e#4813#4838#0" expanded="true" />
             <element signature="e#5514#5534#0" expanded="true" />
             <element signature="e#5797#5818#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/AjaxController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3287#3303#0" expanded="true" />
+            <element signature="e#3491#3499#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostCreateController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostDetailController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#394#395#0" expanded="true" />
           </folding>
         </state>
       </provider>

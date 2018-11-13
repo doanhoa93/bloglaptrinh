@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("admin_/post")
-@CrossOrigin(origins = "http://localhost:4200")
 public class PostCreateController {
 
     @Autowired

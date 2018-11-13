@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("admin_")
-@CrossOrigin(origins = "http://localhost:4200")
 public class PostController {
 
     @Autowired

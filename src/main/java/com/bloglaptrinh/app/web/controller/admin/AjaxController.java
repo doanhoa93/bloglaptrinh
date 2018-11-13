@@ -15,7 +15,6 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-@CrossOrigin(origins = "http://localhost:4200")
 public class AjaxController {
 	private static Logger logger = LoggerFactory.getLogger(AjaxController.class);
 	
