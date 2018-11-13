@@ -1,20 +1,33 @@
 package com.bloglaptrinh.app.web.controller.admin.post;
 
 
+import com.bloglaptrinh.app.common.constant.Constants;
+import com.bloglaptrinh.app.domain.Post;
+import com.bloglaptrinh.app.model.CustomResponse;
+import com.bloglaptrinh.app.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("admin_")
+@RequestMapping("admin_/post")
+@CrossOrigin(origins = "http://localhost:4200")
 public class PostCreateController {
 
-    @PostMapping("post-create")
-    public String newPost(@RequestParam String body, @RequestParam String title){
+    @Autowired
+    private PostService postService;
 
-        return "admin/post/new";
+    @PostMapping("create")
+    public ResponseEntity<CustomResponse> newPost(@RequestBody Post post){
+        CustomResponse customResponse = new CustomResponse();
+        post = postService.add(post);
+        customResponse.setResultCode(Constants.ResultCode.SUCCESS);
+        return new ResponseEntity<>(customResponse, HttpStatus.OK);
     }
 
 }

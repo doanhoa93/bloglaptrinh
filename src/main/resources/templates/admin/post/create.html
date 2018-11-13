@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{template/admin/layout}">
+<body>
+<div class="content mt-3" layout:fragment="content">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" th:href="@{/resources/css/froala_editor.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/froala_style.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/plugins/code_view.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/plugins/draggable.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/plugins/colors.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/plugins/emoticons.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/plugins/image_manager.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/plugins/image.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/plugins/line_breaker.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/plugins/table.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/plugins/char_counter.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/plugins/video.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/plugins/fullscreen.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/plugins/file.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/plugins/quick_insert.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/plugins/help.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/third_party/spell_checker.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/plugins/special_characters.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/codemirror.min.css}">
+    <div class="animated fadeIn">
+        <p><button onclick="ajaxEntity();">ajaxEntity[POST, ResponseEntity]</button></p>
+        <p></p>
+
+        <div>
+            <h3>Response-</h3>
+            <div id="response-panel"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <h3 class="text-center">Thêm bài viết</h3>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <!-- Credit Card -->
+                        <div id="pay-invoice">
+                            <div class="card-body">
+                                <form action="" method="post" novalidate="novalidate">
+                                    <div class="form-group">
+                                        <label for="cc-title" class="control-label mb-1">Tiêu đề</label>
+                                        <input id="cc-title" name="cc-title" type="text" class="form-control" placeholder="Tiêu đề" aria-required="true" aria-invalid="false">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <div class="form-group">
+                                                <label for="cc-exp" class="control-label mb-1">Expiration</label>
+                                                <input id="cc-exp" name="cc-exp" type="tel" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter the card expiration" data-val-cc-exp="Please enter a valid month and year" placeholder="MM / YY" autocomplete="cc-exp">
+                                                <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-7">
+                                            <label for="x_card_code" class="control-label mb-1">Tag</label>
+                                            <div class="input-group">
+                                                <input id="x_card_code" name="x_card_code" type="tel" class="form-control cc-cvc" value="" data-val="true" data-val-required="Please enter the security code" data-val-cc-cvc="Please enter a valid security code" autocomplete="off">
+                                                <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="editor" class="control-label mb-1">Card number</label>
+                                        <div class="animated fadeIn">
+                                            <div id="editor">
+                                                <div id='edit' style="margin-top: 30px;">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="help-block" data-valmsg-for="cc-number" data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div class="form-group"></div>
+                                    <div class="row">
+                                        <div class="col-4"></div>
+                                        <div class="col-4">
+                                            <a id="savePost" class="btn btn-lg btn-primary btn-block" style="color: white">
+                                                <i class="fa fa-dot-circle-o"></i>
+                                                <span id="post-button-amount">Thêm bài viết</span>
+                                                <span id="post-button-sending" style="display:none;">Sending…</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-4"></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script th:src="@{/resources/admin/assets/js/vendor/jquery-2.1.4.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/codemirror.min.js}" ></script>
+    <script type="text/javascript" th:src="@{/resources/js/xml.min.js}" ></script>
+    <script type="text/javascript" th:src="@{/resources/js/froala_editor.min.js}" ></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/align.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/char_counter.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/code_beautifier.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/code_view.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/colors.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/draggable.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/emoticons.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/entities.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/file.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/font_size.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/font_family.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/fullscreen.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/image.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/image_manager.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/line_breaker.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/inline_style.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/link.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/lists.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/paragraph_format.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/paragraph_style.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/quick_insert.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/quote.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/table.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/save.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/url.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/video.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/help.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/print.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/third_party/spell_checker.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/special_characters.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/plugins/word_paste.min.js}"></script>
+    <section layout:fragment="js">
+        <script>
+            var _response = $('#response-panel');
+            function ajaxEntity(){
+                var dataSet = new Object();
+                dataSet.username = "kdevkr";
+                dataSet.password = "kdevpass";
+                $.ajax({
+                    type    : 'POST', // method
+                    url     : 'http://localhost:8080/entity', // POST 요청은 데이터가 요청 바디에 포함됩니다.
+                    async   : 'true', // true
+                    data    : JSON.stringify(dataSet),
+                    contentType : 'application/json',
+                    //dataType  : [응답 데이터 형식], // 명시하지 않을 경우 자동으로 추측
+                    success : function(data, status, xhr){
+                        responseJson(data);
+                    },
+                    error   : function(error){
+                        console.log("error", error);
+                        responseError(error);
+                    }
+                });
+            }
+            function convertJson(data){
+                return JSON.stringify(data, true, 2);
+            }
+
+            function responseJson(data){
+                _response.html(convertJson(data));
+            }
+
+            function responseError(data){
+                _response.html(data.responseText);
+            }
+            jQuery(function($) {
+                $('#txtEditor').parents('form').on('submit', function () {
+                    $('#textarea-input').val($('.Editor-editor').html());
+                    return true;
+                })
+            });
+            $(function(){
+                $('#edit').froalaEditor({
+                    heightMin: 200,
+                    heightMax: 400
+                })
+            });
+            $('#savePost').click(function () {
+               /* $('#packagename').val() == undefined ? '' : $("#packagename").val().trim();*/
+                var language = 'vn';
+                var status = 'PUBLISHED';
+                var views = parseInt('10');
+                var createdAt = '2018-11-11 14:30:54';
+                var updatedAt = '2018-11-11 14:30:54';
+                var body = 'Hello';
+                var post = {
+                    language: language,
+                    status: status,
+                    views: views,
+                    createdAt: createdAt,
+                    updatedAt: updatedAt,
+                    body: body
+                };
+                if (validateData()) {
+                    $.ajax({
+                        type: "POST",
+                        url: "http://localhost:8080/admin_/post/create",
+                        contentType: "application/json",
+                        data: JSON.stringify(post),
+                        dataType: "json",
+                        error: function (request, status, error) {
+                            console.log('Error ' + request.responseText + "\n" + status + "\n" + error);
+                        },
+                        success: function (data) {
+                            console.log('success');
+                            console.log(data);
+                        }
+                    });
+                } else {
+                    console.log('error');
+                }
+            });
+            function validateData() {
+                return true;
+            }
+        </script>
+    </section>
+</div>
+</body>
+</html>

@@ -19,26 +19,21 @@ import java.util.List;
 
 
 @Service
-@Transactional(rollbackFor=Exception.class)
+@Transactional(rollbackFor = Exception.class)
 public class UserServiceImpl implements UserService {
 
     private UserRepository userRepository;
 
     private static final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 
-    public UserServiceImpl(UserRepository userRepository){
-        this.userRepository= userRepository;
+    public UserServiceImpl(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
     @Override
-    @Transactional(readOnly=false)
+    @Transactional(readOnly = false)
     public User add(User user) {
-        try {
-            return userRepository.save(user);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        return null;
+        return userRepository.save(user);
     }
 
     @Override

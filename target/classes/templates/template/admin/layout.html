@@ -14,11 +14,10 @@
 	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/themify-icons.css}">
 	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/flag-icon.min.css}">
 	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/cs-skin-elastic.css}">
-	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/bootstrap-select.cssz}">
+	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/bootstrap-select.css}">
 	<link rel="stylesheet" th:href="@{/resources/admin/assets/scss/style.css}">
 
 	<link th:href="@{/resources/admin/assets/css/editor.css}" type="text/css" rel="stylesheet"/>
-	<link th:href="@{/resources/admin/assets/css/lib/vector-map/jqvmap.min.css}" rel="stylesheet">
 
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 </head>
@@ -271,44 +270,10 @@
 
 	</div>
 	<script th:src="@{/resources/admin/assets/js/vendor/jquery-2.1.4.min.js}"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+	<script th:src="@{/resources/admin/assets/js/popper.min.js}"></script>
 	<script th:src="@{/resources/admin/assets/js/plugins.js}"></script>
 	<script th:src="@{/resources/admin/assets/js/main.js}"></script>
 	<script th:src="@{/resources/admin/assets/js/editor.js}"></script>
-
-	<script th:src="@{/resources/admin/assets/js/lib/chart-js/Chart.bundle.js}"></script>
-	<script th:src="@{/resources/admin/assets/js/dashboard.js}"></script>
-	<script th:src="@{/resources/admin/assets/js/widgets.js}"></script>
-	<script th:src="@{/resources/admin/assets/js/lib/vector-map/jquery.vmap.js}"></script>
-	<script th:src="@{/resources/admin/assets/js/lib/vector-map/jquery.vmap.min.js}"></script>
-	<script th:src="@{/resources/admin/assets/js/lib/vector-map/jquery.vmap.sampledata.js}"></script>
-	<script th:src="@{/resources/admin/assets/js/lib/vector-map/country/jquery.vmap.world.js}"></script>
-	<script>
-        jQuery(function($) {
-            $("#txtEditor").Editor();
-            $('#txtEditor').parents('form').on('submit', function () {
-                $('#textarea-input').val($('.Editor-editor').html());
-                return true;
-            })
-        });
-
-        ( function ( $ ) {
-            "use strict";
-
-            jQuery( '#vmap' ).vectorMap( {
-                map: 'world_en',
-                backgroundColor: null,
-                color: '#ffffff',
-                hoverOpacity: 0.7,
-                selectedColor: '#1de9b6',
-                enableZoom: true,
-                showTooltip: true,
-                values: sample_data,
-                scaleColors: [ '#1de9b6', '#03a9f5' ],
-                normalizeFunction: 'polynomial'
-            } );
-        } )( jQuery );
-	</script>
 	<section layout:fragment="js">
 
 	</section>

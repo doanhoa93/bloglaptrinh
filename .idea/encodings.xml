@@ -88,9 +88,22 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/UserInvitationRepository.java" charset="Shift_JIS" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/UserRepository.java" charset="Shift_JIS" />
     <file url="file://$PROJECT_DIR$/src/main/resources/static/resources/admin/assets" charset="Shift_JIS" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/static/resources/admin/assets" charset="Shift_JIS" />
     <file url="file://$PROJECT_DIR$/src/main/resources/static/resources/admin/dist" charset="Shift_JIS" />
     <file url="file://$PROJECT_DIR$/src/main/resources/static/resources/admin/images" charset="Shift_JIS" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/resources/css/froala_editor.css" charset="Shift_JIS" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/resources/css/froala_editor.min.css" charset="Shift_JIS" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/resources/css/froala_editor.pkgd.css" charset="Shift_JIS" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/resources/css/froala_editor.pkgd.min.css" charset="Shift_JIS" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/resources/css/froala_style.css" charset="Shift_JIS" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/resources/css/froala_style.min.css" charset="Shift_JIS" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/resources/css/plugins" charset="Shift_JIS" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/resources/css/themes" charset="Shift_JIS" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/resources/css/third_party" charset="Shift_JIS" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/resources/js/froala_editor.min.js" charset="Shift_JIS" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/resources/js/froala_editor.pkgd.min.js" charset="Shift_JIS" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/resources/js/languages" charset="Shift_JIS" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/resources/js/plugins" charset="Shift_JIS" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/resources/js/third_party" charset="Shift_JIS" />
     <file url="file://$PROJECT_DIR$/src/main/resources/templates/admin/post/demo.html" charset="Shift_JIS" />
   </component>
 </project>

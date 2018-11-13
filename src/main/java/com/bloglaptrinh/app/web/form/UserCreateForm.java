@@ -1,6 +1,6 @@
 package com.bloglaptrinh.app.web.form;
 
-import com.bloglaptrinh.app.common.constant.Constant;
+import com.bloglaptrinh.app.common.constant.Constants;
 import com.bloglaptrinh.app.common.validator.FieldMatch;
 import org.hibernate.validator.constraints.Email;
 
@@ -21,7 +21,7 @@ public class UserCreateForm implements Serializable {
 
     private String reLoginPassword;
 
-    @Email(regexp = Constant.EMAIL_PATTERN, message = "Email không đúng định dạng!")
+    @Email(regexp = Constants.EMAIL_PATTERN, message = "Email không đúng định dạng!")
     private String email;
 
     /*@NotNull

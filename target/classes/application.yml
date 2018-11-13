@@ -46,4 +46,3 @@ logging:
   level:
     org.springframework.web: ERROR
     com.raysmond.blog: DEBUG
-

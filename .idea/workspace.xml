@@ -2,111 +2,163 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee906873-307a-4d49-8745-92d438d3dc4f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/Article.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/Blog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/BlogLanguage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/CustomField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/CustomFieldOption.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/CustomFieldValue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/DomainObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/GoogleAnalytics.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/Media.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/NavigationItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/NavigationItemCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/NavigationItemPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/Page.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/PasswordResetToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/PersonalName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/PopularPost.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/Post.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/Seo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/Tag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/UserInvitation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/ArticleBulkDeleteRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/ArticleBulkPublishRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/ArticleBulkUnpublishRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/ArticleCreateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/ArticleDeleteRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/ArticleSearchRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/ArticleUpdateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/CategoryCreateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/CategorySearchRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/CategoryUpdateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/CommentBulkApproveRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/CommentBulkDeleteRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/CommentBulkUnapproveRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/CommentCreateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/CommentDeleteRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/CommentSearchRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/CommentUpdateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/CustomFieldBulkDeleteRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/CustomFieldCreateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/CustomFieldDeleteRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/CustomFieldSearchRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/CustomFieldUpdateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/GoogleAnalyticsUpdateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/PageBulkDeleteRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/PageCreateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/PageDeleteRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/PageSearchRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/PageUpdateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/PasswordResetTokenCreateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/PasswordUpdateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/PostSearchRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/ProfileUpdateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/SetupRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/SignupRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/TagBulkDeleteRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/TagCreateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/TagDeleteRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/TagMergeRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/TagSearchRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/TagUpdateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/TreeNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/UserBulkDeleteRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/UserDeleteRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/UserInvitationCreateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/UserInvitationDeleteRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/UserInvitationResendRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/UserSearchRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/UserUpdateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/ArticleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/BlogRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/CategoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/CommentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/CustomFieldRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/MediaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/PageRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/PasswordResetTokenRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/PopularPostRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/PostRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/TagRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/UserInvitationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/css/editor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/js/editor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/post/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/config/SecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/DataSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/CustomError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/CustomResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/service/PostService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/service/PostServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/utils/Md5PasswordEncoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/AjaxController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/froala_editor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/froala_editor.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/froala_editor.pkgd.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/froala_editor.pkgd.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/froala_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/froala_style.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/char_counter.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/char_counter.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/code_view.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/code_view.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/colors.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/colors.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/draggable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/draggable.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/emoticons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/emoticons.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/file.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/file.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/fullscreen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/fullscreen.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/help.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/help.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/image.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/image.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/image_manager.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/image_manager.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/line_breaker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/line_breaker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/quick_insert.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/quick_insert.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/special_characters.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/special_characters.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/table.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/table.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/video.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/video.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/themes/dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/themes/dark.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/themes/gray.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/themes/gray.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/themes/red.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/themes/red.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/themes/royal.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/themes/royal.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/third_party/embedly.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/third_party/embedly.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/third_party/font_awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/third_party/font_awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/third_party/image_tui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/third_party/image_tui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/third_party/spell_checker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/css/third_party/spell_checker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/froala_editor.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/froala_editor.pkgd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/bs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/en_ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/en_gb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/et.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/ko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/ku.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/me.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/nb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/pt_br.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/pt_pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/sr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/zh_cn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/languages/zh_tw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/align.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/char_counter.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/code_beautifier.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/code_view.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/colors.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/draggable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/emoticons.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/entities.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/file.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/font_family.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/font_size.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/forms.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/fullscreen.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/help.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/image.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/image_manager.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/inline_class.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/inline_style.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/line_breaker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/line_height.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/link.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/lists.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/paragraph_format.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/paragraph_style.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/print.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/quick_insert.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/quote.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/save.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/special_characters.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/table.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/url.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/video.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/plugins/word_paste.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/third_party/embedly.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/third_party/font_awesome.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/third_party/image_aviary.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/third_party/image_tui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/resources/js/third_party/spell_checker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/post/create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/common/utils/JsonConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/common/utils/JsonConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/DomainObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/PaggingResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/PaggingResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/common/constant/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/common/constant/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostCreateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostCreateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/guest/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/guest/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/form/UserCreateForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/form/UserCreateForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/scss/bootstrap/_reboot.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/scss/bootstrap/_reboot.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/scss/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/post/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/post/new.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/template/admin/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/template/admin/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/template/guest/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/template/guest/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/post/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/post/new.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/template/admin/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/template/admin/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/template/guest/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/template/guest/layout.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -115,70 +167,93 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-755143311">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.2" value="2" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.2" value="3" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="6" />
-          <entry key="css" value="5" />
+          <entry key="class" value="8" />
+          <entry key="css" value="6" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="31" />
-          <entry key="java" value="176" />
+          <entry key="html" value="44" />
+          <entry key="java" value="204" />
           <entry key="jpg" value="1" />
-          <entry key="js" value="8" />
+          <entry key="js" value="11" />
+          <entry key="json" value="1" />
           <entry key="pom" value="1" />
-          <entry key="properties" value="3" />
-          <entry key="xml" value="4" />
-          <entry key="yml" value="4" />
+          <entry key="properties" value="4" />
+          <entry key="scss" value="3" />
+          <entry key="ts" value="1" />
+          <entry key="xml" value="5" />
+          <entry key="yml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="6" />
-          <entry key="CSS" value="5" />
-          <entry key="HTML" value="31" />
+          <entry key="CLASS" value="8" />
+          <entry key="CSS" value="6" />
+          <entry key="HTML" value="44" />
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="176" />
-          <entry key="JavaScript" value="8" />
+          <entry key="JAVA" value="204" />
+          <entry key="JSON" value="1" />
+          <entry key="JavaScript" value="11" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Properties" value="3" />
-          <entry key="XML" value="5" />
-          <entry key="YAML" value="4" />
+          <entry key="Properties" value="4" />
+          <entry key="SCSS" value="3" />
+          <entry key="TypeScript" value="1" />
+          <entry key="XML" value="6" />
+          <entry key="YAML" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="3" />
-          <entry key="dummy" value="25" />
+          <entry key="dummy" value="26" />
           <entry key="gitignore" value="2" />
-          <entry key="html" value="522" />
-          <entry key="java" value="926" />
+          <entry key="html" value="965" />
+          <entry key="java" value="1137" />
           <entry key="js" value="1" />
           <entry key="properties" value="24" />
-          <entry key="regexp" value="9" />
-          <entry key="xml" value="9" />
-          <entry key="yml" value="12" />
+          <entry key="regexp" value="10" />
+          <entry key="scss" value="12" />
+          <entry key="xml" value="16" />
+          <entry key="yml" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="3" />
-          <entry key="HTML" value="522" />
-          <entry key="JAVA" value="926" />
+          <entry key="HTML" value="965" />
+          <entry key="JAVA" value="1137" />
           <entry key="JavaScript" value="1" />
-          <entry key="PLAIN_TEXT" value="27" />
+          <entry key="PLAIN_TEXT" value="28" />
           <entry key="Properties" value="24" />
-          <entry key="RegExp" value="9" />
-          <entry key="XML" value="9" />
-          <entry key="YAML" value="12" />
+          <entry key="RegExp" value="10" />
+          <entry key="SCSS" value="12" />
+          <entry key="XML" value="16" />
+          <entry key="YAML" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -190,31 +265,38 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/post/new.html">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="52" lean-forward="true" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
+            <state relative-caret-position="225">
+              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
               <folding>
-                <element signature="e#1468#1475#1" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#354#355#0" expanded="true" />
+                <element signature="e#394#395#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/post/demo.html">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/AjaxController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="99" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="99" />
+            <state relative-caret-position="1260">
+              <caret line="87" column="8" lean-forward="true" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3287#3303#0" expanded="true" />
+                <element signature="e#3491#3499#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostController.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.2.RELEASE/spring-web-5.1.2.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+            <state relative-caret-position="182">
+              <caret line="121" selection-start-line="121" selection-end-line="121" />
             </state>
           </provider>
         </entry>
@@ -222,67 +304,69 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="e#45827#45834#1" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#div#0;n#div#12;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#12;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#12;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#12;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#12;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#12;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#12;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#li#3;n#ul#0;n#div#1;n#div#0;n#div#12;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#li#3;n#ul#0;n#div#1;n#div#0;n#div#12;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#li#4;n#ul#0;n#div#1;n#div#0;n#div#12;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#li#4;n#ul#0;n#div#1;n#div#0;n#div#12;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#div#0;n#section#0;n#div#13;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#17;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="1512">
+              <caret line="197" column="4" lean-forward="true" selection-start-line="197" selection-start-column="4" selection-end-line="207" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/template/admin/layout.html">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/post/create.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="273" selection-start-line="273" selection-end-line="273" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/js/plugins.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="45">
+              <caret line="147" column="43" lean-forward="true" selection-start-line="147" selection-start-column="43" selection-end-line="147" selection-end-column="43" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#4813#4838#0" expanded="true" />
+                <element signature="e#5514#5534#0" expanded="true" />
+                <element signature="e#5797#5818#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/js/editor.js">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostCreateController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="1353" column="72" lean-forward="true" selection-start-line="1353" selection-start-column="72" selection-end-line="1353" selection-end-column="72" />
+            <state relative-caret-position="222">
+              <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/DataSet.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/template/admin/layout.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="271" column="4" selection-start-line="271" selection-start-column="4" selection-end-line="271" selection-end-column="87" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/config/SecurityConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/guest/HomeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="55" column="46" lean-forward="true" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -293,18 +377,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>thymeleaf</find>
       <find>fasterxml</find>
       <find>MessageDecoder</find>
       <find>id=&quot;welcome&quot;</find>
       <find>404 page.</find>
-      <find>&lt;img</find>
       <find>menu-title</find>
       <find>admin.</find>
       <find>Editor-editor</find>
@@ -318,7 +401,25 @@
       <find>close</find>
       <find>&lt;h3&gt;</find>
       <find>&lt;h3/</find>
+      <find>textarea</find>
+      <find>&lt;img</find>
+      <find>.js&quot;</find>
+      <find>.css&quot;&gt;</find>
+      <find>language</find>
+      <find>status</find>
+      <find>created</find>
+      <find>views</find>
+      <find>csrf</find>
+      <find>secu</find>
+      <find>Payment amount</find>
+      <find>security</find>
+      <find>entity</find>
     </findStrings>
+    <replaceStrings>
+      <replace>th:src=&quot;@{/resources/admin/assets/images</replace>
+      <replace>.js}&quot;</replace>
+      <replace>.css}&quot;&gt;</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -336,21 +437,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/PopularPost.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/Post.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/Seo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/Tag.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/ArticleRepositoryCustom.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/ArticleBulkDeleteRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/ArticleRepositoryImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/ArticleSpecifications.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/CategoryRepositoryImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/CategoryRepositoryCustom.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/CustomFieldRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/UserInvitationRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/MediaRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/ArticleRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/BlogRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/CategoryRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/CommentRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/PageRepository.java" />
@@ -360,8 +446,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/TagRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/service/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/guest/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/ProfileUpdateRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/SetupRequest.java" />
@@ -380,13 +464,30 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/PageSearchRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/PostSearchRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/UserSearchRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostCreateController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/template/guest/layout.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/css/bootstrap.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/post/new.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/js/editor.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/scss/bootstrap/_reboot.scss" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/scss/style.scss" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/post/new.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/service/PostService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/service/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/service/PostServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/common/constant/Constant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/CustomResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/utils/Md5PasswordEncoder.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/DataSet.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/config/SecurityConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/guest/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/template/admin/layout.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostCreateController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/AjaxController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/post/create.html" />
       </list>
     </option>
   </component>
@@ -417,6 +518,26 @@
     <option name="width" value="1867" />
     <option name="height" value="1056" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Spring</id>
+          </State>
+          <State>
+            <id>Spring BootSpring</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>SpringBootApplicationYaml</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -425,7 +546,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -464,6 +584,59 @@
               <item name="bloglaptrinh" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bloglaptrinh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bloglaptrinh" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bloglaptrinh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bloglaptrinh" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bloglaptrinh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bloglaptrinh" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="post" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bloglaptrinh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bloglaptrinh" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="guest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bloglaptrinh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bloglaptrinh" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -489,8 +662,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bloglaptrinh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bloglaptrinh" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -499,10 +679,9 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="post" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bloglaptrinh" type="b2602c69:ProjectViewProjectNode" />
@@ -510,17 +689,25 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bloglaptrinh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bloglaptrinh" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -531,7 +718,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spring-demo-ajax" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -543,14 +730,18 @@
       <recent name="com.bloglaptrinh.app" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.bloglaptrinh.app.domain" />
+      <recent name="com.bloglaptrinh.app.web.controller.admin" />
+      <recent name="com.bloglaptrinh.app.utils" />
+      <recent name="com.bloglaptrinh.app.config" />
       <recent name="com.bloglaptrinh.app.repository" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/resources/css" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/resources/js" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/js" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/css" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static/resources/admin" />
-      <recent name="$PROJECT_DIR$/src/main/resources/templates/admin/post" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -607,17 +798,19 @@
       <workItem from="1541660061261" duration="5154000" />
       <workItem from="1541990713550" duration="12581000" />
       <workItem from="1542006360048" duration="6607000" />
+      <workItem from="1542075505713" duration="604000" />
+      <workItem from="1542079292568" duration="16210000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44870000" />
+    <option name="totallyTimeSpent" value="64839000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="24" width="1867" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25590336" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25809994" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -632,14 +825,14 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Spring" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.2991632" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.6129707" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.3294979" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Database" order="3" weight="0.3294893" />
       <window_info anchor="right" id="Bean Validation" order="4" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Maven Projects" order="6" />
@@ -668,308 +861,27 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostCreateController.java</url>
-          <line>16</line>
+          <line>26</line>
           <properties />
-          <option name="timeStamp" value="13" />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostController.java</url>
+          <line>33</line>
+          <properties />
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/CustomFieldRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/PopularPostRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/PostRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/TagRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/UserInvitationRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/PasswordResetTokenRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/PageRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/MediaRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/CommentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="71" selection-start-line="13" selection-start-column="71" selection-end-line="13" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/service/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="45" column="38" lean-forward="true" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
-          <folding>
-            <element signature="e#1486#1487#0" expanded="true" />
-            <element signature="e#1533#1534#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/ProfileUpdateRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-401">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/SetupRequest.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/ArticleUpdateRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/CustomFieldUpdateRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/PageCreateRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2460">
-          <caret line="206" selection-start-line="206" selection-end-line="206" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/TreeNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/CustomFieldCreateRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/UserUpdateRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="27" column="15" lean-forward="true" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/SignupRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/ArticleCreateRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2295">
-          <caret line="193" selection-start-line="193" selection-end-line="193" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/ArticleSearchRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-165">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/CommentCreateRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/CustomFieldSearchRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/UserSearchRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/PostSearchRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/PageSearchRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/PageUpdateRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
           <caret line="217" selection-start-line="217" selection-end-line="217" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="23" column="33" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="196" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/guest/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostCreateController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -977,13 +889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/post/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -997,16 +902,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/js/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/js/bootstrap.min.js" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
@@ -1017,74 +913,13 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/css/font-awesome.min.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/libs/flot/css/float-chart.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#45827#45834#1" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#div#0;n#div#12;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#12;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#12;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#12;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#12;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#12;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#12;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#li#3;n#ul#0;n#div#1;n#div#0;n#div#12;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#li#3;n#ul#0;n#div#1;n#div#0;n#div#12;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#li#4;n#ul#0;n#div#1;n#div#0;n#div#12;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#li#4;n#ul#0;n#div#1;n#div#0;n#div#12;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#div#0;n#section#0;n#div#13;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#17;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/css/editor.css">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/post/new.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="52" lean-forward="true" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
-          <folding>
-            <element signature="e#1468#1475#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/js/plugins.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/post/demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="99" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="99" />
         </state>
       </provider>
     </entry>
@@ -1095,10 +930,299 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/scss/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="56" column="1" lean-forward="true" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/scss/bootstrap/_reboot.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="208" lean-forward="true" selection-start-line="208" selection-end-line="208" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/post/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="13" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/libs/flot/css/float-chart.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/resources/js/languages/ar.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/resources/css/plugins/file.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/resources/admin/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" lean-forward="true" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/resources/js/third_party/spell_checker.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="6" column="707" selection-start-line="6" selection-start-column="707" selection-end-line="6" selection-end-column="707" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/post/new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-467">
+          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="15" lean-forward="true" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/guest/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="481" selection-start-line="481" selection-end-line="483" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/post/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3093">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/service/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="20" selection-start-line="20" selection-end-line="21" selection-end-column="45" />
+          <folding>
+            <element signature="e#1000#1001#0" expanded="true" />
+            <element signature="e#1052#1053#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/service/PostService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/service/PostServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#744#745#0" expanded="true" />
+            <element signature="e#792#793#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/CustomResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/model/CustomError.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/common/constant/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/DomainObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="37" column="35" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/Post.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="89" column="25" selection-start-line="89" selection-start-column="25" selection-end-line="89" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.0.6.RELEASE/spring-boot-autoconfigure-2.0.6.RELEASE.jar!/META-INF/spring-configuration-metadata.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.0.9.RELEASE/spring-security-core-5.0.9.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetailsService.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/utils/Md5PasswordEncoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/user/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/domain/DataSet.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/config/SecurityConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/guest/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="55" column="46" lean-forward="true" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#394#395#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/post/PostCreateController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.2.RELEASE/spring-web-5.1.2.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/template/admin/layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="273" selection-start-line="273" selection-end-line="273" />
+        <state relative-caret-position="268">
+          <caret line="271" column="4" selection-start-line="271" selection-start-column="4" selection-end-line="271" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/admin/AjaxController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="87" column="8" lean-forward="true" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3287#3303#0" expanded="true" />
+            <element signature="e#3491#3499#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1512">
+          <caret line="197" column="4" lean-forward="true" selection-start-line="197" selection-start-column="4" selection-end-line="207" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/post/create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="147" column="43" lean-forward="true" selection-start-line="147" selection-start-column="43" selection-end-line="147" selection-end-column="43" />
+          <folding>
+            <element signature="e#4813#4838#0" expanded="true" />
+            <element signature="e#5514#5534#0" expanded="true" />
+            <element signature="e#5797#5818#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
