@@ -17,4 +17,8 @@ public class Constants {
     public interface URL_REMOTE{
         static String URL_ADD_POST = "/private/post/add";
     }
+
+    public interface INDEX{
+        static String POST = "post";
+    }
 }

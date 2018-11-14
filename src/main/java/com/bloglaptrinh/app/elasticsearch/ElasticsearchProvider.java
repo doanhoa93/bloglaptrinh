@@ -1,26 +1,32 @@
 package com.bloglaptrinh.app.elasticsearch;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.elasticsearch.action.bulk.BulkItemResponse;
 import org.elasticsearch.action.bulk.BulkRequestBuilder;
 import org.elasticsearch.action.bulk.BulkResponse;
+import org.elasticsearch.action.delete.DeleteRequest;
 import org.elasticsearch.action.delete.DeleteRequestBuilder;
 import org.elasticsearch.action.delete.DeleteResponse;
 import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.action.get.MultiGetItemResponse;
 import org.elasticsearch.action.get.MultiGetResponse;
+import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.action.index.IndexRequestBuilder;
 import org.elasticsearch.action.index.IndexResponse;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.action.update.UpdateRequestBuilder;
 import org.elasticsearch.action.update.UpdateResponse;
+import org.elasticsearch.client.RequestOptions;
+import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.transport.TransportAddress;
 import org.elasticsearch.common.unit.TimeValue;
 import org.elasticsearch.common.xcontent.XContentFactory;
+import org.elasticsearch.common.xcontent.XContentType;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.script.ScriptType;
@@ -33,33 +39,37 @@ import org.elasticsearch.search.aggregations.bucket.histogram.Histogram;
 import org.elasticsearch.search.aggregations.bucket.terms.StringTerms;
 import org.elasticsearch.search.aggregations.bucket.terms.Terms;
 import org.elasticsearch.search.aggregations.metrics.avg.Avg;
+import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.elasticsearch.transport.client.PreBuiltTransportClient;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-public class BaseDemo {
-    private static final Logger logger = LogManager.getLogger(BaseDemo.class);
+public class ElasticsearchProvider {
+    private TransportClient transportClient;
+    public ElasticsearchProvider() throws UnknownHostException {
+        this.transportClient = new PreBuiltTransportClient(Settings.EMPTY)
+                .addTransportAddress(new TransportAddress(InetAddress.getByName("localhost"), 9300));
+    }
+    private static final Logger logger = LogManager.getLogger(ElasticsearchProvider.class);
 
-    @SuppressWarnings({"unchecked", "resource"})
+    /*@SuppressWarnings({"unchecked", "resource"})
     public static void main(String[] args) throws IOException {
-        // ?????client?C????Q????????Fcluster.name ???Q????\?@??Q???I????C?W?Q????
-        // client.transport.sniff ?\????u????T??W?Q?I?W?Q??_
-        Settings settings = Settings.builder()
+        *//*Settings settings = Settings.builder()
                 .put("cluster.name", "youmeek-cluster")
                 .put("client.transport.sniff", true)
                 .build();
 
-        //?????_?I??@
-        //TransportClient transportClient = new PreBuiltTransportClient(settings).addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("192.168.1.127"), 9300));
         TransportClient transportClient = new PreBuiltTransportClient(Settings.EMPTY)
                 .addTransportAddress(new TransportAddress(InetAddress.getByName("localhost"), 9300))
-                .addTransportAddress(new TransportAddress(InetAddress.getByName("127.0.0.1"), 9300));
+                .addTransportAddress(new TransportAddress(InetAddress.getByName("127.0.0.1"), 9300));*//*
         //======================================================
 
         //create(transportClient);
@@ -69,7 +79,7 @@ public class BaseDemo {
         //update(transportClient);
         query(transportClient);
         //queryByMatchOneParam(transportClient);
-        /*queryByMatchMoreParam(transportClient);
+        *//*queryByMatchMoreParam(transportClient);
         queryByTerm(transportClient);
         queryByPrefix(transportClient);
         queryByBool(transportClient);
@@ -78,21 +88,27 @@ public class BaseDemo {
         queryByScroll(transportClient);
         queryByTemplate(transportClient);
         delete(transportClient);
-        aggregate(transportClient);*/
+        aggregate(transportClient);*//*
 
         //======================================================
 
         transportClient.close();
+    }*/
+
+    private static void closeTransportClient(TransportClient transportClient){
+        if (transportClient != null) {
+            transportClient.close();
+            transportClient = null;
+        }
+        transportClient.close();
     }
-
-
     /**
      * ???
      *
-     * @param transportClient
+     * @param obj
      */
-    private static void create(TransportClient transportClient) throws IOException {
-        IndexResponse indexResponse = transportClient.prepareIndex("product_index", "product", "1").setSource(XContentFactory.jsonBuilder()
+    public void create(Object obj, String index) throws IOException {
+        /*IndexResponse indexResponse = transportClient.prepareIndex("product_index", "product", "1").setSource(XContentFactory.jsonBuilder()
                 .startObject()
                 .field("product_name", "????Y????? HX6700-1")
                 .field("product_desc", "?O 1000 ???????C6 ?? 1 ?? 0 ?_?ƒ¢????C618 ?????? 48 ???")
@@ -140,7 +156,13 @@ public class BaseDemo {
                 .field("created_date_time", new SimpleDateFormat("yyyyMMdd'T'HHmmss.SSSZ").format(new Date()))
                 .field("last_modified_date_time", new SimpleDateFormat("yyyyMMdd'T'HHmmss.SSSZ").format(new Date()))
                 .field("version", 1)
-                .endObject()).get();
+                .endObject()).get();*/
+        ObjectMapper mapper = new ObjectMapper();
+        String json = mapper.writeValueAsString(obj);
+        IndexResponse response = transportClient.prepareIndex(index, "_doc")
+                .setSource(json, XContentType.JSON)
+                .get();
+        closeTransportClient(transportClient);
     }
 
     /**
@@ -497,15 +519,6 @@ public class BaseDemo {
 
     //============================================================================================================
 
-    /**
-     * ???????
-     * 1. ???
-     * 2. ?q???
-     * 3. ??@?Z?o?q????I?????
-     *
-     * @param transportClient
-     * @throws IOException
-     */
     private static void aggregate(TransportClient transportClient) throws IOException {
 
         SearchResponse searchResponse = transportClient.prepareSearch("product_index").setTypes("product")
@@ -537,5 +550,35 @@ public class BaseDemo {
 
     }
 
+/*
+    private final ObjectMapper mapper;
+    private final RestHighLevelClient esClient;
+
+    public ElasticsearchDao(ObjectMapper mapper) {
+        this.esClient = new RestHighLevelClient(RestClient.builder(HttpHost.create("http://127.0.0.1:9200")));
+        this.mapper = mapper;
+    }
+
+    public void save(Person person) throws IOException {
+        byte[] bytes = mapper.writeValueAsBytes(person);
+        transportClient.index(new IndexRequest("person", "_doc", person.idAsString()).source(bytes, XContentType.JSON), RequestOptions.DEFAULT);
+    }
+
+    public void delete(String id) throws IOException {
+        transportClient.delete(new DeleteRequest("person", "_doc", id));
+    }
+
+    public SearchResponse search(QueryBuilder query, Integer from, Integer size) throws IOException {
+        logger.debug("elasticsearch query: {}", query.toString());
+        SearchResponse response = transportClient.search(new SearchRequest("person").source(new SearchSourceBuilder()
+                        .query(query)
+                        .from(from)
+                        .size(size));
+
+        logger.debug("elasticsearch response: {} hits", response.getHits().getTotalHits());
+        logger.trace("elasticsearch response: {} hits", response.toString());
+
+        return response;
+    }*/
 
 }

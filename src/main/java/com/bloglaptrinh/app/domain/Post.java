@@ -139,6 +139,17 @@ public class Post extends DomainObject<Long> {
 	@OrderColumn(name = "`index`")
 	private List<Media> medias;
 
+	public Post() {
+	}
+
+	public Post(String title, String language, Status status, long views, String createdAt, String updatedAt, String body) {
+		this.title = title;
+		this.language = language;
+		this.status = status;
+		this.views = views;
+		this.body = body;
+	}
+
 	@Override
 	public Long getId() {
 		return id;

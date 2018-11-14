@@ -1,11 +1,16 @@
 package com.bloglaptrinh.app.service;
 
+import com.bloglaptrinh.app.common.constant.Constants;
 import com.bloglaptrinh.app.domain.Post;
+import com.bloglaptrinh.app.elasticsearch.ElasticsearchProvider;
+import com.bloglaptrinh.app.elasticsearch.model.PostSearch;
 import com.bloglaptrinh.app.repository.PostRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.io.IOException;
 
 @Service
 @Transactional(rollbackFor = Exception.class)
@@ -21,7 +26,13 @@ public class PostServiceImpl implements PostService {
 
     @Override
     @Transactional(readOnly = false)
-    public Post add(Post post) {
-        return postRepository.save(post);
+    public Post add(Post post) throws IOException {
+        post = postRepository.save(post);
+        if(post.getId() != null){
+            ElasticsearchProvider baseDemo = new ElasticsearchProvider();
+            PostSearch postSearch = new PostSearch();
+            baseDemo.create(post, Constants.INDEX.POST);
+        }
+        return post;
     }
 }

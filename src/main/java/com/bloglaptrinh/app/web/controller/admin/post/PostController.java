@@ -11,6 +11,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
+
 @Controller
 @RequestMapping("admin_")
 public class PostController {
@@ -29,7 +31,7 @@ public class PostController {
     }
 
     @PutMapping("post/create")
-    public ResponseEntity<CustomResponse> createPost(@RequestBody Post post){
+    public ResponseEntity<CustomResponse> createPost(@RequestBody Post post) throws IOException {
         CustomResponse customResponse = new CustomResponse();
         post = postService.add(post);
         customResponse.setResultCode(Constants.ResultCode.SUCCESS);

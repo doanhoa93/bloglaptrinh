@@ -1,6 +1,8 @@
 package com.bloglaptrinh.app.web.controller.admin;
 
 import com.bloglaptrinh.app.domain.DataSet;
+import com.bloglaptrinh.app.domain.Post;
+import com.bloglaptrinh.app.web.form.PostCreateForm;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -17,7 +19,9 @@ import java.util.Map;
 @Controller
 public class AjaxController {
 	private static Logger logger = LoggerFactory.getLogger(AjaxController.class);
-	
+
+
+
 	// Test Case - 1
 	@ResponseBody
 	@RequestMapping(value="/list", method=RequestMethod.GET, consumes=MediaType.APPLICATION_JSON_VALUE)
@@ -113,6 +117,20 @@ public class AjaxController {
 		map.put("username", dataSet.getUsername());
 		map.put("password", dataSet.getPassword());
 		
+		//응답과 함깨 HttpStatus를 지정할 수 있습니다.
+		ResponseEntity<Object> response = new ResponseEntity<Object>(map, HttpStatus.OK);
+		return response;
+	}
+
+	// Test Case - 6
+	@ResponseBody
+	@RequestMapping(value="/entity/create", method=RequestMethod.POST, consumes=MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Object> entitycreate(@RequestBody PostCreateForm postJson){
+		logger.info("Request Entity.... - {}", postJson);
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("username", postJson.getTitle());
+		map.put("password", postJson.getBody());
+
 		//응답과 함깨 HttpStatus를 지정할 수 있습니다.
 		ResponseEntity<Object> response = new ResponseEntity<Object>(map, HttpStatus.OK);
 		return response;

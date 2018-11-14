@@ -23,14 +23,20 @@
     <link rel="stylesheet" th:href="@{/resources/css/third_party/spell_checker.css}">
     <link rel="stylesheet" th:href="@{/resources/css/plugins/special_characters.css}">
     <link rel="stylesheet" th:href="@{/resources/css/codemirror.min.css}">
+    <!--<div class="alert alert-danger" style="z-index: 10000">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+    </div>-->
+    <div class="msgBox"></div>
     <div class="animated fadeIn">
-        <p><button onclick="ajaxEntity();">ajaxEntity[POST, ResponseEntity]</button></p>
+        <!--<p><button onclick="ajaxEntity();">ajaxEntity[POST, ResponseEntity]</button></p>
         <p></p>
 
         <div>
             <h3>Response-</h3>
             <div id="response-panel"></div>
-        </div>
+        </div>-->
+
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">
@@ -65,7 +71,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="editor" class="control-label mb-1">Card number</label>
+                                        <label for="editor" class="control-label mb-1">Nội dung</label>
                                         <div class="animated fadeIn">
                                             <div id="editor">
                                                 <div id='edit' style="margin-top: 30px;">
@@ -134,16 +140,26 @@
         <script>
             var _response = $('#response-panel');
             function ajaxEntity(){
-                var dataSet = new Object();
-                dataSet.username = "kdevkr";
-                dataSet.password = "kdevpass";
+                var language = 'vn';
+                var status = 'PUBLISHED';
+                var views = parseInt('10');
+                var createdAt = '2018-11-11 14:30:54';
+                var updatedAt = '2018-11-11 14:30:54';
+                var body = 'Hello';
+                var postJson = new Object();
+                postJson.language = language;
+                postJson.status = status;
+                postJson.views = views;
+                postJson.createdAt = createdAt;
+                postJson.updatedAt = updatedAt;
+                postJson.body = body;
+
                 $.ajax({
                     type    : 'POST', // method
-                    url     : 'http://localhost:8080/entity', // POST 요청은 데이터가 요청 바디에 포함됩니다.
+                    url     : 'http://localhost:8080/entity/create',
                     async   : 'true', // true
-                    data    : JSON.stringify(dataSet),
+                    data: JSON.stringify(postJson),
                     contentType : 'application/json',
-                    //dataType  : [응답 데이터 형식], // 명시하지 않을 경우 자동으로 추측
                     success : function(data, status, xhr){
                         responseJson(data);
                     },
@@ -165,8 +181,8 @@
                 _response.html(data.responseText);
             }
             jQuery(function($) {
-                $('#txtEditor').parents('form').on('submit', function () {
-                    $('#textarea-input').val($('.Editor-editor').html());
+                $('#editor').parents('form').on('submit', function () {
+                    $('#textarea-input').val($('.fr-view').html());
                     return true;
                 })
             });
@@ -178,36 +194,41 @@
             });
             $('#savePost').click(function () {
                /* $('#packagename').val() == undefined ? '' : $("#packagename").val().trim();*/
+                var title = 'hahaha';
                 var language = 'vn';
                 var status = 'PUBLISHED';
                 var views = parseInt('10');
                 var createdAt = '2018-11-11 14:30:54';
                 var updatedAt = '2018-11-11 14:30:54';
-                var body = 'Hello';
-                var post = {
-                    language: language,
-                    status: status,
-                    views: views,
-                    createdAt: createdAt,
-                    updatedAt: updatedAt,
-                    body: body
-                };
+                var body = $('.fr-view').html();
+                var postJson = new Object();
+                postJson.title = $('#cc-title').val();
+                postJson.language = language;
+                postJson.status = status;
+                postJson.views = views;
+                postJson.createdAt = createdAt;
+                postJson.updatedAt = updatedAt;
+                postJson.body = $('.fr-view').html();
                 if (validateData()) {
                     $.ajax({
-                        type: "POST",
-                        url: "http://localhost:8080/admin_/post/create",
-                        contentType: "application/json",
-                        data: JSON.stringify(post),
+                        type    : 'POST',
+                        url     : 'http://localhost:8080/admin_/post/create',
+                        async   : 'true',
+                        data: JSON.stringify(postJson),
+                        contentType : 'application/json',
                         dataType: "json",
                         error: function (request, status, error) {
                             console.log('Error ' + request.responseText + "\n" + status + "\n" + error);
+                            showMessage('error', 'Tạo bài viết thất bại!', '.msgBox');
                         },
                         success: function (data) {
                             console.log('success');
                             console.log(data);
+                            showMessage('success', 'Tạo bài viết thành công.', '.msgBox');
                         }
                     });
                 } else {
+                    showMessage('error', 'Dữ liệu không hợp lê!', '.msgBox');
                     console.log('error');
                 }
             });
