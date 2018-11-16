@@ -1,21 +1,26 @@
-package com.bloglaptrinh.app.common.validator;
+package com.bloglaptrinh.app.web.form.validator;
 
-import javax.validation.Constraint;
-import javax.validation.Payload;
+
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.RetentionPolicy;
 
-import static java.lang.annotation.ElementType.FIELD;
-import static java.lang.annotation.ElementType.METHOD;
-import static java.lang.annotation.RetentionPolicy.RUNTIME;
+import javax.validation.Constraint;
+import javax.validation.Payload;
 
 @Documented
 @Constraint(validatedBy = PhoneValidator.class)
-@Retention(RUNTIME)
-@Target({ FIELD, METHOD })
+@Target( { ElementType.METHOD, ElementType.FIELD })
+@Retention(RetentionPolicy.RUNTIME)
 public @interface Phone {
+
+
     String message() default "{Phone}";
+
     Class<?>[] groups() default {};
+
     Class<? extends Payload>[] payload() default {};
+
 }

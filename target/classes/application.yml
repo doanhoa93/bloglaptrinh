@@ -4,6 +4,7 @@ spring:
 
   thymeleaf:
     cache: false
+    encoding: UTF-8
 
   devtools:
     restart:
@@ -31,6 +32,8 @@ spring:
         prepStmtCacheSize: 250
         prepStmtCacheSqlLimit: 2048
         useServerPrepStmts: true
+  messages:
+    basename: i18n/messages
   redis:
     host: localhost
     port: 6379

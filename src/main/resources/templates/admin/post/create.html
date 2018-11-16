@@ -52,7 +52,7 @@
                                 <form action="" method="post" novalidate="novalidate">
                                     <div class="form-group">
                                         <label for="cc-title" class="control-label mb-1">Tiêu đề</label>
-                                        <input id="cc-title" name="cc-title" type="text" class="form-control" placeholder="Tiêu đề" aria-required="true" aria-invalid="false">
+                                        <input id="cc-title" name="name" type="text" class="form-control" placeholder="Tiêu đề" aria-required="true" aria-invalid="false">
                                     </div>
                                     <div class="row">
                                         <div class="col-5">
@@ -90,6 +90,17 @@
                                                 <span id="post-button-amount">Thêm bài viết</span>
                                                 <span id="post-button-sending" style="display:none;">Sending…</span>
                                             </a>
+                                            <a id="savePosts" class="btn btn-lg btn-primary btn-block" style="color: white">
+                                                <i class="fa fa-dot-circle-o"></i>
+                                                <span id="post-button-amounts">Thêm bài</span>
+                                            </a>
+                                        </div>
+                                        <div id="resultContainer" style="display: none;">
+                                            <hr/>
+                                            <h4 style="color: green;">JSON Response From Server</h4>
+                                            <pre style="color: green;">
+                                            <code></code>
+                                           </pre>
                                         </div>
                                         <div class="col-4"></div>
                                     </div>
@@ -101,7 +112,7 @@
             </div>
         </div>
     </div>
-    <script th:src="@{/resources/admin/assets/js/vendor/jquery-2.1.4.min.js}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" th:src="@{/resources/js/codemirror.min.js}" ></script>
     <script type="text/javascript" th:src="@{/resources/js/xml.min.js}" ></script>
     <script type="text/javascript" th:src="@{/resources/js/froala_editor.min.js}" ></script>
@@ -229,6 +240,45 @@
                     });
                 } else {
                     showMessage('error', 'Dữ liệu không hợp lê!', '.msgBox');
+                    console.log('error');
+                }
+            });
+
+
+            $('#savePosts').click(function () {
+                var contextRoot = "${pageContext.request.contextPath}";
+                $('input').next().remove();
+                var customerJson = new Object();
+                customerJson.name = $('#cc-title').val();
+                customerJson.email = 'hoa9x3@gmail.com';
+                customerJson.age = parseInt('20');
+                customerJson.phone = '2323Dwed2332';
+                if (validateData()) {
+                    $.ajax({
+                        type    : 'POST',
+                        url     : 'http://localhost:8080/cust/save',
+                        async   : 'true',
+                        data: JSON.stringify(customerJson),
+                        contentType : 'application/json',
+                        dataType: "json",
+                        error: function (request, status, error) {
+                            console.log('status ' + request.responseText + "\n" + status + "\n" + error);
+                        },
+                        success: function (dataResponse) {
+                            if(dataResponse.isSuccess){
+                                $('#resultContainer pre code').text(JSON.stringify(dataResponse.paramObject));
+                                $('#resultContainer').show();
+                                $('input').removeClass("is-invalid");
+                            }else{
+                                //Set error messages
+                                $.each(dataResponse.errorMessages,function(key,value){
+                                    $('input[name='+key+']').after('<span class="error">'+value+'</span>');
+                                    $('input[name='+key+']').addClass("is-invalid");
+                                });
+                            }
+                        }
+                    });
+                } else {
                     console.log('error');
                 }
             });

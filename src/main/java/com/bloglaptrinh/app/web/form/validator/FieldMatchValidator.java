@@ -1,4 +1,4 @@
-package com.bloglaptrinh.app.common.validator;
+package com.bloglaptrinh.app.web.form.validator;
 
 import org.apache.commons.beanutils.BeanUtils;
 

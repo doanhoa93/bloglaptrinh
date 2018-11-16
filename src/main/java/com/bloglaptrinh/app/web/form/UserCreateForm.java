@@ -1,7 +1,7 @@
 package com.bloglaptrinh.app.web.form;
 
 import com.bloglaptrinh.app.common.constant.Constants;
-import com.bloglaptrinh.app.common.validator.FieldMatch;
+import com.bloglaptrinh.app.web.form.validator.FieldMatch;
 import org.hibernate.validator.constraints.Email;
 
 import javax.validation.constraints.Size;

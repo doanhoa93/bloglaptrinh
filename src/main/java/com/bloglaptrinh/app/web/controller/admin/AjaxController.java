@@ -1,26 +1,43 @@
 package com.bloglaptrinh.app.web.controller.admin;
 
+import com.bloglaptrinh.app.common.utils.CoreResponse;
 import com.bloglaptrinh.app.domain.DataSet;
 import com.bloglaptrinh.app.domain.Post;
+import com.bloglaptrinh.app.web.form.Customer;
 import com.bloglaptrinh.app.web.form.PostCreateForm;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
+import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @Controller
 public class AjaxController {
 	private static Logger logger = LoggerFactory.getLogger(AjaxController.class);
 
+	private Map<String, Customer> customers = null;
 
+	public AjaxController(){
+		customers = new HashMap<String, Customer>();
+	}
+
+	@Autowired
+	private MessageSource messageSource;
 
 	// Test Case - 1
 	@ResponseBody
@@ -134,5 +151,51 @@ public class AjaxController {
 		//응답과 함깨 HttpStatus를 지정할 수 있습니다.
 		ResponseEntity<Object> response = new ResponseEntity<Object>(map, HttpStatus.OK);
 		return response;
+	}
+
+
+
+	@ResponseBody
+	@RequestMapping(value = "/cust/save", method = RequestMethod.POST)
+	public ResponseEntity<CoreResponse>  saveCustomerAction(
+			@RequestBody @Valid Customer customerJson,
+			BindingResult bindingResult, Model model) {
+		CoreResponse response = new CoreResponse();
+		/*if (bindingResult.hasErrors()) {
+			for (Object object : bindingResult.getAllErrors()) {
+				if(object instanceof FieldError) {
+					FieldError fieldError = (FieldError) object;
+					System.out.println(fieldError.getDefaultMessage());
+					System.out.println(fieldError.getCode());
+				}
+
+				if(object instanceof ObjectError) {
+					ObjectError objectError = (ObjectError) object;
+
+					System.out.println(objectError.getCode());
+				}
+
+				FieldError fieldError = (FieldError) object;
+				String message = messageSource.getMessage(fieldError, null);
+			}
+
+			ResponseEntity<Object> response = new ResponseEntity<Object>(customerJson, HttpStatus.OK);
+			return response;
+		}*/
+
+		if(bindingResult.hasErrors()){
+			Map<String, String> errors = bindingResult.getFieldErrors().stream()
+					.collect(
+							Collectors.toMap(FieldError::getField, FieldError::getDefaultMessage)
+					);
+
+			response.setSuccess(false);
+			response.setErrorMessages(errors);
+			response.setParamObject(customerJson);
+		}else{
+			response.setSuccess(true);
+			response.setParamObject(customerJson);
+		}
+		return new ResponseEntity<CoreResponse>(response, HttpStatus.OK);
 	}
 }

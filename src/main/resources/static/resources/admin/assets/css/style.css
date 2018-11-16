@@ -599,5 +599,8 @@ header .form-inline {
 .message-show + .dropdown-menu,
 .language-show + .dropdown-menu {
   display: block; }
-
+span.error{
+  color: red;
+  margin-left: 5px;
+}
 /*# sourceMappingURL=style.css.map */
