@@ -122,7 +122,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/i18n/message_en.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
-              <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -140,7 +140,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/controller/guest/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+              <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -149,7 +149,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/service/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -167,7 +167,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -176,7 +176,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/interceptor/PostInterceptor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -187,8 +187,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="201" selection-start-line="201" selection-end-line="201" />
+            <state relative-caret-position="406">
+              <caret line="166" column="24" lean-forward="true" selection-start-line="151" selection-start-column="8" selection-end-line="166" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -563,13 +563,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115207000" />
+    <option name="totallyTimeSpent" value="115305000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1973" y="24" width="1867" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2701812" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2701812" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -584,7 +584,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Spring" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2991632" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2991632" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.3294979" />
@@ -772,7 +772,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/web/interceptor/PostInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -867,7 +867,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/i18n/message_en.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -968,7 +968,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/service/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
@@ -988,8 +988,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="201" selection-start-line="201" selection-end-line="201" />
+        <state relative-caret-position="406">
+          <caret line="166" column="24" lean-forward="true" selection-start-line="151" selection-start-column="8" selection-end-line="166" selection-end-column="24" />
         </state>
       </provider>
     </entry>
