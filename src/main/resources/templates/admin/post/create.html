@@ -3,8 +3,8 @@
       layout:decorate="~{template/admin/layout}">
 <body>
 <div class="content mt-3" layout:fragment="content">
-    <link rel="stylesheet" href="http://cdn.quilljs.com/1.2.0/quill.snow.css">
-    <link rel="stylesheet" href="http://cdn.quilljs.com/1.2.0/quill.bubble.css">
+    <link rel="stylesheet" th:href="@{/resources/admin/assets/css/quill.snow.css}">
+    <link rel="stylesheet" th:href="@{/resources/admin/assets/css/quill.bubble.css}">
 
     <style>
         ng-quill-editor.ng-invalid .ql-container {
@@ -17,9 +17,9 @@
     </style>
 
     <!-- Scripts -->
-    <script type="text/javascript" src="http://code.angularjs.org/1.5.8/angular.min.js"></script>
-    <script type="text/javascript" src="http://cdn.quilljs.com/1.2.0/quill.js"></script>
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/ng-quill/2.2.1/ng-quill.min.js"></script>
+    <script th:src="@{/resources/admin/assets/js/angular.min.js}"></script>
+    <script th:src="@{/resources/admin/assets/js/quill.js}"></script>
+    <script th:src="@{/resources/admin/assets/js/ng-quill.min.js}"></script>
     <script>
         // declare a module and load quillModule
         var myAppModule = angular.module('quillTest', ['ngQuill']);
@@ -132,7 +132,7 @@
         </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script th:src="@{/resources/admin/assets/js/jquery.min.js}"></script>
     <section layout:fragment="js">
         <script>
             var _response = $('#response-panel');
