@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee906873-307a-4d49-8745-92d438d3dc4f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,7 +80,7 @@
           <entry key="html" value="1383" />
           <entry key="java" value="2634" />
           <entry key="js" value="203" />
-          <entry key="properties" value="64" />
+          <entry key="properties" value="67" />
           <entry key="regexp" value="12" />
           <entry key="scss" value="12" />
           <entry key="xml" value="28" />
@@ -94,7 +94,7 @@
           <entry key="JAVA" value="2634" />
           <entry key="JavaScript" value="203" />
           <entry key="PLAIN_TEXT" value="36" />
-          <entry key="Properties" value="64" />
+          <entry key="Properties" value="67" />
           <entry key="RegExp" value="12" />
           <entry key="SCSS" value="12" />
           <entry key="XML" value="28" />
@@ -154,11 +154,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" column="28" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="28" />
+              <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -184,11 +184,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="166" column="24" lean-forward="true" selection-start-line="151" selection-start-column="8" selection-end-line="166" selection-end-column="24" />
+            <state relative-caret-position="61">
+              <caret line="263" lean-forward="true" selection-start-line="263" selection-end-line="263" />
             </state>
           </provider>
         </entry>
@@ -208,7 +208,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.modal.fade</find>
       <find>.modal-backdrop.fade</find>
       <find>txtEditor</find>
       <find>Insert Image</find>
@@ -238,6 +237,7 @@
       <find>validation</find>
       <find>isSuccess</find>
       <find>myserver.hostname</find>
+      <find>org.elasticsearch.client</find>
     </findStrings>
     <replaceStrings>
       <replace>th:src=&quot;@{/resources/admin/assets/images</replace>
@@ -309,9 +309,9 @@
         <option value="$PROJECT_DIR$/src/main/resources/messages_DE.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/guest/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/bloglaptrinh/app/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -563,7 +563,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115305000" />
+    <option name="totallyTimeSpent" value="115755000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1973" y="24" width="1867" height="1056" extended-state="6" />
@@ -979,17 +979,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="28" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="28" />
+        <state relative-caret-position="61">
+          <caret line="263" lean-forward="true" selection-start-line="263" selection-end-line="263" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="166" column="24" lean-forward="true" selection-start-line="151" selection-start-column="8" selection-end-line="166" selection-end-column="24" />
+        <state relative-caret-position="150">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
         </state>
       </provider>
     </entry>
