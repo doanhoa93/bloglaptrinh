@@ -385,6 +385,8 @@
 
             jQuery('#savePost').click(function () {
                 alert(window.location.hostname);
+                /*location.port*/
+                var url = 'http://' + window.location.hostname + 'admin_/post/create_';
                 /* $('#packagename').val() == undefined ? '' : $("#packagename").val().trim();*/
                 var language = 'vn';
                 var status = 'PUBLISHED';
@@ -403,7 +405,7 @@
                 if (validateData()) {
                     jQuery.ajax({
                         type: "PUT",
-                        url: "http://localhost:8080/admin_/post/create_",
+                        url: url,
                         contentType: "application/json",
                         data: JSON.stringify(post),
                         dataType: "json",
