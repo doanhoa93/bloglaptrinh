@@ -26,7 +26,6 @@ public class PostController {
     }
     @GetMapping("post/new")
     public String newPost(){
-        System.out.println("a");
         return "admin/post/create";
     }
 
