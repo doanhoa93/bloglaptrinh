@@ -1,4 +1,4 @@
-package com.bloglaptrinh.app.service;
+package com.bloglaptrinh.app.service.post;
 
 import com.bloglaptrinh.app.domain.Post;
 

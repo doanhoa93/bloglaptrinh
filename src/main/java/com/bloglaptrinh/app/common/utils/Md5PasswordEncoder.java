@@ -1,4 +1,4 @@
-package com.bloglaptrinh.app.utils;
+package com.bloglaptrinh.app.common.utils;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.security.crypto.password.PasswordEncoder;

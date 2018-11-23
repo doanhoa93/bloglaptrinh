@@ -32,19 +32,13 @@ spring:
         prepStmtCacheSize: 250
         prepStmtCacheSqlLimit: 2048
         useServerPrepStmts: true
-  messages:
-    basename: i18n/messages
-  redis:
-    host: localhost
-    port: 6379
-    default_expire_time: 86400
 info:
   component: This is REST API for Notarial Services.
 
-server:
-  port: 8080
-  servlet:
-    context-path:
+#server:
+#  port: 8080
+#  servlet:
+#    context-path:
 logging:
   level:
     org.springframework.web: ERROR

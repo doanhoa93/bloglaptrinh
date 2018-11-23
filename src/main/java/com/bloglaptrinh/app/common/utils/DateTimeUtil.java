@@ -1,4 +1,4 @@
-package com.bloglaptrinh.app.utils;
+package com.bloglaptrinh.app.common.utils;
 
 import java.time.Instant;
 import java.time.LocalDate;

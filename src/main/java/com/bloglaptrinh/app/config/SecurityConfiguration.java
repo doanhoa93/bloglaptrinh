@@ -1,6 +1,6 @@
 package com.bloglaptrinh.app.config;
 
-import com.bloglaptrinh.app.utils.Md5PasswordEncoder;
+import com.bloglaptrinh.app.common.utils.Md5PasswordEncoder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
