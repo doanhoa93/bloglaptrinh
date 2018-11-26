@@ -28,9 +28,9 @@ public class ValidationExceptionHandler extends ResponseEntityExceptionHandler {
 
         ResponseEntity<Response> response;
         if (ex.getApiStatus() == HttpStatus.BAD_REQUEST) {
-            response = responseUtil.badRequestResponse(ex.getData());
+            response = responseUtil.badRequestResponse(null, null);
         } else {
-            response = responseUtil.buildResponse(ex.getApiStatus(), ex.getData(), HttpStatus.OK);
+            response = responseUtil.buildResponse(ex.getApiStatus(), ex.getData(), HttpStatus.OK, null);
         }
 
         return response;
@@ -40,13 +40,13 @@ public class ValidationExceptionHandler extends ResponseEntityExceptionHandler {
     protected ResponseEntity<Object> handleMissingServletRequestParameter(MissingServletRequestParameterException ex,
                                                                           HttpHeaders headers, HttpStatus status, WebRequest request) {
 
-        return new ResponseEntity(new Response<>(HttpStatus.BAD_REQUEST, null), headers, status);
+        return new ResponseEntity(new Response<>(HttpStatus.BAD_REQUEST, null, null), headers, status);
     }
 
     @ExceptionHandler(value = Exception.class)
     public ResponseEntity<Response> handleUncatchException(Exception ex, WebRequest request) {
         LOGGER.error("handleUncatchException", ex);
-        return responseUtil.buildResponse(HttpStatus.INTERNAL_SERVER_ERROR, "Please contact System Admin to resolve problem", HttpStatus.INTERNAL_SERVER_ERROR);
+        return responseUtil.buildResponse(HttpStatus.INTERNAL_SERVER_ERROR, "Please contact System Admin to resolve problem", HttpStatus.INTERNAL_SERVER_ERROR, null);
     }
 
 }

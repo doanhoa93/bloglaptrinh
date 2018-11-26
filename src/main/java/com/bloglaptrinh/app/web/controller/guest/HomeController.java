@@ -1,11 +1,17 @@
 package com.bloglaptrinh.app.web.controller.guest;
 
 import com.bloglaptrinh.app.domain.PaggingResult;
+import com.bloglaptrinh.app.domain.Post;
 import com.bloglaptrinh.app.domain.User;
+import com.bloglaptrinh.app.model.PostSearchRequest;
 import com.bloglaptrinh.app.service.UserService;
+import com.bloglaptrinh.app.service.post.PostService;
+import com.bloglaptrinh.app.web.support.Pagination;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,6 +30,9 @@ public class HomeController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private PostService postService;
+
     /*@Autowired
     private IUserService service;
 
@@ -37,28 +46,16 @@ public class HomeController {
     private PaggingResult paggingResult;
 
     @GetMapping({"trang-chu","/"})
-    public String dashboard(Model model, HttpServletRequest request){
-        try {
-            //List<Category> categoryList = categoryService.getAll();
-            String page = request.getParameter("page");
-            if(StringUtils.isBlank(page)){
-                page = "1";
-            }
-            if(!StringUtils.isNumeric(page)){
-                page = "1";
-            }
-            List<String> nameCategory = new ArrayList<>();
-            nameCategory.add("C/C++");
-            nameCategory.add("Java");
-            nameCategory.add("C#");
-            nameCategory.add("PHP");
-            nameCategory.add("Python");
-            nameCategory.add("Ngôn ngữ khác");
-            model.addAttribute("listItem",paggingResult.getItemList());
-            model.addAttribute("listCategory",nameCategory);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+    public String dashboard(@RequestParam(defaultValue = "") String keyword,
+                            @PageableDefault(50) Pageable pageable,
+                            Model model,
+                            HttpServletRequest servletRequest) {
+        PostSearchRequest request = new PostSearchRequest("vi").withKeyword(keyword);
+        Page<Post> posts = postService.getPosts(request, pageable);
+        model.addAttribute("keyword", keyword);
+        model.addAttribute("posts", posts);
+        model.addAttribute("pageable", pageable);
+        model.addAttribute("pagination", new Pagination<>(posts, servletRequest));
         return "guest/index";
     }
 

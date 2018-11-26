@@ -168,8 +168,8 @@
                 var language = 'vn';
                 var status = 'PUBLISHED';
                 var views = parseInt('10');
-                var createdAt = '2018-11-11 14:30:54';
-                var updatedAt = '2018-11-11 14:30:54';
+                var createdAt = now();
+                var updatedAt = now();
                 var body = 'Hello';
                 var postJson = new Object();
                 postJson.language = language;
@@ -208,21 +208,21 @@
 
             $('#savePost').click(function () {
                /* $('#packagename').val() == undefined ? '' : $("#packagename").val().trim();*/
-                var title = 'hahaha';
+                var title = $('#cc-title').val();
                 var language = 'vn';
                 var status = 'PUBLISHED';
                 var views = parseInt('10');
-                var createdAt = '2018-11-11 14:30:54';
-                var updatedAt = '2018-11-11 14:30:54';
-                var body = $('.fr-view').html();
+                var createdAt = now();
+                var updatedAt = now();
+                var body = $('.ql-editor').html();
                 var postJson = new Object();
-                postJson.title = $('#cc-title').val();
+                postJson.title = title;
                 postJson.language = language;
                 postJson.status = status;
                 postJson.views = views;
                 postJson.createdAt = createdAt;
                 postJson.updatedAt = updatedAt;
-                postJson.body = $('.fr-view').html();
+                postJson.body = body;
                 if (validateData()) {
                     $.ajax({
                         type    : 'POST',
@@ -237,7 +237,7 @@
                         },
                         success: function (data) {
                             console.log('success');
-                            console.log(data);
+                            console.log(data.errorMessages);
                             showMessage('success', 'Tạo bài viết thành công.', '.msgBox');
                         }
                     });

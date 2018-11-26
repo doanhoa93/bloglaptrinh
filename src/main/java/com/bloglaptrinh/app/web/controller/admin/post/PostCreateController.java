@@ -10,12 +10,15 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.validation.Valid;
 import java.io.IOException;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("admin_")
@@ -27,8 +30,14 @@ public class PostCreateController extends AbstractBaseController {
     @PostMapping("post/create")
     public ResponseEntity<Response> newPost(@RequestBody @Valid PostCreateForm postJson,
                                             BindingResult bindingResult, Model model) throws IOException {
-
-        return responseUtil.successResponse(postService.add(postJson.convertToPost()));
+        Map<String, String> errors = null;
+        if(bindingResult.hasErrors()){
+            errors = bindingResult.getFieldErrors().stream()
+                    .collect(
+                            Collectors.toMap(FieldError::getField, FieldError::getDefaultMessage)
+                    );
+        }
+        return responseUtil.successResponse(postService.add(postJson.convertToPost()), errors);
     }
 
 }

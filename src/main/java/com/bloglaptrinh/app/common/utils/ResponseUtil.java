@@ -11,18 +11,18 @@ import java.util.Map;
 public class ResponseUtil {
 
     private Response createResponse(HttpStatus apiStatus, Object data, Map<String, String> errorMessages) {
-        return new Response(apiStatus, data, null);
+        return new Response(apiStatus, data, errorMessages);
     }
 
     public ResponseEntity<Response> buildResponse(HttpStatus apiStatus, Object data, HttpStatus httpStatus, Map<String, String> errorMessages) {
-        return new ResponseEntity(createResponse(apiStatus, data), httpStatus);
+        return new ResponseEntity(createResponse(apiStatus, data, errorMessages), httpStatus);
     }
 
     public ResponseEntity<Response> successResponse(Object data, Map<String, String> errorMessages) {
-        return buildResponse(HttpStatus.OK, data, HttpStatus.OK, );
+        return buildResponse(HttpStatus.OK, data, HttpStatus.OK, errorMessages);
     }
 
-    public ResponseEntity<Response> badRequestResponse(Map<String, String> errMap) {
-        return buildResponse(HttpStatus.BAD_REQUEST, errMap, HttpStatus.BAD_REQUEST);
+    public ResponseEntity<Response> badRequestResponse(Map<String, String> errMap, Map<String, String> errorMessages) {
+        return buildResponse(HttpStatus.BAD_REQUEST, errMap, HttpStatus.BAD_REQUEST, errorMessages);
     }
 }

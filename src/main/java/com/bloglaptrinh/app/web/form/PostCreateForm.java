@@ -2,13 +2,24 @@ package com.bloglaptrinh.app.web.form;
 
 import com.bloglaptrinh.app.domain.Post;
 
+import javax.validation.constraints.NotBlank;
+
 public class PostCreateForm {
+
+    @NotBlank(message = "Tiêu đề bài viết không được để trống!")
     private String title;
+
     private String language;
+
     private String status;
+
     private String views;
+
     private String createdAt;
+
     private String updatedAt;
+
+    @NotBlank(message = "Nội dung bài viết không được để trống!")
     private String body;
 
     public enum Status {

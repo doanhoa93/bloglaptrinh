@@ -13,7 +13,7 @@ import java.util.List;
 
 @Repository
 @Transactional
-public interface PostRepository extends JpaRepository<Post, Long> {
+public interface PostRepository extends JpaRepository<Post, Long>, PostRepositoryCustom  {
 	
 	@EntityGraph(value = Post.DEEP_GRAPH_NAME, type = EntityGraph.EntityGraphType.FETCH)
 	Post findOneByIdAndLanguage(Long id, String language);
