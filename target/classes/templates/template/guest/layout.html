@@ -752,7 +752,18 @@
         $("#msg").emojioneArea({
             autoHideFilters: true
         });
+        /*$.getJSON('http://ipinfo.io', function(data){
+            console.log(data);
+        });
+        alert(getIpAddress());*/
     });
+    var ipinfo;
+
+    $.getJSON("http://ipinfo.io", function (data) {
+
+        $("#info").html("City: " + data.city + " ,County: " + data.country + " ,IP: " + data.ip + " ,Location: " + data.loc + " ,Organisation: " + data.org + " ,Postal Code: " + data.postal + " ,Region: " + data.region + "")
+        console.log(data);
+    })
 </script>
 <section layout:fragment="js"></section>
 </body>

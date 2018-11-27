@@ -24,6 +24,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+import java.util.ArrayList;
 import java.util.List;
 
 public class PostRepositoryImpl implements PostRepositoryCustom {
@@ -47,7 +48,8 @@ public class PostRepositoryImpl implements PostRepositoryCustom {
         int resultSize = 0;
 
         @SuppressWarnings("unchecked")
-        List<Post> results = null;
+        List<Post> results = new ArrayList<>();
+        results.add(new Post());
         return new PageImpl<>(results, pageable, resultSize);
     }
 }
