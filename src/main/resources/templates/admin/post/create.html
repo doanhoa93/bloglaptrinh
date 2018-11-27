@@ -3,70 +3,18 @@
       layout:decorate="~{template/admin/layout}">
 <body>
 <div class="content mt-3" layout:fragment="content">
+    <link rel="stylesheet"
+          href="http://tutsplus.github.io/syntax-highlighter-demos/highlighters/highlightjs/styles/monokai_sublime.css">
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <style>
-        .ql-editor{
+        #savePost{
+            max-width: 30%;
+            min-width: 50%;
+            text-align: center !important;
+        }
+
+        #editor{
             min-height: 300px;
-        }
-/*
-        .form-control {
-            display: block !important;
-            width: 100% !important;
-            padding: .375rem .75rem !important;
-            font-size: 1rem !important;
-            line-height: 1.5 !important;
-            color: #495057 !important;
-            background-color: #fff !important;
-            background-clip: padding-box !important;
-            border: 1px solid #ced4da !important;
-            border-radius: .25rem !important;
-            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out !important;
-        }*/
-
-        .overlay {
-            height: 90%;
-            width: 0;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #F0F1F6;
-            color: black;
-            overflow-x: hidden;
-            transition: 0.5s;
-        }
-
-        .overlay a {
-            padding-top: 10px;
-            padding-right: 10px;
-            text-decoration: none;
-            font-size: 30px !important;
-            color: #818181;
-            display: block;
-            transition: 0.3s;
-        }
-
-        .overlay a:hover, .overlay a:focus {
-            color: #f1f1f1;
-        }
-
-        .overlay .closebtn {
-            top: 20px;
-            right: 45px;
-            font-size: 60px;
-        }
-
-        .closebtn:hover{
-            color: #2B2F36 !important;
-        }
-
-        @media screen and (max-height: 450px) {
-            .overlay a {font-size: 20px}
-            .overlay .closebtn {
-                font-size: 40px;
-                top: 15px;
-                right: 35px;
-            }
         }
     </style>
     <div class="msgBox"></div>
@@ -85,10 +33,10 @@
                             <div class="card-body">
                                 <form action="" method="post" novalidate="novalidate">
                                     <div class="form-group">
-                                        <label for="cc-title" class="control-label mb-1">Tiêu đề</label>
-                                        <input id="cc-title" name="name" type="text" class="form-control" placeholder="Tiêu đề" aria-required="true" aria-invalid="false">
+                                        <label for="title" class="control-label mb-1">Tiêu đề</label>
+                                        <input id="title" name="title" type="text" class="form-control" placeholder="Tiêu đề" aria-required="true" aria-invalid="false">
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group" id="tags">
                                         <label for="tagSelect" class="control-label mb-1">Tag</label>
                                         <select id="tagSelect" data-placeholder="--Choose tag--" multiple class="standardSelect" tabindex="5">
                                             <option value=""></option>
@@ -100,7 +48,7 @@
                                         </select>
                                         <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group" id="categories">
                                         <label for="category" class="control-label mb-1">Danh mục</label>
                                         <select id="category" data-placeholder="--Choose category--" multiple class="standardSelect" tabindex="5">
                                             <option value=""></option>
@@ -118,111 +66,62 @@
                                     </div>
                                     <div class="form-group"></div>
                                     <div class="row">
-                                        <div class="col-4"></div>
-                                        <div class="col-4">
-                                            <a id="savePost" class="btn btn-lg btn-primary btn-block" style="color: white">
-                                                <i class="fa fa-dot-circle-o"></i>
-                                                <span id="post-button-amount">Thêm bài viết</span>
-                                                <span id="post-button-sending" style="display:none;">Sending…</span>
-                                            </a>
-                                            <a id="savePosts" class="btn btn-lg btn-primary btn-block" style="color: white">
-                                                <i class="fa fa-dot-circle-o"></i>
-                                                <span id="post-button-amounts">Thêm bài</span>
-                                            </a>
-                                        </div>
-                                        <div id="resultContainer" style="display: none;">
-                                            <hr/>
-                                            <h4 style="color: green;">JSON Response From Server</h4>
-                                            <pre style="color: green;">
-                                            <code></code>
-                                           </pre>
-                                        </div>
-                                        <div class="col-4"></div>
+                                        <a id="savePost" class="btn btn-lg btn-primary btn-block" style="color: white">
+                                            <i class="fa fa-dot-circle-o"></i>
+                                            <span id="post-button-amount">Thêm bài viết</span>
+                                            <span id="post-button-sending" style="display:none;">Sending…</span>
+                                        </a>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
-                    <div class="preview">
-                        <a id="clickpreview">sdsdsd</a>
-                        <a id='btnPreview' style='cursor: pointer' href='#'>Preview</a>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="myNav" class="overlay">
-        <div style="width: 100%">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        </div>
-        <div class="col-md-12" id="contentPreview" style="padding: 50px">
 
-        </div>
-    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
     <script th:src="@{/resources/admin/assets/js/jquery.min.js}"></script>
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
     <section layout:fragment="js">
         <script>
-            var _response = $('#response-panel');
-            function ajaxEntity(){
-                var language = 'vn';
-                var status = 'PUBLISHED';
-                var views = parseInt('10');
-                var createdAt = now();
-                var updatedAt = now();
-                var body = 'Hello';
-                var postJson = new Object();
-                postJson.language = language;
-                postJson.status = status;
-                postJson.views = views;
-                postJson.createdAt = createdAt;
-                postJson.updatedAt = updatedAt;
-                postJson.body = body;
-
-                $.ajax({
-                    type    : 'POST', // method
-                    url     : 'http://localhost:8080/entity/create',
-                    async   : 'true', // true
-                    data: JSON.stringify(postJson),
-                    contentType : 'application/json',
-                    success : function(data, status, xhr){
-                        responseJson(data);
-                    },
-                    error   : function(error){
-                        console.log("error", error);
-                        responseError(error);
-                    }
-                });
-            }
-            function convertJson(data){
-                return JSON.stringify(data, true, 2);
-            }
-
-            function responseJson(data){
-                _response.html(convertJson(data));
-            }
-
-            function responseError(data){
-                _response.html(data.responseText);
-            }
+            (function() {
+                var el = document.querySelector('.ql-syntax');
+                var esc;
+                if(el != null && el != ''){
+                    esc = _.escape(el.innerHTML);
+                    el.innerHTML = esc;
+                    hljs.highlightBlock(el);
+                }
+            })();
 
             $('#savePost').click(function () {
                /* $('#packagename').val() == undefined ? '' : $("#packagename").val().trim();*/
-                var title = $('#cc-title').val();
-                var language = 'vn';
-                var status = 'PUBLISHED';
-                var views = parseInt('10');
-                var createdAt = now();
-                var updatedAt = now();
-                var body = $('.ql-editor').html();
+                var tags = [];
+                var categories = [];
+                $( "#tags .chosen-choices .search-choice" ).each(function( index ) {
+                    if($(this).text() != undefined && $(this).text() != ''){
+                        tags.push($(this).text());
+                    }
+                });
+
+                $( "#categories .chosen-choices .search-choice" ).each(function( index ) {
+                    if($(this).text() != undefined && $(this).text() != ''){
+                        categories.push($(this).text());
+                    }
+                });
+
                 var postJson = new Object();
-                postJson.title = title;
-                postJson.language = language;
-                postJson.status = status;
-                postJson.views = views;
-                postJson.createdAt = createdAt;
-                postJson.updatedAt = updatedAt;
-                postJson.body = body;
+                postJson.title = $('#title').val();
+                postJson.language = 'vn';
+                postJson.status = 'PUBLISHED';
+                postJson.views = parseInt('10');
+                postJson.tags = tags;
+                postJson.categories = categories;
+                postJson.created_at = now();
+                postJson.updated_at = now();
+                postJson.body = $('.ql-editor').html();
                 if (validateData()) {
                     $.ajax({
                         type    : 'POST',
@@ -232,51 +131,19 @@
                         contentType : 'application/json',
                         dataType: "json",
                         error: function (request, status, error) {
+                            alert("error");
                             console.log('Error ' + request.responseText + "\n" + status + "\n" + error);
-                            showMessage('error', 'Tạo bài viết thất bại!', '.msgBox');
-                        },
-                        success: function (data) {
-                            console.log('success');
-                            console.log(data.errorMessages);
-                            showMessage('success', 'Tạo bài viết thành công.', '.msgBox');
-                        }
-                    });
-                } else {
-                    showMessage('error', 'Dữ liệu không hợp lê!', '.msgBox');
-                    console.log('error');
-                }
-            });
-
-
-            $('#savePosts').click(function () {
-                var body = $(".ql-editor").html();
-                alert(body);
-                var contextRoot = "${pageContext.request.contextPath}";
-                $('input').next().remove();
-                var customerJson = new Object();
-                customerJson.name = $('#cc-title').val();
-                customerJson.email = 'hoa9x3@gmail.com';
-                customerJson.age = parseInt('20');
-                customerJson.phone = '2323Dwed2332';
-                if (validateData()) {
-                    $.ajax({
-                        type    : 'POST',
-                        url     : 'http://localhost:8080/cust/save',
-                        async   : 'true',
-                        data: JSON.stringify(customerJson),
-                        contentType : 'application/json',
-                        dataType: "json",
-                        error: function (request, status, error) {
-                            console.log('status ' + request.responseText + "\n" + status + "\n" + error);
+                            showMessage('error', 'Tạo bài viết không thành công!', '.msgBox');
                         },
                         success: function (dataResponse) {
                             if(dataResponse.isSuccess){
-                                $('#resultContainer pre code').text(JSON.stringify(dataResponse.paramObject));
-                                $('#resultContainer').show();
+                                showMessage('success', 'Tạo bài viết thành công.', '.msgBox');
                                 $('input').removeClass("is-invalid");
+                                $('.error').hide();
                             }else{
                                 //Set error messages
                                 $.each(dataResponse.errorMessages,function(key,value){
+                                    showMessage('error', dataResponse.message, '.msgBox');
                                     $('input[name='+key+']').after('<span class="error">'+value+'</span>');
                                     $('input[name='+key+']').addClass("is-invalid");
                                 });
@@ -284,12 +151,19 @@
                         }
                     });
                 } else {
+                    showMessage('error', 'Dữ liệu không hợp lệ!', '.msgBox');
                     console.log('error');
                 }
             });
+
             function validateData() {
                 return true;
             }
+
+            hljs.configure({
+                languages: ['javascript', 'ruby', 'python', 'java', 'css', 'sql', 'perl', 'html', 'coffeescript', 'properties', 'xml', 'json']
+            });
+
             var toolbarOptions = [
                 [{
                     'header': [1, 2, 3, 4, 5, 6, false]
@@ -311,39 +185,40 @@
                     'script': 'sub'
                 }, {
                     'script': 'super'
-                }], // superscript/subscript
+                }],
                 [{
                     'indent': '-1'
                 }, {
                     'indent': '+1'
-                }], // outdent/indent
+                }],
                 [{
                     'direction': 'rtl'
-                }], // text direction
+                }],
 
                 [{
                     'size': ['small', false, 'large', 'huge']
-                }], // custom dropdown
+                }],
 
                 [{
                     'color': []
                 }, {
                     'background': []
-                }], // dropdown with defaults from theme
+                }],
                 [{
                     'font': []
                 }],
                 [{
                     'align': []
                 }],
-                ['link', 'image', 'video'],
+                ['link', 'video'],
 
                 ['clean']
             ];
 
             var quillFull = new Quill('#editor', {
                 modules: {
-                    toolbar: toolbarOptions
+                    toolbar: toolbarOptions,
+                    syntax: true
                 },
                 theme: 'snow',
                 placeholder: "Write something..."
@@ -354,41 +229,15 @@
                 $(".preview").html(html)
             });*/
 
-
-            $( '#clickpreview' ).on('click', function() {
-                console.log('aaaaa');
-            });
-
-            function preview(){
-                sample1('');
-            }
-
-            jQuery(function($) {
-                $('.ql-toolbar').append("<a  onclick='openNav()' class='pull-right' style='cursor: pointer; font-size: 20px' title='Preview'><span class='ti-eye'></span></a>")
-            });
-
-            function openNav() {
-                document.getElementById("myNav").style.width = "95%";
-                document.getElementById("myNav").style.margin = '50px';
-                var content = quillFull.root.innerHTML;
-                $('#contentPreview').append(content);
-            }
-
-            function closeNav() {
-                document.getElementById("myNav").style.width = "0%";
-                $('#contentPreview').html('');
-            }
-        </script>
-        <script>
             jQuery(document).ready(function() {
                 jQuery(".standardSelect").chosen({
                     disable_search_threshold: 10,
+                    search:true,
                     no_results_text: "Oops, nothing found!",
                     width: "100%"
                 });
             });
         </script>
-
     </section>
 </div>
 </body>

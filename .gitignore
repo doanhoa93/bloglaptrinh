@@ -35,3 +35,18 @@ hs_err_pid*
 */build
 /bin
 */bin
+
+# Package Files #
+*.class
+*.jar
+*.war
+*.ear
+
+/target/
+*.classpath
+*.project
+*.settings
+*.springBeans
+/.idea
+/.DS_Store
+*.iml

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sufee Admin - HTML5 Admin Template</title>
+    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" th:href="@{/resources/admin/assets/css/normalize.css}">
+    <link rel="stylesheet" th:href="@{/resources/admin/assets/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/resources/admin/assets/css/font-awesome.min.css}">
+    <link rel="stylesheet" th:href="@{/resources/admin/assets/css/themify-icons.css}">
+    <link rel="stylesheet" th:href="@{/resources/admin/assets/css/flag-icon.min.css}">
+    <link rel="stylesheet" th:href="@{/resources/admin/assets/css/cs-skin-elastic.css}">
+    <link rel="stylesheet" th:href="@{/resources/admin/assets/scss/style.css}">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+<body class="bg-dark">
+<div class="sufee-login d-flex align-content-center flex-wrap">
+    <div class="container">
+        <div class="login-content">
+            <div class="login-form">
+                <form action="home" th:action="@{/login}" method="post">
+                    <div class="form-group has-feedback">
+                        <input type="email" class="form-control" name="username"
+                               placeholder="Email" /> <span
+                            class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <input type="password" class="form-control" name="password"
+                               placeholder="Password" /> <span
+                            class="glyphicon glyphicon-lock form-control-feedback"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="remember-me"> Remember Me
+                        </label>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-xs-offset-8 col-xs-4">
+                            <button type="submit" class="btn btn-primary btn-block btn-flat">LogIn</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div th:if="${param.error}"
+                                 class="alert alert-danger alert-dismissable">
+                                <p>
+                                    <i class="icon fa fa-ban"></i> <span
+                                        th:text="#{error.login_failed}">Invalid Email and
+											Password.</span>
+                                </p>
+                            </div>
+                            <div th:if="${param.logout}"
+                                 class="alert alert-info alert-dismissable">
+                                <p>
+                                    <i class="icon fa fa-info"></i> <span
+                                        th:text="#{info.logout_success}">You have been logged
+											out.</span>
+                                </p>
+                            </div>
+                            <div th:if="${msg!=null}"
+                                 class="alert alert-warning alert-dismissable">
+                                <p>
+                                    <i class="icon fa fa-warning"></i> <span th:text="${msg}"></span>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script th:src="@{/resources/admin/assets/js/vendor/jquery-2.1.4.min.js}"></script>
+<script th:src="@{/resources/admin/assets/js/popper.min.js}"></script>
+<script th:src="@{/resources/admin/assets/js/plugins.js}"></script>
+<script th:src="@{/resources/admin/assets/js/main.js}"></script>
+
+</body>
+</html>

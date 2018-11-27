@@ -20,29 +20,10 @@ $(document).ready(function() {
     };
 
     //------- Lightbox  js --------//  
-
-    $('.img-gal').magnificPopup({
-        type: 'image',
-        gallery: {
-            enabled: true
-        }
-    });
-
-    $('.play-btn').magnificPopup({
-        type: 'iframe',
-        mainClass: 'mfp-fade',
-        removalDelay: 160,
-        preloader: false,
-        fixedContentPos: false
-    });
-
-    //------- Datepicker  js --------//  
-
       $( function() {
         $( "#datepicker" ).datepicker();
         $( "#datepicker2" ).datepicker();
       } );
-
 
     //------- Superfist nav menu  js --------//  
 

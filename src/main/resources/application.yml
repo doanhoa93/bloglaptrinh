@@ -19,12 +19,14 @@ spring:
     hibernate:
       ddl-auto: ${hibernate.ddl-auto}
       format-sql: ${hibernate.format-sql}
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
 
   datasource:
-    type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mysql://${db.hostname}:${db.port}/${db.schema}?createDatabaseIfNotExist=true&autoReconnect=true&zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf8&useSSL=false
-    username: root
-    password:
+    url: jdbc:mysql://${db.hostname}:${db.port}/${db.schema}?useSSL=false&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true&autoReconnect=true&zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf8
+    username: ${db.username}
+    password: ${db.password}
 
     hikari:
       data-source-properties:
