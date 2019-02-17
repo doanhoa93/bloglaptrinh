@@ -35,7 +35,7 @@ spring:
         prepStmtCacheSqlLimit: 2048
         useServerPrepStmts: true
 info:
-  component: This is REST API for Notarial Services.
+  component: This is website about programming
 
 #server:
 #  port: 8080
@@ -44,4 +44,4 @@ info:
 logging:
   level:
     org.springframework.web: ERROR
-    com.raysmond.blog: DEBUG
+    bloglaptrinh.com: DEBUG

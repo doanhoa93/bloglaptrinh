@@ -1,6 +1,5 @@
 package bloglaptrinh.com.web.controller.admin.post;
 
-
 import bloglaptrinh.com.service.post.PostService;
 import bloglaptrinh.com.web.controller.AbstractBaseController;
 import bloglaptrinh.com.web.form.PostCreateForm;
@@ -28,7 +27,7 @@ public class PostCreateController extends AbstractBaseController {
     private PostService postService;
 
     @PostMapping("post/create")
-    public ResponseEntity<Response> newPost(@RequestBody @Valid PostCreateForm postJson,
+    public ResponseEntity<Response> newPost(@RequestBody @Valid PostCreateForm postCreateForm,
                                             BindingResult bindingResult, Model model) throws IOException {
         Map<String, String> errors = null;
         if(bindingResult.hasErrors()){
@@ -36,9 +35,9 @@ public class PostCreateController extends AbstractBaseController {
                     .collect(
                             Collectors.toMap(FieldError::getField, FieldError::getDefaultMessage)
                     );
-            return responseUtil.errorResponse(postJson, errors);
+            return responseUtil.errorResponse(postCreateForm, errors);
         }
-        return responseUtil.successResponse(postService.add(postJson.convertToPost()), errors);
+        return responseUtil.successResponse(postService.add(postCreateForm.convert(postCreateForm)), errors);
     }
 
 }

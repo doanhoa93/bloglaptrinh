@@ -2,8 +2,8 @@ package bloglaptrinh.com.model;
 
 import bloglaptrinh.com.domain.BlogLanguage;
 import bloglaptrinh.com.domain.Post;
-import org.apache.commons.lang.builder.ToStringBuilder;
-import org.apache.commons.lang.builder.ToStringStyle;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.MultiValueMap;
@@ -13,7 +13,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 
-@SuppressWarnings("serial")
 public class PageSearchRequest implements Serializable {
 
 	private String keyword;

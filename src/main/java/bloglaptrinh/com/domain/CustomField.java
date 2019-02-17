@@ -1,9 +1,8 @@
 package bloglaptrinh.com.domain;
 
-
-import org.apache.commons.lang.builder.CompareToBuilder;
-import org.apache.commons.lang.builder.EqualsBuilder;
-import org.apache.commons.lang.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.CompareToBuilder;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.SortNatural;
@@ -24,7 +23,6 @@ import java.util.TreeSet;
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = {"code", "language"}))
 @DynamicInsert
 @DynamicUpdate
-@SuppressWarnings("serial")
 public class CustomField extends DomainObject<Long> implements Comparable<CustomField> {
 
 	public static final String SHALLOW_GRAPH_NAME = "CUSTOM_FIELD_SHALLOW_GRAPH";

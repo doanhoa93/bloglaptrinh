@@ -1,6 +1,5 @@
 package bloglaptrinh.com.web.controller.admin;
 
-import bloglaptrinh.com.common.utils.BaseController;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("admin_")
-public class DashboardController extends BaseController {
+public class DashboardController {
 
     @GetMapping
     public String dashboard(Model model){

@@ -14,10 +14,11 @@ public class CoreException extends RuntimeException {
         this.apiStatus = apiStatus;
     }
 
-    /**
-     * @param apiStatus
-     * @param data
-     */
+    public CoreException(String message, HttpStatus apiStatus) {
+        super(message);
+        this.apiStatus = apiStatus;
+    }
+
     public CoreException(HttpStatus apiStatus, List<ParamError> data) {
         this(apiStatus);
         this.data = data;

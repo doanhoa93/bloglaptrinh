@@ -24,17 +24,7 @@ public class Response<T extends Object> implements Serializable {
 
         this.status = apiStatus.value();
         this.errorMessages = errorMessages;
-        this.data = data;
-    }
-
-    public Response(HttpStatus apiStatus, T data, Map<String, String> errorMessages, String msgApi) {
-        if (apiStatus == null) {
-            throw new IllegalArgumentException("APIStatus must not be null");
-        }
-
-        this.status = apiStatus.value();
-        this.errorMessages = errorMessages;
-        this.message = msgApi;
+        this.message = apiStatus.getReasonPhrase();
         this.data = data;
     }
 

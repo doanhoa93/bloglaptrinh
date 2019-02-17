@@ -12,5 +12,8 @@ public interface PostService {
     public Post add(Post post) throws IOException;
 
     public Page<Post> getPosts(PostSearchRequest request, Pageable pageable);
+
     public Post getPostById(Long id);
+
+    public Post getPostByCode(String code);
 }

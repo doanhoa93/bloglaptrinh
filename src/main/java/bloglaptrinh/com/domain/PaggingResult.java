@@ -3,7 +3,6 @@ package bloglaptrinh.com.domain;
 
 import lombok.*;
 
-import javax.inject.Named;
 import java.util.List;
 
 @Data
@@ -11,7 +10,6 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Named
 public class PaggingResult {
     private long firstPage;
     private long lastPage;

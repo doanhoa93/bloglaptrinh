@@ -9,7 +9,7 @@
     <!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="img/fav.png}">
-    <link rel="shortcut icon" th:href="@{/resources/images/favicon.png}">
+    <link rel="shortcut icon" th:href="@{/resources/blog/img/favicon.png}">
     <!-- Author Meta -->
     <meta name="author" content="Doan Quang Hoa">
     <!-- Meta Description -->
@@ -28,17 +28,8 @@
     <link th:href="@{/resources/blog/css/owl.carousel.css}" rel="stylesheet" media='all'/>
     <link th:href="@{/resources/blog/css/jquery-ui.css}" rel="stylesheet" media='all'/>
     <link th:href="@{/resources/blog/css/main.css}" rel="stylesheet" media='all'/>
-
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/emojione/1.5.2/assets/sprites/emojione.sprites.css" media="screen">
-	<link th:href="@{/resources/css/emojionearea.min.css}" rel="stylesheet" media='all'/>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="http://mervick.github.io/lib/google-code-prettify/skins/tomorrow.css" media="screen">
-    <style>
-        a :hover{
-            color: #FF0049 !important;
-        }
-    </style>
+    <link th:href="@{/resources/blog/css/normalize.min.css}" rel="stylesheet" media='all'/>
+    <link th:href="@{/resources/blog/css/font-awesome.min.css}" rel="stylesheet" media='all'/>
 </head>
 <body>
 <section layout:fragment="header">
@@ -61,9 +52,6 @@
                                     sec:authentication="principal.username"></span></a></li>
                             <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}"><span>Logout</span></a><a
                                     href="#"></a></li>
-                            <!--<div sec:authorize="isAuthenticated()">
-                                <span sec:authentication="principal.authorities"></span>
-                            </div>-->
                         </ul>
                     </div>
                 </div>
@@ -74,7 +62,7 @@
                 <div class="row justify-content-between align-items-center">
                     <div class="col-lg-4 col-md-4 col-sm-12 logo-left no-padding">
                         <a th:href="@{/}">
-                            <img class="img-fluid" th:src="@{/resources/blog/img/logo5.png}" alt="">
+                            <img class="img-fluid" th:src="@{/resources/blog/img/logo1.gif}" alt="">
                         </a>
                     </div>
                     <div class="col-lg-8 col-md-8 col-sm-12 logo-right no-padding ads-banner">
@@ -724,9 +712,8 @@
             </div>
         </div>
         <div class="footer-bottom row align-items-center">
-            <p class="footer-text m-0 col-lg-8 col-md-12"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            <p class="footer-text m-0 col-lg-8 col-md-12">
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
             <div class="col-lg-4 col-md-12 footer-social">
                 <a href="#"><i class="fa fa-facebook"></i></a>
                 <a href="#"><i class="fa fa-twitter"></i></a>
@@ -736,44 +723,18 @@
         </div>
     </div>
 </footer>
-
-
-
-<!--<script th:src="@{/resources/blog/js/vendor/jquery-2.2.4.min.js}"></script>-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script th:src="@{/resources/blog/js/vendor/bootstrap.min.js}"></script>
-<script th:src="@{/resources/blog/js/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA}"></script>
-<script th:src="@{/resources/blog/js/easing.min.js}"></script>
-<script th:src="@{/resources/blog/js/hoverIntent.js}"></script>
-<script th:src="@{/resources/blog/js/superfish.min.js}"></script>
-<script th:src="@{/resources/blog/js/jquery.ajaxchimp.min.js}"></script>
-<script th:src="@{/resources/blog/js/jquery.magnific-popup.min.js}"></script>
-<script th:src="@{/resources/blog/js/mn-accordion.js}"></script>
-<script th:src="@{/resources/blog/js/jquery-ui.js}"></script>
-<script th:src="@{/resources/blog/js/jquery.nice-select.min.js}"></script>
-<script th:src="@{/resources/blog/js/owl.carousel.min.js}"></script>
-<script th:src="@{/resources/blog/js/mail-script.js}"></script>
-<script th:src="@{/resources/blog/js/main.js}"></script>
-<script type="text/javascript" src="http://mervick.github.io/lib/google-code-prettify/prettify.js"></script>
-<script th:src="@{/resources/js/emojionearea.min.js}"></script>
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        $("#msg").emojioneArea({
-            autoHideFilters: true
-        });
-        // Usage
-
-        getUserIP(function(ip){
-            console.log("Got IP! :" + ip);
-        });
-    });
-    /*$.getJSON("http://ipinfo.io", function (data) {
-        $("#info").html("City: " + data.city + " ,County: " + data.country + " ,IP: " + data.ip + " ,Location: " + data.loc + " ,Organisation: " + data.org + " ,Postal Code: " + data.postal + " ,Region: " + data.region + "")
-        console.log(data);
-    })*/
-</script>
+<script type="text/javascript" th:src="@{/resources/blog/js/jquery.min.3.3.1.js}"></script>
+<script type="text/javascript" th:src="@{/resources/blog/js/popper.min.js}"></script>
+<script type="text/javascript" th:src="@{/resources/blog/js/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{/resources/blog/js/easing.min.js}"></script>
+<script type="text/javascript" th:src="@{/resources/blog/js/hoverIntent.js}"></script>
+<script type="text/javascript" th:src="@{/resources/blog/js/jquery.ajaxchimp.min.js}"></script>
+<script type="text/javascript" th:src="@{/resources/blog/js/jquery.magnific-popup.min.js}"></script>
+<script type="text/javascript" th:src="@{/resources/blog/js/mn-accordion.js}"></script>
+<script type="text/javascript" th:src="@{/resources/blog/js/jquery-ui.js}"></script>
+<script type="text/javascript" th:src="@{/resources/blog/js/jquery.nice-select.min.js}"></script>
+<script type="text/javascript" th:src="@{/resources/blog/js/mail-script.js}"></script>
+<script type="text/javascript" th:src="@{/resources/blog/js/main.js}"></script>
 <section layout:fragment="js"></section>
 </body>
 </html>

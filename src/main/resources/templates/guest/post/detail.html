@@ -8,8 +8,7 @@
 <body>
 <section layout:fragment="feature"></section>
 <section layout:fragment="content">
-    <link rel="stylesheet"
-          href="http://tutsplus.github.io/syntax-highlighter-demos/highlighters/highlightjs/styles/monokai_sublime.css">
+    <link rel="stylesheet" th:href="@{/resources/admin/assets/css/monokai_sublime.css}">
     <style>
         .ql-syntax{
             background-color: #232323 !important;
@@ -59,8 +58,8 @@
                                 <div th:utext="${item.body}"></div>
                                 <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</blockquote>
                                 <div class="navigation-wrap justify-content-between d-flex">
-                                    <a class="prev" th:href="@{'/bai-viet/' + ${item.code} + '?prev=true&id=' + ${item.id}}" ><span class="lnr lnr-arrow-left"></span>Prev Post</a>
-                                    <a class="next" th:href="@{'/bai-viet/' + ${item.code} + '?next=true&id=' + ${item.id}}" >Next Post<span class="lnr lnr-arrow-right"></span></a>
+                                    <a class="prev" th:href="@{'/post/' + ${item.code} + '?prev=true&id=' + ${item.id}}" ><span class="lnr lnr-arrow-left"></span>Prev Post</a>
+                                    <a class="next" th:href="@{'/post/' + ${item.code} + '?next=true&id=' + ${item.id}}" >Next Post<span class="lnr lnr-arrow-right"></span></a>
                                 </div>
                                 <div class="comment-sec-area">
                                     <div class="container">

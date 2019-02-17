@@ -1,7 +1,6 @@
 package bloglaptrinh.com.web.form.validator;
 
 import org.apache.commons.beanutils.BeanUtils;
-
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 

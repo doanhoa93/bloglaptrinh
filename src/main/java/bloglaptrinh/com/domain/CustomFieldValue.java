@@ -1,7 +1,6 @@
 package bloglaptrinh.com.domain;
 
-
-import org.apache.commons.lang.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.springframework.util.StringUtils;
@@ -14,7 +13,6 @@ import java.time.LocalDateTime;
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = {"post_id", "custom_field_id"}))
 @DynamicInsert
 @DynamicUpdate
-@SuppressWarnings("serial")
 public class CustomFieldValue extends DomainObject<Long> implements Comparable<CustomFieldValue> {
 
 	@Id

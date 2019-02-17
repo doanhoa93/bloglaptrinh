@@ -3,9 +3,8 @@
       layout:decorate="~{template/admin/layout}">
 <body>
 <div class="content mt-3" layout:fragment="content">
-    <link rel="stylesheet"
-          href="http://tutsplus.github.io/syntax-highlighter-demos/highlighters/highlightjs/styles/monokai_sublime.css">
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/resources/admin/assets/css/monokai_sublime.css}">
+    <link rel="stylesheet" th:href="@{/resources/admin/assets/css/quill.snow.css}">
     <style>
         #savePost{
             max-width: 30%;
@@ -122,20 +121,34 @@
                 postJson.created_at = now();
                 postJson.updated_at = now();
                 postJson.body = $('.ql-editor').html();
+                var port = window.location.port;
+                var url = '';
+                var protocol = '';
+                if (window.location.hostname == 'localhost') {
+                    protocol = 'http://'
+                } else {
+                    protocol = 'https://'
+                }
+                if(port !== null && port !== '') {
+                    url = protocol + window.location.hostname + ':' + window.location.port ;
+                } else {
+                    url = protocol + window.location.hostname;
+                }
                 if (validateData()) {
                     $.ajax({
                         type    : 'POST',
-                        url     : 'http://localhost:8080/admin_/post/create',
+                        url     : url + "/admin_/post/create",
                         async   : 'true',
                         data: JSON.stringify(postJson),
                         contentType : 'application/json',
                         dataType: "json",
                         error: function (request, status, error) {
-                            alert("error");
+                            var err = eval("(" + request.responseText + ")");
                             console.log('Error ' + request.responseText + "\n" + status + "\n" + error);
-                            showMessage('error', 'Tạo bài viết không thành công!', '.msgBox');
+                            showMessage('error', 'Tạo bài viết thất bại! ', '.msgBox');
                         },
                         success: function (dataResponse) {
+                            alert(dataResponse.body);
                             if(dataResponse.isSuccess){
                                 showMessage('success', 'Tạo bài viết thành công.', '.msgBox');
                                 $('input').removeClass("is-invalid");
@@ -143,7 +156,7 @@
                             }else{
                                 //Set error messages
                                 $.each(dataResponse.errorMessages,function(key,value){
-                                    showMessage('error', dataResponse.message, '.msgBox');
+                                    showMessage('error', 'Tạo bài viết thất bại!', '.msgBox');
                                     $('input[name='+key+']').after('<span class="error">'+value+'</span>');
                                     $('input[name='+key+']').addClass("is-invalid");
                                 });

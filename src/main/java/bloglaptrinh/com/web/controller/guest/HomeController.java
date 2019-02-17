@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
@@ -31,18 +30,6 @@ public class HomeController {
 
     @Autowired
     private PostService postService;
-
-    /*@Autowired
-    private IUserService service;
-
-    @Autowired
-    private PostService postService;
-
-    @Autowired
-    private CategoryService categoryService;*/
-
-    @Inject
-    private PaggingResult paggingResult;
 
     @GetMapping({"/"})
     public String dashboard(@RequestParam(defaultValue = "") String keyword,
@@ -65,17 +52,10 @@ public class HomeController {
         return "guest/index";
     }
 
-    @GetMapping("bai-viet/{code}")
-    public String newPost(@PathVariable("code") long code, Model model, HttpServletRequest request){
+    @GetMapping("post/{code}")
+    public String newPost(@PathVariable("code") String code, Model model, HttpServletRequest request){
         try {
-            /*if(!StringUtils.isBlank(request.getParameter("next"))){
-                post = postService.getDetailNextOrPrev("next", Long.parseLong(request.getParameter("id")));
-            }else if(!StringUtils.isBlank(request.getParameter("prev"))){
-                post = postService.getDetailNextOrPrev("prev", Long.parseLong(request.getParameter("id")));
-            }else{
-
-            }*/
-            Post post = postService.getPostById(code);
+            Post post = postService.getPostByCode(code);
             model.addAttribute("item",post);
         }catch (Exception e){
             e.printStackTrace();
@@ -118,9 +98,4 @@ public class HomeController {
     public String chat(Model model){
         return "chat";
     }
-
-    /*@GetMapping(value = "login")
-    public String loginPage(){
-        return "guest/login";
-    }*/
 }

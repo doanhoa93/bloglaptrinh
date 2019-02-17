@@ -1,10 +1,19 @@
 package bloglaptrinh.com.web.form;
 
-import bloglaptrinh.com.domain.Post;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
 
-public class PostCreateForm {
+import bloglaptrinh.com.common.utils.StringUtil;
+import bloglaptrinh.com.domain.Post;
+import org.springframework.core.convert.converter.Converter;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class PostCreateForm implements Converter<PostCreateForm, Post> {
 
     @NotBlank(message = "Tiêu đề bài viết không được để trống!")
     private String title;
@@ -26,77 +35,8 @@ public class PostCreateForm {
         DRAFT, SCHEDULED, PUBLISHED
     }
 
-    public PostCreateForm() {
-    }
-
-
-    public PostCreateForm(String title, String language, String status, String views, String createdAt, String updatedAt, String body) {
-        this.title = title;
-        this.language = language;
-        this.status = status;
-        this.views = views;
-        this.createdAt = createdAt;
-        this.updatedAt = updatedAt;
-        this.body = body;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getLanguage() {
-        return language;
-    }
-
-    public void setLanguage(String language) {
-        this.language = language;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getViews() {
-        return views;
-    }
-
-    public void setViews(String views) {
-        this.views = views;
-    }
-
-    public String getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(String createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public String getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(String updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-
-    public String getBody() {
-        return body;
-    }
-
-    public void setBody(String body) {
-        this.body = body;
-    }
-
-    public Post convertToPost(){
-        return new Post(this.title, this.language, Post.Status.PUBLISHED, Long.valueOf(this.views), this.createdAt, this.updatedAt, this.body);
+    @Override
+    public Post convert(PostCreateForm postCreateForm) {
+        return new Post(getTitle(), getLanguage(), Post.Status.PUBLISHED,StringUtil.covertStringToURL(getTitle()), Long.valueOf(getViews()), getCreatedAt(), getUpdatedAt(), getBody());
     }
 }

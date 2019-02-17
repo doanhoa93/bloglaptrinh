@@ -30,7 +30,7 @@ public class ValidationExceptionHandler extends ResponseEntityExceptionHandler {
         if (ex.getApiStatus() == HttpStatus.BAD_REQUEST) {
             response = responseUtil.badRequestResponse(null, null);
         } else {
-            response = responseUtil.buildResponse(ex.getData(), HttpStatus.OK, null);
+            response = responseUtil.buildResponse(ex.getApiStatus(), ex.getData(), HttpStatus.OK, null);
         }
 
         return response;
@@ -46,7 +46,7 @@ public class ValidationExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(value = Exception.class)
     public ResponseEntity<Response> handleUncatchException(Exception ex, WebRequest request) {
         LOGGER.error("handleUncatchException", ex);
-        return responseUtil.buildResponse("Please contact System Admin to resolve problem", HttpStatus.INTERNAL_SERVER_ERROR, null);
+        return responseUtil.buildResponse(HttpStatus.INTERNAL_SERVER_ERROR, "Please contact System Admin to resolve problem", HttpStatus.INTERNAL_SERVER_ERROR, null);
     }
 
 }

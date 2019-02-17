@@ -22,7 +22,6 @@
 	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/lib/chosen/chosen.min.css}">
 	<link rel="stylesheet" th:href="@{/resources/admin/sweetalert/sweet-alert.css}">
 	<link rel="stylesheet" th:href="@{/resources/admin/sweetalert/swal-forms.css}">
-	<link th:href="@{/resources/admin/assets/css/editor.css}" type="text/css" rel="stylesheet"/>
 
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 	<style type="text/css">
@@ -41,7 +40,7 @@
 						<i class="fa fa-bars"></i>
 					</button>
 					<a class="navbar-brand" th:href="@{/admin_}">
-						<img th:src="@{/resources/admin/images/logo.png}" alt=""/>
+						<img th:src="@{/resources/admin/images/admin-logo.gif}" alt=""/>
 					</a>
 					<a class="navbar-brand hidden" th:href="@{/admin_}">
 						<img th:src="@{/resources/admin/images/logo2.png}" alt=""/>
@@ -50,9 +49,6 @@
 
 				<div id="main-menu" class="main-menu collapse navbar-collapse">
 					<ul class="nav navbar-nav">
-						<li class="active">
-							<a th:href="@{/admin_}"><i class="menu-icon fa fa-dashboard"></i>Trang quản trị </a>
-						</li>
 						<li class="active">
 							<a th:href="@{/}" target="_blank"><i class="menu-icon fa fa-home"></i>Truy cập vào trang chủ</a>
 						</li>
@@ -291,6 +287,21 @@
 	<script th:src="@{/resources/admin/sweetalert/sweet-alert.js}"></script>
 	<script th:src="@{/resources/admin/sweetalert/swal-forms.js}"></script>
 	<script th:src="@{/resources/admin/sweetalert/live-demo.js}"></script>
+	<script>
+		/*function redirectHttps() {
+			if (window.location.protocol == "https:") {
+				console.log("You are not connected with the correct protocol.")
+				console.log("Reloading the page to the correct protocol...")
+				window.location = document.URL.replace("https://", "http://");
+			}
+
+			if (window.location.protocol == "http:") {
+				console.log("You are connected with the correct protocol.");
+				window.location = document.URL.replace("http://", "https://");
+			}
+		}
+		window.onload = redirectHttps;*/
+	</script>
 	<section layout:fragment="js">
 
 	</section>

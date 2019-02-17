@@ -7,12 +7,10 @@
 </head>
 <body>
 <section layout:fragment="content">
-    <link rel="stylesheet"
-          href="http://tutsplus.github.io/syntax-highlighter-demos/highlighters/highlightjs/styles/monokai_sublime.css">
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/resources/admin/assets/css/monokai_sublime.css}">
+    <link rel="stylesheet" th:href="@{/resources/admin/assets/css/quill.snow.css}">
     <div class="site-main-container">
-        <!-- Start top-post Area -->
-        <section class="top-post-area pt-10">
+        <!--<section class="top-post-area pt-10">
             <div class="container no-padding">
                 <div class="row small-gutters">
                     <div class="col-lg-8 top-post-left">
@@ -81,7 +79,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
         <!-- End top-post Area -->
         <!-- Start latest-post Area -->
         <section class="latest-post-area pb-120">
@@ -96,14 +94,14 @@
                                     <div class="col-lg-5 post-left">
                                         <div class="feature-img relative">
                                             <div class="overlay overlay-bg"></div>
-                                            <!--<img class="img-fluid" th:src="${item.imageLink}"  alt="">-->
+                                            <img class="img-fluid" src='https://image.ibb.co/eO8oq8/default-1.png' alt="">
                                         </div>
                                         <ul class="tags">
                                             <li><a href="#">Lifestyle</a></li>
                                         </ul>
                                     </div>
                                     <div class="col-lg-7 post-right">
-                                        <a th:href="@{'/bai-viet/' + ${item.id}}" >
+                                        <a th:href="@{'/post/' + ${item.code}}" >
                                             <h4 th:utext="${item.title}"></h4>
                                         </a>
                                         <ul class="meta">
@@ -201,8 +199,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- End popular-post Area -->
-                        <!-- Start relavent-story-post Area -->
                         <div class="relavent-story-post-wrap mt-30">
                             <h4 class="title">Relavent Stories</h4>
                             <div class="relavent-story-list-wrap">

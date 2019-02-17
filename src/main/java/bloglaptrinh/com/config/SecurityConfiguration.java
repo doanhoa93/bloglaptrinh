@@ -65,6 +65,9 @@ public class SecurityConfiguration implements WebMvcConfigurer {
 
         @Override
         protected void configure(HttpSecurity http) throws Exception {
+            http.requiresChannel()
+                    .requestMatchers(r -> r.getHeader("X-Forwarded-Proto") != null)
+                    .requiresSecure();
             http.antMatcher("/admin_/**")
                     .authorizeRequests()
                     .antMatchers("/admin_/**").hasAnyRole("ADMIN", "EDITOR", "AUTHOR")
@@ -111,6 +114,9 @@ public class SecurityConfiguration implements WebMvcConfigurer {
 
         @Override
         protected void configure(HttpSecurity http) throws Exception {
+            http.requiresChannel()
+                    .requestMatchers(r -> r.getHeader("X-Forwarded-Proto") != null)
+                    .requiresSecure();
             http.antMatcher("/**")
                     .authorizeRequests()
                     .antMatchers("/settings/**").hasRole("VIEWER")

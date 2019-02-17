@@ -139,15 +139,19 @@ public class Post extends DomainObject<Long> {
 	@OrderColumn(name = "`index`")
 	private List<Media> medias;
 
+	/*@Transient
+	private String imageLink;*/
+
 	public Post() {
 	}
 
-	public Post(String title, String language, Status status, long views, String createdAt, String updatedAt, String body) {
+	public Post(String title, String language, Status status,String code, long views, String createdAt, String updatedAt, String body) {
 		this.title = title;
 		this.language = language;
 		this.status = status;
 		this.views = views;
 		this.body = body;
+		this.code = code;
 	}
 
 	@Override
