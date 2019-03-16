@@ -230,45 +230,6 @@
                     </div>
 
                 </div>
-                <div class="card-footer">
-                    <ul>
-                        <li>
-                            <div class="text-muted">Visits</div>
-                            <strong>29.703 Users (40%)</strong>
-                            <div class="progress progress-xs mt-2" style="height: 5px;">
-                                <div class="progress-bar bg-success" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </li>
-                        <li class="hidden-sm-down">
-                            <div class="text-muted">Unique</div>
-                            <strong>24.093 Users (20%)</strong>
-                            <div class="progress progress-xs mt-2" style="height: 5px;">
-                                <div class="progress-bar bg-info" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="text-muted">Pageviews</div>
-                            <strong>78.706 Views (60%)</strong>
-                            <div class="progress progress-xs mt-2" style="height: 5px;">
-                                <div class="progress-bar bg-warning" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </li>
-                        <li class="hidden-sm-down">
-                            <div class="text-muted">New Users</div>
-                            <strong>22.123 Users (80%)</strong>
-                            <div class="progress progress-xs mt-2" style="height: 5px;">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </li>
-                        <li class="hidden-sm-down">
-                            <div class="text-muted">Bounce Rate</div>
-                            <strong>40.15%</strong>
-                            <div class="progress progress-xs mt-2" style="height: 5px;">
-                                <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
 
@@ -349,19 +310,7 @@
                 </div>
             </div>
         </div>
-
         <div class="col-xl-3 col-lg-6">
-            <div class="row">
-                <div class="col-4"></div>
-                <div class="col-4">
-                    <a id="savePost" class="btn btn-lg btn-primary btn-block" style="color: white">
-                        <i class="fa fa-dot-circle-o"></i>
-                        <span id="post-button-amount">Thêm bài viết</span>
-                        <span id="post-button-sending" style="display:none;">Sending…</span>
-                    </a>
-                </div>
-                <div class="col-4"></div>
-            </div>
             <script async src="https://imgbb.com/upload.js"></script>
             <div class="card">
                 <div class="card-body">
@@ -376,51 +325,6 @@
             </div>
         </div>
     </div>
-    <section layout:fragment="js">
-        <script>
-
-            jQuery('#savePost').click(function () {
-                alert(window.location.hostname);
-                /*location.port*/
-                var url = 'http://' + window.location.hostname + '/admin_/post/create_';
-                /* $('#packagename').val() == undefined ? '' : $("#packagename").val().trim();*/
-                var language = 'vn';
-                var status = 'PUBLISHED';
-                var views = parseInt('10');
-                var createdAt = '2018-11-11 14:30:54';
-                var updatedAt = '2018-11-11 14:30:54';
-                var body = 'Hello';
-                var post = {
-                    language: language,
-                    status: status,
-                    views: views,
-                    createdAt: createdAt,
-                    updatedAt: updatedAt,
-                    body: body
-                };
-                if (validateData()) {
-                    jQuery.ajax({
-                        type: "PUT",
-                        url: url,
-                        contentType: "application/json",
-                        data: JSON.stringify(post),
-                        dataType: "json",
-                        error: function (request, status, error) {
-                            console.log('Error ' + request.responseText + "\n" + status + "\n" + error);
-                        },
-                        success: function (data) {
-                            console.log('success');
-                            console.log(data);
-                        }
-                    });
-                } else {
-                    console.log('error');
-                }
-            });
-            function validateData() {
-                return true;
-            }
-        </script>
-    </section>
+    <section layout:fragment="js"></section>
 </body>
 </html>

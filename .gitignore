@@ -1,7 +1,7 @@
 # Compiled class file
 *.class
 
-.idea
+*.idea
 
 # Log file
 *.log
@@ -37,7 +37,6 @@ hs_err_pid*
 */build
 /bin
 */bin
-
 # Package Files #
 *.class
 *.jar

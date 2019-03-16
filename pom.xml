@@ -3,14 +3,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.bloglaptrinh.app</groupId>
-    <artifactId>bloglaptrinh</artifactId>
+    <groupId>com.techblog.app</groupId>
+    <artifactId>techblog</artifactId>
     <version>v1</version>
     <packaging>jar</packaging>
 
-    <name>bloglaptrinh</name>
-    <description>bloglaptrinh</description>
-
+    <name>techblog</name>
+    <description>techblog</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -42,6 +41,14 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-quartz</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

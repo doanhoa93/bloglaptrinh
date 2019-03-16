@@ -1,42 +1,82 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{template/guest/layout}">
+<html xmlns:th="http://www.thymeleaf.org" lang="zxx" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <title>Chat</title>
-    <style>
-        #emoji img{
-            width: 20px;
-            height: 20px;
-        }
-    </style>
+  <!-- Mobile Specific Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="img/fav.png">
+  <!-- Author Meta -->
+  <meta name="author" content="colorlib">
+  <!-- Meta Description -->
+  <meta name="description" content="">
+  <!-- Meta Keyword -->
+  <meta name="keywords" content="">
+  <!-- meta character set -->
+  <meta charset="UTF-8">
+  <!-- Site Title -->
+  <title>Magazine</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"/>
+  <link th:href="@{/resources/blog/css/linearicons.css}" rel="stylesheet" media='all'/>
+  <link th:href="@{/resources/blog/css/font-awesome.min.css}" rel="stylesheet" media='all'/>
+  <link th:href="@{/resources/blog/css/bootstrap.css}" rel="stylesheet" media='all'/>
+  <link th:href="@{/resources/blog/css/magnific-popup.css}" rel="stylesheet" media='all'/>
+  <link th:href="@{/resources/blog/css/nice-select.css}" rel="stylesheet" media='all'/>
+  <link th:href="@{/resources/blog/css/animate.min.css}" rel="stylesheet" media='all'/>
+  <link th:href="@{/resources/blog/css/owl.carousel.css}" rel="stylesheet" media='all'/>
+  <link th:href="@{/resources/blog/css/jquery-ui.css}" rel="stylesheet" media='all'/>
+  <link th:href="@{/resources/blog/css/main.css}" rel="stylesheet" media='all'/>
 </head>
 <body>
-<section layout:fragment="feature"></section>
-<section layout:fragment="content">
-    <table>
-        <tr>
-            <td colspan="2">
-                <input type="text" id="username" placeholder="Username"/>
-                <button type="button" onclick="connect();" >Connect</button>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div id="emoji" style="width: 200px; min-height: 300px;overflow: auto; border: solid 1px black"></div>
-                <!--<textarea readonly="true" rows="10" cols="80" id="log"></textarea>-->
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="text" size="51" id="msg" placeholder="Message"/>
-                <button type="button" onclick="send();" >Send</button>
-            </td>
-        </tr>
-    </table>
-</section>
-<section layout:fragment="js">
-    <script th:src="@{/resources/js/websocket.js}"></script>
-</section>
+<header>
+  <div class="container main-menu" id="main-menu">
+    <div class="row align-items-center justify-content-between">
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="index.html">Home</a></li>
+          <li><a href="archive.html">Archive</a></li>
+          <li><a href="category.html">Category</a></li>
+          <li class="menu-has-children"><a href="">Post Types</a>
+            <ul>
+              <li><a href="standard-post.html">Standard Post</a></li>
+              <li><a href="image-post.html">Image Post</a></li>
+              <li><a href="gallery-post.html">Gallery Post</a></li>
+              <li><a href="video-post.html">Video Post</a></li>
+              <li><a href="audio-post.html">Audio Post</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+      <div class="navbar-right">
+        <form class="Search">
+          <input type="text" class="form-control Search-box" name="Search-box" id="Search-box" placeholder="Search">
+          <label for="Search-box" class="Search-box-label">
+            <span class="lnr lnr-magnifier"></span>
+          </label>
+          <span class="Search-close">
+              <span class="lnr lnr-cross"></span>
+          </span>
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<script type="text/javascript" th:src="@{/resources/blog/js/vendor/jquery-2.2.4.min.js}"></script>
+<script type="text/javascript" th:src="@{/resources/blog/js/popper.min.js}"></script>
+<script type="text/javascript" th:src="@{/resources/blog/js/vendor/bootstrap.min.js}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+<script type="text/javascript" th:src="@{/resources/blog/js/easing.min.js}"></script>
+<script type="text/javascript" th:src="@{/resources/blog/js/hoverIntent.js}"></script>
+<script type="text/javascript" th:src="@{/resources/blog/js/superfish.min.js}"></script>
+<script type="text/javascript" th:src="@{/resources/blog/js/jquery.ajaxchimp.min.js}"></script>
+<script type="text/javascript" th:src="@{/resources/blog/js/jquery.magnific-popup.min.js}"></script>
+<script type="text/javascript" th:src="@{/resources/blog/js/mn-accordion.js}"></script>
+<script type="text/javascript" th:src="@{/resources/blog/js/jquery-ui.js}"></script>
+<script type="text/javascript" th:src="@{/resources/blog/js/jquery.nice-select.min.js}"></script>
+<script type="text/javascript" th:src="@{/resources/blog/js/mail-script.js}"></script>
+<script type="text/javascript" th:src="@{/resources/blog/js/main.js}"></script>
 </body>
 </html>

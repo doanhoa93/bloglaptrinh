@@ -7,21 +7,20 @@
 	<meta http-equiv="Content-Type: text/html;charset=utf-8" />
 	<meta name="author" content="Đoàn Quang Hòa">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Admin Dashboard </title>
+	<link rel="shortcut icon" th:href="@{/resources/admin/images/manager-icon.png}">
+	<title>Admin Dashboard</title>
 	<meta name="description" content="Sufee Admin - HTML5 Admin Template">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/normalize.css}">
-	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/bootstrap.min.css}">
-	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/font-awesome.min.css}">
-	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/themify-icons.css}">
-	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/flag-icon.min.css}">
-	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/cs-skin-elastic.css}">
-	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/bootstrap-select.css}">
-	<link rel="stylesheet" th:href="@{/resources/admin/assets/scss/style.css}">
-	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/lib/chosen/chosen.min.css}">
-	<link rel="stylesheet" th:href="@{/resources/admin/sweetalert/sweet-alert.css}">
-	<link rel="stylesheet" th:href="@{/resources/admin/sweetalert/swal-forms.css}">
+	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/normalize.css}" type='text/css'>
+	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/bootstrap.min.css}" type='text/css'>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="screen">
+	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/themify-icons.css}" type='text/css'>
+	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/cs-skin-elastic.css}" type='text/css'>
+	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/bootstrap-select.css}" type='text/css'>
+	<link rel="stylesheet" th:href="@{/resources/admin/assets/scss/style.css}" type='text/css'>
+	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/chosen.min.css}" type='text/css'>
+	<link rel="stylesheet" th:href="@{/resources/admin/sweetalert/sweet-alert.css}" type='text/css'>
+	<link rel="stylesheet" th:href="@{/resources/admin/sweetalert/swal-forms.css}" type='text/css'>
 
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 	<style type="text/css">
@@ -50,7 +49,7 @@
 				<div id="main-menu" class="main-menu collapse navbar-collapse">
 					<ul class="nav navbar-nav">
 						<li class="active">
-							<a th:href="@{/}" target="_blank"><i class="menu-icon fa fa-home"></i>Truy cập vào trang chủ</a>
+							<a th:href="@{/}" target="_blank"><i class="menu-icon fa fa-home"></i>Truy cập trang chủ</a>
 						</li>
 						<h3 class="menu-title">UI elements</h3>
 						<li class="menu-item-has-children dropdown">
@@ -93,9 +92,6 @@
 								<li><i class="menu-icon ti-themify-logo"></i><a href="font-themify.html">Themefy Icons</a></li>
 							</ul>
 						</li>
-						<li>
-							<a href="widgets.html"> <i class="menu-icon ti-email"></i>Widgets </a>
-						</li>
 						<li class="menu-item-has-children dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bar-chart"></i>Charts</a>
 							<ul class="sub-menu children dropdown-menu">
@@ -104,7 +100,6 @@
 								<li><i class="menu-icon fa fa-pie-chart"></i><a href="charts-peity.html">Peity Chart</a></li>
 							</ul>
 						</li>
-
 						<li class="menu-item-has-children dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-area-chart"></i>Maps</a>
 							<ul class="sub-menu children dropdown-menu">
@@ -158,58 +153,6 @@
 								<a class="dropdown-item media bg-flat-color-5" href="#">
 									<i class="fa fa-warning"></i>
 									<p>Server #3 overloaded.</p>
-								</a>
-							</div>
-						</div>
-
-						<div class="dropdown for-message">
-							<button class="btn btn-secondary dropdown-toggle" type="button"
-									id="message"
-									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<i class="ti-email"></i>
-								<span class="count bg-primary">9</span>
-							</button>
-							<div class="dropdown-menu" aria-labelledby="message">
-								<p class="red">You have 4 Mails</p>
-								<a class="dropdown-item media bg-flat-color-1" href="#">
-									<span class="photo media-left">
-										<img th:src="@{/resources/admin/images/avatar/1.jpg}" alt=""/>
-									</span>
-									<span class="message media-body">
-								<span class="name float-left">Jonathan Smith</span>
-								<span class="time float-right">Just now</span>
-									<p>Hello, this is an example msg</p>
-							</span>
-								</a>
-								<a class="dropdown-item media bg-flat-color-4" href="#">
-									<span class="photo media-left">
-										<img th:src="@{/resources/admin/images/avatar/2.jpg}" alt=""/>
-									</span>
-									<span class="message media-body">
-								<span class="name float-left">Jack Sanders</span>
-								<span class="time float-right">5 minutes ago</span>
-									<p>Lorem ipsum dolor sit amet, consectetur</p>
-							</span>
-								</a>
-								<a class="dropdown-item media bg-flat-color-5" href="#">
-									<span class="photo media-left">
-										<img th:src="@{/resources/admin/images/avatar/3.jpg}" alt=""/>
-									</span>
-									<span class="message media-body">
-								<span class="name float-left">Cheryl Wheeler</span>
-								<span class="time float-right">10 minutes ago</span>
-									<p>Hello, this is an example msg</p>
-							</span>
-								</a>
-								<a class="dropdown-item media bg-flat-color-3" href="#">
-									<span class="photo media-left">
-										<img th:src="@{/resources/admin/images/avatar/4.jpg}" alt=""/>
-									</span>
-									<span class="message media-body">
-								<span class="name float-left">Rachel Santos</span>
-								<span class="time float-right">15 minutes ago</span>
-									<p>Lorem ipsum dolor sit amet, consectetur</p>
-							</span>
 								</a>
 							</div>
 						</div>
@@ -273,10 +216,7 @@
 				</div>
 			</div>
 		</div>
-		<section layout:fragment="content">
-
-		</section>
-
+		<section layout:fragment="content"></section>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script th:src="@{/resources/admin/assets/js/popper.min.js}"></script>
@@ -287,21 +227,6 @@
 	<script th:src="@{/resources/admin/sweetalert/sweet-alert.js}"></script>
 	<script th:src="@{/resources/admin/sweetalert/swal-forms.js}"></script>
 	<script th:src="@{/resources/admin/sweetalert/live-demo.js}"></script>
-	<script>
-		/*function redirectHttps() {
-			if (window.location.protocol == "https:") {
-				console.log("You are not connected with the correct protocol.")
-				console.log("Reloading the page to the correct protocol...")
-				window.location = document.URL.replace("https://", "http://");
-			}
-
-			if (window.location.protocol == "http:") {
-				console.log("You are connected with the correct protocol.");
-				window.location = document.URL.replace("http://", "https://");
-			}
-		}
-		window.onload = redirectHttps;*/
-	</script>
 	<section layout:fragment="js">
 
 	</section>
