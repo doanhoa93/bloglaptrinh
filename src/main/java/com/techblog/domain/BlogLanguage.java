@@ -1,5 +1,8 @@
 package com.techblog.domain;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.hibernate.annotations.DynamicInsert;
@@ -7,7 +10,10 @@ import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
 
+@Data
 @Entity
+@ToString
+@EqualsAndHashCode
 @Table(name = "blog_language", uniqueConstraints = @UniqueConstraint(columnNames = {"blog_id", "language"}))
 @DynamicInsert
 @DynamicUpdate
@@ -27,36 +33,9 @@ public class BlogLanguage extends DomainObject<Long> {
 	@Column(length = 300, nullable = false)
 	private String title;
 
+	@Override
 	public Long getId() {
 		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	public Blog getBlog() {
-		return blog;
-	}
-
-	public void setBlog(Blog blog) {
-		this.blog = blog;
-	}
-
-	public String getLanguage() {
-		return language;
-	}
-
-	public void setLanguage(String language) {
-		this.language = language;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
 	}
 
 	@Override
@@ -64,27 +43,4 @@ public class BlogLanguage extends DomainObject<Long> {
 		return getBlog().getCode() + "-" + getLanguage();
 	}
 
-	@Override
-	public String toString() {
-		return getBlog().getCode() + "-" + getLanguage();
-	}
-
-	@Override
-	public boolean equals(Object other) {
-		if (this == other) return true;
-		if (other == null || !(other instanceof BlogLanguage)) return false;
-		BlogLanguage that = (BlogLanguage) other;
-		return new EqualsBuilder()
-				.append(getId(), that.getId())
-				.append(getLanguage(), that.getLanguage())
-				.isEquals();
-	}
-
-	@Override
-	public int hashCode() {
-		return new HashCodeBuilder()
-				.append(getId())
-				.append(getLanguage())
-				.toHashCode();
-	}
 }

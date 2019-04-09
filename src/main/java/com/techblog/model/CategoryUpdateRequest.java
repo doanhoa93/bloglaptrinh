@@ -1,8 +1,18 @@
 package com.techblog.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
 import java.io.Serializable;
 
-@SuppressWarnings("serial")
+@Data
+@ToString
+@EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
 public class CategoryUpdateRequest implements Serializable {
 
 	private Long id;
@@ -11,30 +21,6 @@ public class CategoryUpdateRequest implements Serializable {
 	private String name;
 	private String description;
 	private String language;
-
-	public Long getId() {
-		return id;
-	}
-
-	public Long getParentId() {
-		return parentId;
-	}
-
-	public String getCode() {
-		return code;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public String getLanguage() {
-		return language;
-	}
 
 	public static class Builder  {
 

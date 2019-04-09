@@ -1,12 +1,18 @@
 package com.techblog.domain;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.apache.commons.lang3.builder.CompareToBuilder;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
 
+@Data
 @Entity
+@ToString
+@EqualsAndHashCode
 @Table(name = "popular_post", uniqueConstraints = @UniqueConstraint(columnNames = {"language", "type"}))
 @DynamicInsert
 @DynamicUpdate
@@ -38,46 +44,6 @@ public class PopularPost extends DomainObject<Long> implements Comparable<Popula
 	@Override
 	public Long getId() {
 		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	public String getLanguage() {
-		return language;
-	}
-
-	public void setLanguage(String language) {
-		this.language = language;
-	}
-
-	public Type getType() {
-		return type;
-	}
-
-	public void setType(Type type) {
-		this.type = type;
-	}
-
-	public long getViews() {
-		return views;
-	}
-
-	public void setViews(long views) {
-		this.views = views;
-	}
-
-	public Post getPost() {
-		return post;
-	}
-
-	public void setPost(Post post) {
-		this.post = post;
 	}
 
 	@Override

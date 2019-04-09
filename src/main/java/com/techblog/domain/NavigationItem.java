@@ -1,18 +1,23 @@
 package com.techblog.domain;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
 import java.util.Set;
 
+@Data
 @Entity
+@ToString
+@EqualsAndHashCode
 @Table(name="navigation_item")
 @Inheritance(strategy= InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name="type", discriminatorType=DiscriminatorType.STRING)
 @DynamicInsert
 @DynamicUpdate
-@SuppressWarnings("serial")
 public abstract class NavigationItem extends DomainObject<Long> {
 
 	@Id
@@ -34,42 +39,6 @@ public abstract class NavigationItem extends DomainObject<Long> {
 	@Override
 	public Long getId() {
 		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	public int getSort() {
-		return sort;
-	}
-
-	public void setSort(int sort) {
-		this.sort = sort;
-	}
-
-	public String getLanguage() {
-		return language;
-	}
-
-	public void setLanguage(String language) {
-		this.language = language;
-	}
-
-	public NavigationItem getParent() {
-		return parent;
-	}
-
-	public void setParent(NavigationItem parent) {
-		this.parent = parent;
-	}
-
-	public Set<NavigationItem> getChildren() {
-		return children;
-	}
-
-	public void setChildren(Set<NavigationItem> children) {
-		this.children = children;
 	}
 }
 

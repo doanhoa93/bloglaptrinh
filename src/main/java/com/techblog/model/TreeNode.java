@@ -1,10 +1,18 @@
 package com.techblog.model;
 
 import com.techblog.domain.Page;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Data
+@ToString
+@EqualsAndHashCode
 public class TreeNode<T> {
 
 	private T object;

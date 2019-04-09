@@ -1,10 +1,19 @@
 package com.techblog.model;
 
 import com.techblog.domain.PersonalName;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.io.Serializable;
 
-@SuppressWarnings("serial")
+@Data
+@ToString
+@EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserUpdateRequest implements Serializable {
 
 	private Long id;
@@ -13,30 +22,6 @@ public class UserUpdateRequest implements Serializable {
 	private String nickname;
 	private String email;
 	private String description;
-
-	public Long getId() {
-		return id;
-	}
-
-	public String getLoginId() {
-		return loginId;
-	}
-
-	public PersonalName getName() {
-		return name;
-	}
-
-	public String getNickname() {
-		return nickname;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public String getDescription() {
-		return description;
-	}
 
 	public static class Builder  {
 

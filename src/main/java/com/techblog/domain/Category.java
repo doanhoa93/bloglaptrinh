@@ -1,5 +1,8 @@
 package com.techblog.domain;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.SortNatural;
@@ -9,7 +12,10 @@ import java.util.List;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
+@Data
 @Entity
+@ToString
+@EqualsAndHashCode
 @NamedEntityGraphs({
 		@NamedEntityGraph(name = Category.SHALLOW_GRAPH_NAME,
 				attributeNodes = {
@@ -24,7 +30,6 @@ import java.util.TreeSet;
 @Table(name = "category", uniqueConstraints = @UniqueConstraint(columnNames = {"code", "language"}))
 @DynamicInsert
 @DynamicUpdate
-@SuppressWarnings("serial")
 public class Category extends DomainObject<Long> implements Comparable<Category> {
 
 	public static final String SHALLOW_GRAPH_NAME = "CATEGORY_SHALLOW_GRAPH";
@@ -66,98 +71,10 @@ public class Category extends DomainObject<Long> implements Comparable<Category>
 	@SortNatural
 	private SortedSet<Post> posts = new TreeSet<>();
 
-//	@Formula("(" +
-//			"select count(distinct article.id) from article article " +
-//			"inner join post post on article.id = post.id " +
-//			"inner join article_category category on article.id = category.article_id " +
-//			"where category.category_id = id " +
-//			"and post.status = 'PUBLISHED') ")
-//	private int articleCount;
-
 	@Override
 	public Long getId() {
 		return id;
 	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getCode() {
-		return code;
-	}
-
-	public void setCode(String code) {
-		this.code = code;
-	}
-
-	public String getLanguage() {
-		return language;
-	}
-
-	public void setLanguage(String language) {
-		this.language = language;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public int getLft() {
-		return lft;
-	}
-
-	public void setLft(int lft) {
-		this.lft = lft;
-	}
-
-	public int getRgt() {
-		return rgt;
-	}
-
-	public void setRgt(int rgt) {
-		this.rgt = rgt;
-	}
-
-	public Category getParent() {
-		return parent;
-	}
-
-	public void setParent(Category parent) {
-		this.parent = parent;
-	}
-
-	public List<Category> getChildren() {
-		return children;
-	}
-
-	public void setChildren(List<Category> children) {
-		this.children = children;
-	}
-
-	public SortedSet<Post> getPosts() {
-		return posts;
-	}
-
-	public void setPosts(SortedSet<Post> posts) {
-		this.posts = posts;
-	}
-
-//	public int getArticleCount() {
-//		return articleCount;
-//	}
 
 	@Override
 	public String print() {

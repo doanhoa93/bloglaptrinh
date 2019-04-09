@@ -1,11 +1,18 @@
 package com.techblog.domain;
 
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
+
 import javax.persistence.Embeddable;
+import javax.persistence.Entity;
 import java.io.Serializable;
 
+@Data
+@ToString
+@EqualsAndHashCode
 @Embeddable
-@SuppressWarnings("serial")
 public class PersonalName implements Serializable {
 
 	private String firstName;
@@ -17,26 +24,5 @@ public class PersonalName implements Serializable {
 	public PersonalName(String firstName, String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-	
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-	
-	public String getLastName() {
-		return lastName;
-	}
-	
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-	
-	@Override
-	public String toString() {
-		return getLastName() + " " + getFirstName();
 	}
 }

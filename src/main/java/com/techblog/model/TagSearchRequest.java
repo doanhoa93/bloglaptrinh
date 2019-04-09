@@ -1,11 +1,19 @@
 package com.techblog.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.util.StringUtils;
 
 import java.io.Serializable;
 
-@SuppressWarnings("serial")
+@Data
+@ToString
+@EqualsAndHashCode
+@AllArgsConstructor
 public class TagSearchRequest implements Serializable {
 
 	private String keyword;
@@ -13,14 +21,6 @@ public class TagSearchRequest implements Serializable {
 
 	public TagSearchRequest() {
 		this.language = LocaleContextHolder.getLocale().getLanguage();
-	}
-
-	public String getKeyword() {
-		return keyword;
-	}
-
-	public String getLanguage() {
-		return language;
 	}
 
 	public boolean isEmpty() {

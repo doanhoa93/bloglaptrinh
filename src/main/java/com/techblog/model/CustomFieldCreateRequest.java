@@ -1,11 +1,21 @@
 package com.techblog.model;
 
 import com.techblog.domain.CustomField;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+@Data
+@ToString
+@EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
 public class CustomFieldCreateRequest implements Serializable {
 
 	private String name;
@@ -14,30 +24,6 @@ public class CustomFieldCreateRequest implements Serializable {
 	private String description;
 	private List<String> options = new ArrayList<>();
 	private String language;
-
-	public String getName() {
-		return name;
-	}
-
-	public String getCode() {
-		return code;
-	}
-
-	public CustomField.FieldType getType() {
-		return type;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public List<String> getOptions() {
-		return options;
-	}
-
-	public String getLanguage() {
-		return language;
-	}
 
 	public static class Builder {
 

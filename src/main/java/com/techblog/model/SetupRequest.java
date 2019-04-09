@@ -2,78 +2,37 @@ package com.techblog.model;
 
 
 import com.techblog.domain.PersonalName;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.io.Serializable;
 import java.util.List;
 
-@SuppressWarnings("serial")
+
+@Data
+@ToString
+@EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
 public class SetupRequest implements Serializable {
-	
 	private String websiteTitle;
 	private String defaultLanguage;
 	private List<String> languages;
 	private String mediaUrlPrefix;
 	private String mediaPath;
-//	private String mailSmtpHost;
-//	private String mailFrom;
 	private String loginId;
 	private String loginPassword;
 	private PersonalName name;
 	private String email;
-
-	public String getWebsiteTitle() {
-		return websiteTitle;
-	}
-
-	public String getDefaultLanguage() {
-		return defaultLanguage;
-	}
-
-	public List<String> getLanguages() {
-		return languages;
-	}
-
-	public String getMediaUrlPrefix() {
-		return mediaUrlPrefix;
-	}
-
-	public String getMediaPath() {
-		return mediaPath;
-	}
-
-//	public String getMailSmtpHost() {
-//		return mailSmtpHost;
-//	}
-//
-//	public String getMailFrom() {
-//		return mailFrom;
-//	}
-
-	public String getLoginId() {
-		return loginId;
-	}
-
-	public String getLoginPassword() {
-		return loginPassword;
-	}
-
-	public PersonalName getName() {
-		return name;
-	}
-
-	public String getEmail() {
-		return email;
-	}
 
 	public static class Builder  {
 
 		private String websiteTitle;
 		private String defaultLanguage;
 		private List<String> languages;
-//		private String mediaUrlPrefix;
-//		private String mediaPath;
-//		private String mailSmtpHost;
-//		private String mailFrom;
 		private String loginId;
 		private String loginPassword;
 		private PersonalName name;

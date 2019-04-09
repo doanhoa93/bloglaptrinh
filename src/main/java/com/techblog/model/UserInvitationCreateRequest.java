@@ -1,19 +1,22 @@
 package com.techblog.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
 import java.io.Serializable;
 
+@Data
+@ToString
+@EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserInvitationCreateRequest implements Serializable {
 
 	private String invitees;
 	private String message;
-
-	public String getInvitees() {
-		return invitees;
-	}
-
-	public String getMessage() {
-		return message;
-	}
 
 	public static class Builder  {
 

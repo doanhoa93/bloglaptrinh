@@ -1,8 +1,9 @@
 package com.techblog.domain;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.apache.commons.lang3.builder.CompareToBuilder;
-import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.SortNatural;
@@ -13,7 +14,10 @@ import java.util.List;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
+@Data
 @Entity
+@ToString
+@EqualsAndHashCode
 @NamedEntityGraphs({
 		@NamedEntityGraph(name = CustomField.SHALLOW_GRAPH_NAME),
 		@NamedEntityGraph(name = CustomField.DEEP_GRAPH_NAME,
@@ -97,82 +101,6 @@ public class CustomField extends DomainObject<Long> implements Comparable<Custom
 		return id;
 	}
 
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	public Integer getIdx() {
-		return idx;
-	}
-
-	public void setIdx(Integer idx) {
-		this.idx = idx;
-	}
-
-	public String getCode() {
-		return code;
-	}
-
-	public void setCode(String code) {
-		this.code = code;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public FieldType getFieldType() {
-		return fieldType;
-	}
-
-	public void setFieldType(FieldType fieldType) {
-		this.fieldType = fieldType;
-	}
-
-	public String getDefaultValue() {
-		return defaultValue;
-	}
-
-	public void setDefaultValue(String defaultValue) {
-		this.defaultValue = defaultValue;
-	}
-
-	public String getLanguage() {
-		return language;
-	}
-
-	public void setLanguage(String language) {
-		this.language = language;
-	}
-
-	public SortedSet<CustomFieldValue> getCustomFieldValues() {
-		return customFieldValues;
-	}
-
-	public void setCustomFieldValues(SortedSet<CustomFieldValue> customFieldValues) {
-		this.customFieldValues = customFieldValues;
-	}
-
-	public List<CustomFieldOption> getOptions() {
-		return options;
-	}
-
-	public void setOptions(List<CustomFieldOption> options) {
-		this.options = options;
-	}
-
 	@Override
 	public String print() {
 		return getName();
@@ -184,28 +112,5 @@ public class CustomField extends DomainObject<Long> implements Comparable<Custom
 				.append(getIdx(), field.getIdx())
 				.append(getId(), field.getId())
 				.toComparison();
-	}
-
-	@Override
-	public boolean equals(Object other) {
-		if (other == null) { return false; }
-		if (other == this) { return true; }
-		if (other.getClass() != getClass()) { return false; }
-		CustomField customField = (CustomField) other;
-		return new EqualsBuilder()
-				.append(getId(), (customField.getId()))
-				.isEquals();
-	}
-
-	@Override
-	public int hashCode() {
-		return new HashCodeBuilder()
-				.append(getId())
-				.toHashCode();
-	}
-
-	@Override
-	public String toString() {
-		return getName();
 	}
 }

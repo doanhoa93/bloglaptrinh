@@ -1,11 +1,17 @@
 package com.techblog.domain;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Lob;
 import java.io.Serializable;
 
+@Data
+@ToString
+@EqualsAndHashCode
 @Embeddable
 public class GoogleAnalytics implements Serializable {
 
@@ -27,52 +33,4 @@ public class GoogleAnalytics implements Serializable {
 	@Lob
 	@Column(name = "ga_service_account_p12_file_content")
 	private byte[] serviceAccountP12FileContent;
-
-	public String getTrackingId() {
-		return trackingId;
-	}
-
-	public void setTrackingId(String trackingId) {
-		this.trackingId = trackingId;
-	}
-
-	public String getProfileId() {
-		return profileId;
-	}
-
-	public void setProfileId(String profileId) {
-		this.profileId = profileId;
-	}
-
-	public int getCustomDimensionIndex() {
-		return customDimensionIndex;
-	}
-
-	public void setCustomDimensionIndex(int customDimensionIndex) {
-		this.customDimensionIndex = customDimensionIndex;
-	}
-
-	public String getServiceAccountId() {
-		return serviceAccountId;
-	}
-
-	public void setServiceAccountId(String serviceAccountId) {
-		this.serviceAccountId = serviceAccountId;
-	}
-
-	public String getServiceAccountP12FileName() {
-		return serviceAccountP12FileName;
-	}
-
-	public void setServiceAccountP12FileName(String serviceAccountP12FileName) {
-		this.serviceAccountP12FileName = serviceAccountP12FileName;
-	}
-
-	public byte[] getServiceAccountP12FileContent() {
-		return serviceAccountP12FileContent;
-	}
-
-	public void setServiceAccountP12FileContent(byte[] serviceAccountP12Key) {
-		this.serviceAccountP12FileContent = serviceAccountP12Key;
-	}
 }

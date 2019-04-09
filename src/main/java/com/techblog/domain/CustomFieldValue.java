@@ -1,5 +1,8 @@
 package com.techblog.domain;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
@@ -9,7 +12,10 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+@Data
 @Entity
+@ToString
+@EqualsAndHashCode
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = {"post_id", "custom_field_id"}))
 @DynamicInsert
 @DynamicUpdate
@@ -41,71 +47,6 @@ public class CustomFieldValue extends DomainObject<Long> implements Comparable<C
 
 	@Column
 	private LocalDateTime datetimeValue;
-
-	@Override
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	public CustomField getCustomField() {
-		return customField;
-	}
-
-	public void setCustomField(CustomField customField) {
-		this.customField = customField;
-	}
-
-	public Post getPost() {
-		return post;
-	}
-
-	public void setPost(Post post) {
-		this.post = post;
-	}
-
-	public String getStringValue() {
-		return stringValue;
-	}
-
-	public void setStringValue(String stringValue) {
-		this.stringValue = stringValue;
-	}
-
-	public Long getNumberValue() {
-		return numberValue;
-	}
-
-	public void setNumberValue(Long numberValue) {
-		this.numberValue = numberValue;
-	}
-
-	public String getTextValue() {
-		return textValue;
-	}
-
-	public void setTextValue(String textValue) {
-		this.textValue = textValue;
-	}
-
-	public LocalDate getDateValue() {
-		return dateValue;
-	}
-
-	public void setDateValue(LocalDate dateValue) {
-		this.dateValue = dateValue;
-	}
-
-	public LocalDateTime getDatetimeValue() {
-		return datetimeValue;
-	}
-
-	public void setDatetimeValue(LocalDateTime datetimeValue) {
-		this.datetimeValue = datetimeValue;
-	}
 
 	public Object getValue() {
 		switch (getCustomField().getFieldType()) {
@@ -165,6 +106,11 @@ public class CustomFieldValue extends DomainObject<Long> implements Comparable<C
 	}
 
 	@Override
+	public Long getId() {
+		return id;
+	}
+
+	@Override
 	public String print() {
 		return this.getClass().getName() + " " + getId();
 	}
@@ -179,24 +125,5 @@ public class CustomFieldValue extends DomainObject<Long> implements Comparable<C
 			return fieldDiff;
 		}
 		return Long.compare(getId(), customFieldValue.getId());
-	}
-
-	@Override
-	public String toString() {
-		return this.getClass().getName() + " " + getId();
-	}
-
-	@Override
-	public boolean equals(Object other) {
-		if (this == other) return true;
-		if (other == null || !(other instanceof CustomFieldValue)) return false;
-		if (getId() == 0) return false;
-		CustomFieldValue that = (CustomFieldValue) other;
-		return getId() == that.getId();
-	}
-
-	@Override
-	public int hashCode() {
-		return new HashCodeBuilder().append(getId()).toHashCode();
 	}
 }

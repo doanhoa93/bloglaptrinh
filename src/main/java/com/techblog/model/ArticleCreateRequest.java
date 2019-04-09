@@ -1,13 +1,22 @@
 package com.techblog.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
+@Data
+@ToString
+@EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
 public class ArticleCreateRequest implements Serializable {
-
 	private String code;
 	private String coverId;
 	private String title;
@@ -20,60 +29,7 @@ public class ArticleCreateRequest implements Serializable {
 	private String seoTitle;
 	private String seoDescription;
 	private String seoKeywords;
-
 	private String language;
-
-	public String getCode() {
-		return code;
-	}
-
-	public String getCoverId() {
-		return coverId;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public String getBody() {
-		return body;
-	}
-
-	public Long getAuthorId() {
-		return authorId;
-	}
-
-	public LocalDateTime getDate() {
-		return date;
-	}
-
-	public Set<Long> getCategoryIds() {
-		return categoryIds;
-	}
-
-	public String getTags() {
-		return tags;
-	}
-
-	public Set<Long> getRelatedPostIds() {
-		return relatedPostIds;
-	}
-
-	public String getSeoTitle() {
-		return seoTitle;
-	}
-
-	public String getSeoDescription() {
-		return seoDescription;
-	}
-
-	public String getSeoKeywords() {
-		return seoKeywords;
-	}
-
-	public String getLanguage() {
-		return language;
-	}
 
 	public static class Builder  {
 

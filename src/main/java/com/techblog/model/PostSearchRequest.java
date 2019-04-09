@@ -1,11 +1,19 @@
 package com.techblog.model;
 
 import com.techblog.domain.Post;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
 
+@Data
+@ToString
+@EqualsAndHashCode
+@AllArgsConstructor
 public class PostSearchRequest {
 
 	private Collection<Long> postIds = new ArrayList<>();
@@ -17,17 +25,6 @@ public class PostSearchRequest {
 	private LocalDateTime dateTo;
 	private String language;
 
-	public PostSearchRequest(String language) {
-		this.language = language;
-	}
-
-	public Collection<Long> getPostIds() {
-		return postIds;
-	}
-
-	public void setPostIds(Collection<Long> postIds) {
-		this.postIds = postIds;
-	}
 
 	public PostSearchRequest withPostIds(Long... postIds) {
 		if (getPostIds() == null) {
@@ -39,38 +36,14 @@ public class PostSearchRequest {
 		return this;
 	}
 
-	public Post.Status getStatus() {
-		return status;
-	}
-
-	public void setStatus(Post.Status status) {
-		this.status = status;
-	}
-	
 	public PostSearchRequest withStatus(Post.Status status) {
 		this.status = status;
 		return this;
 	}
 
-	public String getKeyword() {
-		return keyword;
-	}
-
-	public void setKeyword(String keyword) {
-		this.keyword = keyword;
-	}
-
 	public PostSearchRequest withKeyword(String keyword) {
 		this.keyword = keyword;
 		return this;
-	}
-
-	public Collection<String> getCategoryCodes() {
-		return categoryCodes;
-	}
-
-	public void setCategoryCodes(Collection<String> categoryCodes) {
-		this.categoryCodes = categoryCodes;
 	}
 
 	public PostSearchRequest withCategoryCodes(String... categoryCodes) {
@@ -83,14 +56,6 @@ public class PostSearchRequest {
 		return this;
 	}
 
-	public Collection<String> getTagNames() {
-		return tagNames;
-	}
-
-	public void setTagNames(Collection<String> tagNames) {
-		this.tagNames = tagNames;
-	}
-
 	public PostSearchRequest withTagNames(String... tagNames) {
 		if (getTagNames() == null) {
 			setTagNames(new ArrayList<String>(tagNames.length));
@@ -101,25 +66,9 @@ public class PostSearchRequest {
 		return this;
 	}
 
-	public LocalDateTime getDateFrom() {
-		return dateFrom;
-	}
-
-	public void setDateFrom(LocalDateTime dateFrom) {
-		this.dateFrom = dateFrom;
-	}
-
 	public PostSearchRequest withDateFrom(LocalDateTime dateFrom) {
 		this.dateFrom = dateFrom;
 		return this;
-	}
-
-	public LocalDateTime getDateTo() {
-		return dateTo;
-	}
-
-	public void setDateTo(LocalDateTime dateTo) {
-		this.dateTo = dateTo;
 	}
 
 	public PostSearchRequest withDateTo(LocalDateTime dateTo) {
@@ -127,16 +76,12 @@ public class PostSearchRequest {
 		return this;
 	}
 
-	public String getLanguage() {
-		return language;
-	}
-
-	public void setLanguage(String language) {
-		this.language = language;
-	}
-
 	public PostSearchRequest withLanguage(String language) {
 		this.language = language;
 		return this;
+	}
+
+	public PostSearchRequest(String language) {
+		this.language = language;
 	}
 }

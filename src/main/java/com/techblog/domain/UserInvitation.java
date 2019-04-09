@@ -1,5 +1,8 @@
 package com.techblog.domain;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.GenericGenerator;
@@ -7,11 +10,13 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+@Data
 @Entity
+@ToString
+@EqualsAndHashCode
 @Table(name="user_invitation")
 @DynamicInsert
 @DynamicUpdate
-@SuppressWarnings("serial")
 public class UserInvitation extends DomainObject<String> {
 
 	@Id
@@ -37,54 +42,6 @@ public class UserInvitation extends DomainObject<String> {
 	@Override
 	public String getId() {
 		return getToken();
-	}
-
-	public String getToken() {
-		return token;
-	}
-
-	public void setToken(String token) {
-		this.token = token;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getMessage() {
-		return message;
-	}
-
-	public void setMessage(String message) {
-		this.message = message;
-	}
-
-	public LocalDateTime getExpiredAt() {
-		return expiredAt;
-	}
-
-	public void setExpiredAt(LocalDateTime expiredAt) {
-		this.expiredAt = expiredAt;
-	}
-
-	public boolean isAccepted() {
-		return accepted;
-	}
-
-	public void setAccepted(boolean accepted) {
-		this.accepted = accepted;
-	}
-
-	public LocalDateTime getAcceptedAt() {
-		return acceptedAt;
-	}
-
-	public void setAcceptedAt(LocalDateTime acceptedAt) {
-		this.acceptedAt = acceptedAt;
 	}
 
 	@Override

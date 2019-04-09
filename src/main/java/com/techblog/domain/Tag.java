@@ -1,5 +1,8 @@
 package com.techblog.domain;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.apache.commons.lang3.builder.CompareToBuilder;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
@@ -9,11 +12,13 @@ import javax.persistence.*;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
+@Data
 @Entity
+@ToString
+@EqualsAndHashCode
 @Table(name = "tag", uniqueConstraints = @UniqueConstraint(columnNames = {"name", "language"}))
 @DynamicInsert
 @DynamicUpdate
-@SuppressWarnings("serial")
 public class Tag extends DomainObject<Long> implements Comparable<Tag> {
 
 	@Id
@@ -39,45 +44,8 @@ public class Tag extends DomainObject<Long> implements Comparable<Tag> {
 		return id;
 	}
 
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getLanguage() {
-		return language;
-	}
-
-	public void setLanguage(String language) {
-		this.language = language;
-	}
-
-	public SortedSet<Post> getPosts() {
-		return posts;
-	}
-
-	public void setPosts(SortedSet<Post> posts) {
-		this.posts = posts;
-	}
-
-//	public int getArticleCount() {
-//		return articleCount;
-//	}
-
 	@Override
 	public String print() {
-		return getName();
-	}
-
-	@Override
-	public String toString() {
 		return getName();
 	}
 

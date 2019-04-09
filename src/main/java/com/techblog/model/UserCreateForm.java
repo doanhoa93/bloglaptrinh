@@ -2,12 +2,21 @@ package com.techblog.model;
 
 import com.techblog.common.constant.Constants;
 import com.techblog.validator.FieldMatch;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.hibernate.validator.constraints.Email;
 
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 
-
+@Data
+@ToString
+@EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
 @FieldMatch.List({
         @FieldMatch(first = "loginPassword", second = "reLoginPassword", message = "The password fields must match")
 })
@@ -23,47 +32,4 @@ public class UserCreateForm implements Serializable {
 
     @Email(regexp = Constants.EMAIL_PATTERN, message = "Email không đúng định dạng!")
     private String email;
-
-    /*@NotNull
-    @Size(min=8, max=25)
-    private String password;
-
-    @NotNull
-    @Size(min=8, max=25)
-    private String confirmPassword;*/
-
-
-
-    public String getLoginId() {
-        return loginId;
-    }
-
-    public void setLoginId(String loginId) {
-        this.loginId = loginId;
-    }
-
-    public String getLoginPassword() {
-        return loginPassword;
-    }
-
-    public void setLoginPassword(String loginPassword) {
-        this.loginPassword = loginPassword;
-    }
-
-    public String getReLoginPassword() {
-        return reLoginPassword;
-    }
-
-    public void setReLoginPassword(String reLoginPassword) {
-        this.reLoginPassword = reLoginPassword;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
 }

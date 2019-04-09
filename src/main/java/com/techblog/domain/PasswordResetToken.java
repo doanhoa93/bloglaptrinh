@@ -1,5 +1,8 @@
 package com.techblog.domain;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.GenericGenerator;
@@ -7,7 +10,10 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+@Data
 @Entity
+@ToString
+@EqualsAndHashCode
 @Table(name = "password_reset_token")
 @Inheritance(strategy = InheritanceType.JOINED)
 @DynamicInsert
@@ -32,38 +38,6 @@ public class PasswordResetToken extends DomainObject<String> {
 	@Override
 	public String getId() {
 		return getToken();
-	}
-
-	public String getToken() {
-		return token;
-	}
-
-	public void setToken(String token) {
-		this.token = token;
-	}
-
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public LocalDateTime getExpiredAt() {
-		return expiredAt;
-	}
-
-	public void setExpiredAt(LocalDateTime expiredAt) {
-		this.expiredAt = expiredAt;
 	}
 
 	@Override

@@ -1,12 +1,18 @@
 package com.techblog.domain;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
 import java.util.List;
 
+@Data
 @Entity
+@ToString
+@EqualsAndHashCode
 @NamedEntityGraphs({
 	@NamedEntityGraph(name = Page.SHALLOW_GRAPH_NAME,
 			attributeNodes = {
@@ -36,7 +42,6 @@ import java.util.List;
 @Table(name="page")
 @DynamicInsert
 @DynamicUpdate
-@SuppressWarnings("serial")
 public class Page extends Post implements Comparable<Page> {
 
 	public static final String SHALLOW_GRAPH_NAME = "PAGE_SHALLOW_GRAPH";
@@ -49,43 +54,10 @@ public class Page extends Post implements Comparable<Page> {
 	private int rgt;
 
 	@ManyToOne
-//	@IndexedEmbedded(includeEmbeddedObjectId = true) //org.hibernate.search.SearchException: Circular reference.
 	private Page parent;
 
 	@OneToMany(mappedBy="parent", cascade=CascadeType.ALL)
 	private List<Page> children;
-
-	public int getLft() {
-		return lft;
-	}
-
-	public void setLft(int lft) {
-		this.lft = lft;
-	}
-
-	public int getRgt() {
-		return rgt;
-	}
-
-	public void setRgt(int rgt) {
-		this.rgt = rgt;
-	}
-
-	public Page getParent() {
-		return parent;
-	}
-
-	public void setParent(Page parent) {
-		this.parent = parent;
-	}
-
-	public List<Page> getChildren() {
-		return children;
-	}
-
-	public void setChildren(List<Page> children) {
-		this.children = children;
-	}
 	
 	public int compareTo(Page page) {
 		int lftDiff = getLft() - page.getLft();

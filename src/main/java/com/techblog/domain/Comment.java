@@ -1,5 +1,8 @@
 package com.techblog.domain;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.apache.commons.lang3.builder.CompareToBuilder;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
@@ -7,7 +10,10 @@ import org.hibernate.annotations.DynamicUpdate;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+@Data
 @Entity
+@ToString
+@EqualsAndHashCode
 @NamedEntityGraphs({
 		@NamedEntityGraph(name = Comment.SHALLOW_GRAPH_NAME,
 				attributeNodes = {
@@ -51,58 +57,6 @@ public class Comment extends DomainObject<Long> implements Comparable<Comment> {
 	@Override
 	public Long getId() {
 		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	public Post getPost() {
-		return post;
-	}
-
-	public void setPost(Post post) {
-		this.post = post;
-	}
-
-	public User getAuthor() {
-		return author;
-	}
-
-	public void setAuthor(User author) {
-		this.author = author;
-	}
-
-	public String getAuthorName() {
-		return authorName;
-	}
-
-	public void setAuthorName(String authorName) {
-		this.authorName = authorName;
-	}
-
-	public LocalDateTime getDate() {
-		return date;
-	}
-
-	public void setDate(LocalDateTime date) {
-		this.date = date;
-	}
-
-	public String getContent() {
-		return content;
-	}
-
-	public void setContent(String content) {
-		this.content = content;
-	}
-
-	public boolean isApproved() {
-		return approved;
-	}
-
-	public void setApproved(boolean approved) {
-		this.approved = approved;
 	}
 
 	@Override

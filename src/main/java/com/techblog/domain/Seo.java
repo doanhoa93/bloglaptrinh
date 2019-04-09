@@ -1,12 +1,19 @@
 package com.techblog.domain;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
+
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.persistence.Entity;
 import javax.persistence.Lob;
 import java.io.Serializable;
 
+@Data
+@ToString
+@EqualsAndHashCode
 @Embeddable
-@SuppressWarnings("serial")
 public class Seo implements Serializable {
 
 	@Column(name = "seo_title", length = 500)
@@ -19,28 +26,4 @@ public class Seo implements Serializable {
 	@Column(name = "seo_keywords")
 	@Lob
 	private String keywords;
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public String getKeywords() {
-		return keywords;
-	}
-
-	public void setKeywords(String keywords) {
-		this.keywords = keywords;
-	}
 }

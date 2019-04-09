@@ -4,13 +4,17 @@ import com.techblog.common.utils.StringUtil;
 import com.techblog.domain.Post;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
 
+import lombok.ToString;
 import org.springframework.core.convert.converter.Converter;
 
 @Data
+@ToString
+@EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
 public class PostCreateForm implements Converter<PostCreateForm, Post> {

@@ -1,5 +1,8 @@
 package com.techblog.domain;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.SortNatural;
@@ -10,7 +13,10 @@ import java.io.UnsupportedEncodingException;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
+@Data
 @Entity
+@ToString
+@EqualsAndHashCode
 @NamedEntityGraphs({
 		@NamedEntityGraph(name = User.SHALLOW_GRAPH_NAME,
 				attributeNodes = {
@@ -23,7 +29,6 @@ import java.util.TreeSet;
 @Table(name = "user")
 @DynamicInsert
 @DynamicUpdate
-@SuppressWarnings("serial")
 public class User extends DomainObject<Long> {
 
 	public static final String SHALLOW_GRAPH_NAME = "USER_SHALLOW_GRAPH";
@@ -75,66 +80,6 @@ public class User extends DomainObject<Long> {
 		return id;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getLoginId() {
-		return loginId;
-	}
-
-	public void setLoginId(String loginId) {
-		this.loginId = loginId;
-	}
-
-	public String getLoginPassword() {
-		return loginPassword;
-	}
-
-	public void setLoginPassword(String loginPassword) {
-		this.loginPassword = loginPassword;
-	}
-
-	public PersonalName getName() {
-		return name;
-	}
-
-	public void setName(PersonalName name) {
-		this.name = name;
-	}
-
-	public String getNickname() {
-		return nickname;
-	}
-
-	public void setNickname(String nickname) {
-		this.nickname = nickname;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public SortedSet<Role> getRoles() {
-		return roles;
-	}
-
-	public void setRoles(SortedSet<Role> roles) {
-		this.roles = roles;
-	}
-
 	public String getGravatarUrl(int size) throws UnsupportedEncodingException {
 		String hash = DigestUtils.md5DigestAsHex(getEmail().getBytes("CP1252"));
 		return String.format("https://secure.gravatar.com/avatar/%s?size=%d&d=mm", hash, size);
@@ -142,11 +87,6 @@ public class User extends DomainObject<Long> {
 
 	@Override
 	public String print() {
-		return (getName() != null) ? getName().toString() : "";
-	}
-
-	@Override
-	public String toString() {
 		return (getName() != null) ? getName().toString() : "";
 	}
 }
