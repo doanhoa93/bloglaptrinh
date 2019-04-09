@@ -20,18 +20,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletRequest;
+
 @Controller
-@RequestMapping("/admin_/login")
+@RequestMapping("/admin_")
 public class LoginController {
 
-	@RequestMapping
-	public String form() {
+	@RequestMapping("/login")
+	public String form(HttpServletRequest request) {
+		System.out.println(request.getParameter("fail"));
+		System.out.println();
 		return "admin/login";
-	}
-
-	@RequestMapping(params="failed")
-	public String failed(Model model) {
-		model.addAttribute("failed", true);
-		return "login";
 	}
 }

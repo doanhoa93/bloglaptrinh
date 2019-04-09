@@ -9,7 +9,7 @@
     <!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" th:href="@{/resources/blog/img/favicon.png}">
+    <link rel="shortcut icon" th:href="@{/blog/img/favicon.png}">
     <!-- Author Meta -->
     <meta name="author" content="Doan Quang Hoa">
     <!-- Meta Description -->
@@ -20,18 +20,17 @@
     <meta charset="UTF-8">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"/>
-    <link th:href="@{/resources/blog/css/main.css}" rel="stylesheet" media='all'/>
-    <link th:href="@{/resources/blog/css/linearicons.css}" rel="stylesheet" media='all'/>
-    <link th:href="@{/resources/blog/css/font-awesome.min.css}" rel="stylesheet" media='all'/>
-    <link th:href="@{/resources/blog/css/bootstrap.css}" rel="stylesheet" media='all'/>
-    <link th:href="@{/resources/blog/css/magnific-popup.css}" rel="stylesheet" media='all'/>
-    <link th:href="@{/resources/blog/css/nice-select.css}" rel="stylesheet" media='all'/>
-    <link th:href="@{/resources/blog/css/animate.min.css}" rel="stylesheet" media='all'/>
-    <link th:href="@{/resources/blog/css/owl.carousel.css}" rel="stylesheet" media='all'/>
-    <link th:href="@{/resources/blog/css/jquery-ui.css}" rel="stylesheet" media='all'/>
-    <link th:href="@{/resources/blog/css/main.css}" rel="stylesheet" media='all'/>
-    <link th:href="@{/resources/admin/assets/css/monokai_sublime.css}" rel="stylesheet" media='all'/>
-    <link th:href="@{/resources/admin/assets/css/quill.snow.css}" rel="stylesheet" media='all'/>
+    <link th:href="@{/blog/css/linearicons.css}" rel="stylesheet" media='all'/>
+    <link th:href="@{/blog/css/font-awesome.min.css}" rel="stylesheet">
+    <link th:href="@{/blog/css/bootstrap.css}" rel="stylesheet" media='all'/>
+    <link th:href="@{/blog/css/magnific-popup.css}" rel="stylesheet" media='all'/>
+    <link th:href="@{/blog/css/nice-select.css}" rel="stylesheet" media='all'/>
+    <link th:href="@{/blog/css/animate.min.css}" rel="stylesheet" media='all'/>
+    <link th:href="@{/blog/css/owl.carousel.css}" rel=main.css"stylesheet" media='all'/>
+    <link th:href="@{/blog/css/jquery-ui.css}" rel="stylesheet" media='all'/>
+    <link th:href="@{/blog/css/main.css}" rel="stylesheet" media='all'/>
+    <link th:href="@{/admin/assets/css/monokai_sublime.css}" rel="stylesheet" media='all'/>
+    <link th:href="@{/admin/assets/css/quill.snow.css}" rel="stylesheet" media='all'/>
 </head>
 <body>
 <section layout:fragment="header">
@@ -40,20 +39,25 @@
         <div class="header-top">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-6 header-top-left no-padding">
-                        <ul>
-                            <li><a href="https://www.facebook.com/quanghoa93" target="_blank"><i
-                                    class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <div class="col-lg-9 col-md-9 col-sm-9 col-9 header-top-left no-padding">
+                        <ul class="link-header">
+                            <li><a href="#" target="_blank">Sự kiện nổi bật</a></li>
+                            <li><a href="#" target="_blank">Tìm việc IT</a></li>
+                            <li><a th:href="@{/create-cv}" target="_blank">Tạo CV</a></li>
+                            <li><a href="#" target="_blank">Top công ty</a></li>
                         </ul>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-6 header-top-right no-padding">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-3 header-top-right no-padding">
                         <ul>
                             <li sec:authorize="isAnonymous()"><a href="#" data-toggle="modal" data-target="#staticModal"><span>Đăng nhập</span></a></li>
-                            <li sec:authorize="isAuthenticated()"><a href="#"><span
-                                    sec:authentication="principal.username"></span></a></li>
+                            <li sec:authorize="isAuthenticated()">
+                                <i class="fa fa-life-ring"></i>
+                                <a href="#">
+                                    <span class="navbar__link__toggle">
+                                        <span class="nav-text" id="navbarHelp" sec:authentication="principal.username"></span>
+                                    </span>
+                                </a>
+                            </li>
                             <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}"><span>Đăng xuất</span></a></li>
                         </ul>
                     </div>
@@ -65,11 +69,11 @@
                 <div class="row justify-content-between align-items-center">
                     <div class="col-lg-4 col-md-4 col-sm-12 logo-left no-padding">
                         <a th:href="@{/}">
-                            <img class="img-fluid" th:src="@{/resources/blog/img/logo1.gif}" alt="">
+                            <img class="img-fluid" th:src="@{/blog/img/logo1.gif}" alt="">
                         </a>
                     </div>
                     <div class="col-lg-8 col-md-8 col-sm-12 logo-right no-padding ads-banner">
-                        <img class="img-fluid" th:src="@{/resources/blog/img/banner-ad.jpg}" alt="">
+                        <img class="img-fluid" th:src="@{/blog/img/banner-ad.jpg}" alt="">
                     </div>
                 </div>
             </div>
@@ -79,19 +83,19 @@
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
                         <li class="menu-active"><a th:href="@{/}">Home</a></li>
-                        <li><a href="archive.html">Archive</a></li>
-                        <li><a href="category.html">Category</a></li>
+                        <li><a href="#">Archive</a></li>
+                        <li><a href="#">Category</a></li>
                         <li class="menu-has-children"><a href="">Post Types</a>
                             <ul>
-                                <li><a href="standard-post.html">Standard Post</a></li>
-                                <li><a href="image-post.html">Image Post</a></li>
-                                <li><a href="gallery-post.html">Gallery Post</a></li>
-                                <li><a href="video-post.html">Video Post</a></li>
-                                <li><a href="audio-post.html">Audio Post</a></li>
+                                <li><a href="#">Standard Post</a></li>
+                                <li><a href="#">Image Post</a></li>
+                                <li><a href="#">Gallery Post</a></li>
+                                <li><a href="#">Video Post</a></li>
+                                <li><a href="#">Audio Post</a></li>
                             </ul>
                         </li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                 </nav><!-- #nav-menu-container -->
                 <!--<div class="navbar-right">
@@ -117,6 +121,7 @@
 </section>-->
 <section layout:fragment="content"></section>
 <footer layout:fragment="footer" class="footer-area section-gap">
+
     <div class="modal fade" id="staticModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true" data-backdrop="static">
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
@@ -137,11 +142,6 @@
                             <input type="password" class="form-control" name="password"
                                    placeholder="Password" /> <span
                                 class="glyphicon glyphicon-lock form-control-feedback"></span>
-                        </div>
-                        <div class="form-group">
-                            <label>
-                                <input type="checkbox" name="remember-me"> Lưu trạng thái đăng nhập
-                            </label>
                         </div>
                         <div class="row">
                             <div class="col-xs-12">
@@ -177,19 +177,19 @@
         </div>
     </div>
 </footer>
-<script type="text/javascript" th:src="@{/resources/blog/js/vendor/jquery-2.2.4.min.js}"></script>
-<script type="text/javascript" th:src="@{/resources/blog/js/popper.min.js}"></script>
-<script type="text/javascript" th:src="@{/resources/blog/js/vendor/bootstrap.min.js}"></script>
-<script type="text/javascript" th:src="@{/resources/blog/js/easing.min.js}"></script>
-<script type="text/javascript" th:src="@{/resources/blog/js/hoverIntent.js}"></script>
-<script type="text/javascript" th:src="@{/resources/blog/js/superfish.min.js}"></script>
-<script type="text/javascript" th:src="@{/resources/blog/js/jquery.ajaxchimp.min.js}"></script>
-<script type="text/javascript" th:src="@{/resources/blog/js/jquery.magnific-popup.min.js}"></script>
-<script type="text/javascript" th:src="@{/resources/blog/js/mn-accordion.js}"></script>
-<script type="text/javascript" th:src="@{/resources/blog/js/jquery-ui.js}"></script>
-<script type="text/javascript" th:src="@{/resources/blog/js/jquery.nice-select.min.js}"></script>
-<script type="text/javascript" th:src="@{/resources/blog/js/mail-script.js}"></script>
-<script type="text/javascript" th:src="@{/resources/blog/js/main.js}"></script>
+<script type="text/javascript" th:src="@{/blog/js/vendor/jquery-2.2.4.min.js}"></script>
+<script type="text/javascript" th:src="@{/blog/js/popper.min.js}"></script>
+<script type="text/javascript" th:src="@{/blog/js/vendor/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{/blog/js/easing.min.js}"></script>
+<script type="text/javascript" th:src="@{/blog/js/hoverIntent.js}"></script>
+<script type="text/javascript" th:src="@{/blog/js/superfish.min.js}"></script>
+<script type="text/javascript" th:src="@{/blog/js/jquery.ajaxchimp.min.js}"></script>
+<script type="text/javascript" th:src="@{/blog/js/jquery.magnific-popup.min.js}"></script>
+<script type="text/javascript" th:src="@{/blog/js/mn-accordion.js}"></script>
+<script type="text/javascript" th:src="@{/blog/js/jquery-ui.js}"></script>
+<script type="text/javascript" th:src="@{/blog/js/jquery.nice-select.min.js}"></script>
+<script type="text/javascript" th:src="@{/blog/js/mail-script.js}"></script>
+<script type="text/javascript" th:src="@{/blog/js/main.js}"></script>
 <section layout:fragment="js"></section>
 </body>
 </html>
