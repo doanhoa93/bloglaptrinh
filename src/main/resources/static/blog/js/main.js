@@ -1,10 +1,5 @@
 $(document).ready(function() {
     "use strict";
-    var http = require("http");
-    setInterval(function() {
-        http.get("https://codehorror.herokuapp.com");
-    }, 600000);
-
     var window_width = $(window).width(),
         window_height = window.innerHeight,
         header_height = $(".default-header").height(),

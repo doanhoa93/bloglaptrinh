@@ -22,7 +22,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import javax.sql.DataSource;
 
-
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
@@ -42,8 +41,8 @@ public class SecurityConfiguration implements WebMvcConfigurer {
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth
-                .userDetailsService(authorizedUserDetailsService())
-                .passwordEncoder(passwordEncoder());
+          .userDetailsService(authorizedUserDetailsService())
+          .passwordEncoder(passwordEncoder());
     }
 
     @Configuration
@@ -55,45 +54,43 @@ public class SecurityConfiguration implements WebMvcConfigurer {
 
         @Override
         public void configure(WebSecurity web) throws Exception {
-            web
-                    .ignoring()
-                    .antMatchers("/admin_/resources/**")
-                    .antMatchers("/admin_/webjars/**")
-                    .antMatchers("/admin_/setup**")
-                    .antMatchers("/admin_/signup**");
+            web.ignoring()
+              .antMatchers("/admin/assets/**")
+              .antMatchers("/admin/images/**")
+              .antMatchers("/admin/sweetalert/**");
         }
 
         @Override
         protected void configure(HttpSecurity http) throws Exception {
             http.requiresChannel()
-                    .requestMatchers(r -> r.getHeader("X-Forwarded-Proto") != null)
-                    .requiresSecure();
+              .requestMatchers(r -> r.getHeader("X-Forwarded-Proto") != null)
+              .requiresSecure();
             http.antMatcher("/admin_/**")
-                    .authorizeRequests()
-                    .antMatchers("/admin_/**").hasAnyRole("ADMIN", "EDITOR", "AUTHOR")
-                    .and()
-                    .formLogin()
-                    .loginPage("/admin_/login").permitAll()
-                    .loginProcessingUrl("/admin_/login")
-                    .defaultSuccessUrl("/admin_")
-                    .failureUrl("/admin_/login?failed")
-                    .and()
-                    .logout()
-                    .logoutRequestMatcher(new AntPathRequestMatcher("/admin_/logout", "GET"))
-                    .logoutSuccessUrl("/admin_/login")
-                    .and()
-                    .rememberMe()
-                    .tokenRepository(persistentTokenRepository)
-                    .and()
-                    .headers()
-                    .frameOptions().disable()
-                    .cacheControl().disable()
-                    .httpStrictTransportSecurity().disable()
-                    .and()
-                    .csrf()
-                    .disable()
-                    .exceptionHandling()
-                    .accessDeniedPage("/admin_/login");
+              .authorizeRequests()
+              .antMatchers("/admin_/**").hasAnyRole("ADMIN", "EDITOR", "AUTHOR")
+              .and()
+              .formLogin()
+              .loginPage("/admin_/login").permitAll()
+              .loginProcessingUrl("/admin_/login")
+              .defaultSuccessUrl("/admin_")
+              .failureUrl("/admin_/login?fail")
+              .and()
+              .logout()
+              .logoutRequestMatcher(new AntPathRequestMatcher("/admin_/logout", "GET"))
+              .logoutSuccessUrl("/admin_/login")
+              .and()
+              .rememberMe()
+              .tokenRepository(persistentTokenRepository)
+              .and()
+              .headers()
+              .frameOptions().disable()
+              .cacheControl().disable()
+              .httpStrictTransportSecurity().disable()
+              .and()
+              .csrf()
+              .disable()
+              .exceptionHandling()
+              .accessDeniedPage("/admin_/login");
         }
     }
 
@@ -107,47 +104,49 @@ public class SecurityConfiguration implements WebMvcConfigurer {
         @Override
         public void configure(WebSecurity web) throws Exception {
             web.ignoring()
-                    .antMatchers("/resources/blog/css/**")
-                    .antMatchers("/resources/blog/js/**")
-                    .antMatchers("/webjars/**");
+              .antMatchers("/blog/css/**")
+              .antMatchers("/blog/js/**")
+              .antMatchers("/blog/fonts/**")
+              .antMatchers("/blog/img/**")
+              .antMatchers("/blog/scss/**");
         }
 
         @Override
         protected void configure(HttpSecurity http) throws Exception {
             http.requiresChannel()
-                    .requestMatchers(r -> r.getHeader("X-Forwarded-Proto") != null)
-                    .requiresSecure();
+              .requestMatchers(r -> r.getHeader("X-Forwarded-Proto") != null)
+              .requiresSecure();
             http.antMatcher("/**")
-                    .authorizeRequests()
-                    .antMatchers("/settings/**").hasRole("VIEWER")
-                    .antMatchers("/**/viet-bai").hasAnyRole("ADMIN", "EDITOR", "AUTHOR", "VIEWER")
-                    .antMatchers("/comments/**").hasRole("VIEWER")
-                    .and()
-                    .formLogin()
-                    .loginPage("/login").permitAll()
-                    .loginProcessingUrl("/login")
-                    .defaultSuccessUrl("/")
-                    .failureUrl("/login?failed")
-                    .permitAll()
-                    .and()
-                    .logout()
-                    .logoutRequestMatcher(new AntPathRequestMatcher("/logout", "GET"))
-                    .logoutSuccessUrl("/?logout")
-                    .deleteCookies("my-remember-me-cookie")
-                    .permitAll()
-                    .and()
-                    .rememberMe()
-                    .tokenRepository(persistentTokenRepository)
-                    .and()
-                    .headers()
-                    .frameOptions().disable()
-                    .cacheControl().disable()
-                    .httpStrictTransportSecurity().disable()
-                    .and()
-                    .csrf()
-                    .disable()
-                    .exceptionHandling()
-                    .accessDeniedPage("/login");
+              .authorizeRequests()
+              .antMatchers("/settings/**").hasRole("VIEWER")
+              .antMatchers("/**/viet-bai").hasAnyRole("ADMIN", "EDITOR", "AUTHOR", "VIEWER")
+              .antMatchers("/comments/**").hasRole("VIEWER")
+              .and()
+              .formLogin()
+              .loginPage("/login").permitAll()
+              .loginProcessingUrl("/login")
+              .defaultSuccessUrl("/")
+              .failureUrl("/?fail")
+              .permitAll()
+              .and()
+              .logout()
+              .logoutRequestMatcher(new AntPathRequestMatcher("/logout", "GET"))
+              .logoutSuccessUrl("/?logout")
+              .deleteCookies("my-remember-me-cookie")
+              .permitAll()
+              .and()
+              .rememberMe()
+              .tokenRepository(persistentTokenRepository)
+              .and()
+              .headers()
+              .frameOptions().disable()
+              .cacheControl().disable()
+              .httpStrictTransportSecurity().disable()
+              .and()
+              .csrf()
+              .disable()
+              .exceptionHandling()
+              .accessDeniedPage("/login");
         }
     }
 

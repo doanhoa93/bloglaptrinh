@@ -56,7 +56,7 @@ public class HomeController {
     public String get(){
 
 
-        return "index";
+        return "guest/cv/cv-doan-quang-hoa";
     }
 
     @GetMapping(value = "login", params = {"failed"})

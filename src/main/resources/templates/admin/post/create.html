@@ -3,15 +3,14 @@
       layout:decorate="~{template/admin/layout}">
 <body>
 <div class="content mt-3" layout:fragment="content">
-    <link rel="stylesheet" th:href="@{/resources/admin/assets/css/monokai_sublime.css}">
-    <link rel="stylesheet" th:href="@{/resources/admin/assets/css/quill.snow.css}">
+    <link rel="stylesheet" th:href="@{/admin/assets/css/monokai_sublime.css}">
+    <link rel="stylesheet" th:href="@{/admin/assets/css/quill.snow.css}">
     <style>
         #savePost{
             max-width: 30%;
             min-width: 50%;
             text-align: center !important;
         }
-
         #editor{
             min-height: 300px;
         }
@@ -37,19 +36,19 @@
                                     </div>
                                     <div class="form-group" id="tags">
                                         <label for="tagSelect" class="control-label mb-1">Tag</label>
-                                        <select id="tagSelect" data-placeholder="--Choose tag--" multiple class="standardSelect" tabindex="5">
+                                        <select id="tagSelect" data-placeholder="--Chọn tag--" multiple class="standardSelect" tabindex="5">
                                             <option value=""></option>
-                                            <option value="United States">Java</option>
-                                            <option value="United Kingdom">C#</option>
-                                            <option value="Afghanistan">PHP</option>
-                                            <option value="Aland Islands">Javascript</option>
-                                            <option value="Albania">C++</option>
+                                            <option value="java">Java</option>
+                                            <option value="csharp">C#</option>
+                                            <option value="php">PHP</option>
+                                            <option value="javascript">Javascript</option>
+                                            <option value="cplus">C++</option>
                                         </select>
                                         <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
                                     </div>
                                     <div class="form-group" id="categories">
                                         <label for="category" class="control-label mb-1">Danh mục</label>
-                                        <select id="category" data-placeholder="--Choose category--" multiple class="standardSelect" tabindex="5">
+                                        <select id="category" data-placeholder="--Chọn danh mục--" multiple class="standardSelect" tabindex="5">
                                             <option value=""></option>
                                             <option value="United States">Quản trị hệ thống</option>
                                             <option value="United Kingdom">Lập trình</option>
@@ -81,7 +80,7 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
-    <script th:src="@{/resources/admin/assets/js/jquery.min.js}"></script>
+    <script th:src="@{/admin/assets/js/jquery.min.js}"></script>
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
     <section layout:fragment="js">
         <script>
@@ -234,13 +233,8 @@
                     syntax: true
                 },
                 theme: 'snow',
-                placeholder: "Write something..."
+                placeholder: "Nhập nội dung..."
             });
-            /*quillFull.on('text-change', function() {
-                var html = quillFull.root.innerHTML;
-                console.log(html);
-                $(".preview").html(html)
-            });*/
 
             jQuery(document).ready(function() {
                 jQuery(".standardSelect").chosen({

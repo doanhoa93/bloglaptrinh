@@ -7,21 +7,22 @@
 	<meta http-equiv="Content-Type: text/html;charset=utf-8" />
 	<meta name="author" content="Đoàn Quang Hòa">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="shortcut icon" th:href="@{/resources/admin/images/manager-icon.png}">
+	<link rel="shortcut icon" th:href="@{/admin/images/manager-icon.png}">
 	<title>Admin Dashboard</title>
-	<meta name="description" content="Sufee Admin - HTML5 Admin Template">
+	<meta name="description" content="Admin manager">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/normalize.css}" type='text/css' />
-	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/bootstrap.min.css}" type='text/css' />
-	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/font-awesome.min.css}">
-	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/themify-icons.css}" type='text/css' />
-	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/cs-skin-elastic.css}" type='text/css' />
-	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/lib/datatable/dataTables.bootstrap.min.css}" type='text/css' />
-	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/bootstrap-select.css}" type='text/css' />
-	<link rel="stylesheet" th:href="@{/resources/admin/assets/scss/style.css}" type='text/css' />
-	<link rel="stylesheet" th:href="@{/resources/admin/assets/css/chosen.min.css}" type='text/css' />
-	<link rel="stylesheet" th:href="@{/resources/admin/sweetalert/sweet-alert.css}" type='text/css' />
-	<link rel="stylesheet" th:href="@{/resources/admin/sweetalert/swal-forms.css}" type='text/css' />
+	<link rel="stylesheet" th:href="@{/admin/assets/css/normalize.css}" type='text/css' />
+	<link rel="stylesheet" th:href="@{/admin/assets/css/bootstrap.min.css}" type='text/css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--<link rel="stylesheet" th:href="@{/admin/assets/css/font-awesome.min.css}">-->
+	<link rel="stylesheet" th:href="@{/admin/assets/css/themify-icons.css}" type='text/css' />
+	<link rel="stylesheet" th:href="@{/admin/assets/css/cs-skin-elastic.css}" type='text/css' />
+	<link rel="stylesheet" th:href="@{/admin/assets/css/lib/datatable/dataTables.bootstrap.min.css}" type='text/css' />
+	<link rel="stylesheet" th:href="@{/admin/assets/css/bootstrap-select.css}" type='text/css' />
+	<link rel="stylesheet" th:href="@{/admin/assets/scss/style.css}" type='text/css' />
+	<link rel="stylesheet" th:href="@{/admin/assets/css/chosen.min.css}" type='text/css' />
+	<link rel="stylesheet" th:href="@{/admin/sweetalert/sweet-alert.css}" type='text/css' />
+	<link rel="stylesheet" th:href="@{/admin/sweetalert/swal-forms.css}" type='text/css' />
 
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css' />
 	<style type="text/css">
@@ -40,10 +41,10 @@
 						<i class="fa fa-bars"></i>
 					</button>
 					<a class="navbar-brand" th:href="@{/admin_}">
-						<img th:src="@{/resources/admin/images/admin-logo.gif}" alt=""/>
+						<img th:src="@{/admin/images/admin-logo.gif}" alt=""/>
 					</a>
 					<a class="navbar-brand hidden" th:href="@{/admin_}">
-						<img th:src="@{/resources/admin/images/logo2.png}" alt=""/>
+						<img th:src="@{/admin/images/logo2.png}" alt=""/>
 					</a>
 				</div>
 
@@ -56,8 +57,8 @@
 						<li class="menu-item-has-children dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Quản lí bài viết</a>
 							<ul class="sub-menu children dropdown-menu">
-								<li><i class="fa fa-puzzle-piece"></i><a th:href="@{/admin_/posts}" >danh sách bài viết</a></li>
-								<li><i class="fa fa-id-badge"></i><a href="ui-badges.html">Thêm mới bài viết</a></li>
+								<li><i class="fa fa-puzzle-piece"></i><a th:href="@{/admin_/posts}" >Danh sách</a></li>
+								<li><i class="fa fa-id-badge"></i><a th:href="@{/admin_/post/new}" >Thêm mới</a></li>
 							</ul>
 						</li>
 						<li class="menu-item-has-children dropdown">
@@ -154,7 +155,7 @@
 				<div class="col-sm-5">
 					<div class="user-area dropdown float-right">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<img class="user-avatar rounded-circle" th:src="@{/resources/admin/images/admin.jpg}" alt="User Avatar"/>
+							<img class="user-avatar rounded-circle" th:src="@{/admin/images/admin.jpg}" alt="User Avatar"/>
 						</a>
 
 						<div class="user-menu dropdown-menu">
@@ -163,7 +164,7 @@
 							<a class="nav-link" href="#"><i class="fa fa- user"></i>Notifications <span class="count">13</span></a>
 
 							<a class="nav-link" href="#"><i class="fa fa -cog"></i>Settings</a>
-							<a class="nav-link" th:href="@{/admin_/logout}" sec:authorize="isAuthenticated()"><i class="fa fa-power -off"></i>Logout</a>
+							<a class="nav-link" th:href="@{/admin_/logout?logout=true}" sec:authorize="isAuthenticated()"><i class="fa fa-power -off"></i>Logout</a>
 						</div>
 					</div>
 
@@ -211,14 +212,14 @@
 		<section layout:fragment="content"></section>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script th:src="@{/resources/admin/assets/js/popper.min.js}"></script>
-	<script th:src="@{/resources/admin/assets/js/plugins.js}"></script>
-	<script th:src="@{/resources/admin/assets/js/main.js}"></script>
-	<script th:src="@{/resources/admin/assets/js/lib/chosen/chosen.jquery.min.js}"></script>
-	<script th:src="@{/resources/admin/assets/js/validate.js}"></script>
-	<script th:src="@{/resources/admin/sweetalert/sweet-alert.js}"></script>
-	<script th:src="@{/resources/admin/sweetalert/swal-forms.js}"></script>
-	<script th:src="@{/resources/admin/sweetalert/live-demo.js}"></script>
+	<script th:src="@{/admin/assets/js/popper.min.js}"></script>
+	<script th:src="@{/admin/assets/js/plugins.js}"></script>
+	<script th:src="@{/admin/assets/js/main.js}"></script>
+	<script th:src="@{/admin/assets/js/lib/chosen/chosen.jquery.min.js}"></script>
+	<script th:src="@{/admin/assets/js/validate.js}"></script>
+	<script th:src="@{/admin/sweetalert/sweet-alert.js}"></script>
+	<script th:src="@{/admin/sweetalert/swal-forms.js}"></script>
+	<script th:src="@{/admin/sweetalert/live-demo.js}"></script>
 	<section layout:fragment="js">
 
 	</section>

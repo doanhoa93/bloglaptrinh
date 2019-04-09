@@ -1,53 +1,3 @@
-/******************************************************************
-Theme Name: Magazine 
-Description: 
-Author: Colorlib
-Author URI: 
-Version: 1.0
-Created: 
-******************************************************************/
-/*------------------------------------------------------------------
-
-
--------------------------------------------------------------------*/
-/*------------------------------------------------------------------
-[Table of contents]
-
-1.  Basic Styles
-	1.1	Variables
-	1.2	Mixins
-	1.3	Flexbox
-	1.4	Reset
-2.  Elements
-3.  Menu Style 
-4.  Sidebar Style
-5.  Archive Style
-6.  About Style
-7.  Post Type Style
-8.  Contact Style
-9.  Footer Style
-
--------------------------------------------------------------------*/
-/* =================================== */
-/*  Font Family and Colors Styles
-/* =================================== */
-/*
-
-$primary-font	: 'Poppins', sans-serif;
----------------------------------------------
-
-$primary-color	: #0A1223;
-$title-color	: #222222;
-$text-color		: #777777;
-
-$white			: #fff;
-$offwhite		: #f9f9ff;
-$black			: #222;
-
-*/
-/* =================================== */
-/*  Basic Style 
-/* =================================== */
 ::-moz-selection {
   /* Code for Firefox */
   background-color: #0A1223;
@@ -2470,17 +2420,6 @@ body {
   background-color: #f9f9ff;
 }
 
-.info-area:after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 48%;
-  height: 100%;
-  background: url(../img/about/about-img.jpg) no-repeat center center/cover;
-  z-index: 1;
-}
-
 @media (max-width: 991px) {
   .info-area:after {
     display: none;
@@ -2592,7 +2531,7 @@ body {
 
 .feedback-area .feedback-left .mn-accordion .accordion-item .accordion-heading .icon i {
   -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0eg);
+  -ms-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
 }
@@ -2642,7 +2581,6 @@ body {
 }
 
 .feedback-area .feedback-right {
-  background: url(../img/video-bg.jpg) center;
   background-size: cover;
   padding: 130px 0;
 }
