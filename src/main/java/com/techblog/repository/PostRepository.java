@@ -19,7 +19,7 @@ public interface PostRepository extends JpaRepository<Post, Long>, PostRepositor
 	Post findOneByIdAndLanguage(Long id, String language);
 
 	@Query("select post from Post post where post.code = :code ")
-	Post findOneByCode(String code);
+	Post findOneByCode(@Param("code") String code);
 
 	@EntityGraph(value = Post.DEEP_GRAPH_NAME, type = EntityGraph.EntityGraphType.FETCH)
 	Post findOneByCodeAndLanguage(String code, String language);
