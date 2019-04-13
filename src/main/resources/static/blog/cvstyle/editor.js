@@ -1,18 +1,18 @@
 var id_document    	= $('#id_document').val(),
-	$name 				= ".doc_name", 
+	$name 				= ".doc_name",
 	$profession 		= '.doc_profession',
 	$address 			= '.doc_address',
 	$phone 			= '.doc_phone',
 	$email 				= '.doc_email',
-	$website 			= '.doc_website', 
+	$website 			= '.doc_website',
 	$placeofbirth 		= '.doc_placeofbirth',
-	$dateofbirth 		= '.doc_dateofbirth', 
+	$dateofbirth 		= '.doc_dateofbirth',
 	$linkedin 			= '.doc_linkedin',
 	$facebook 			= '.doc_facebook',
 	$marital 			= '.doc_marital',
 	$citizenship 		= '.doc_citizenship',
 	$images 			= 'doc_images',
-	$interest 			= '.doc_interest', 
+	$interest 			= '.doc_interest',
 	$skill 				= '.doc_skill',
 	$skillLevel 			= '.doc_level',
 	$summary 			= '.doc_summary',
@@ -33,7 +33,7 @@ var id_document    	= $('#id_document').val(),
 	$citydate           	= '.doc_city_date',
 	$recipient          	= '.doc_recipient',
 	$content            	= '.doc_content',
-	$fluency            	= '.doc_fluency',     
+	$fluency            	= '.doc_fluency',
 	$language           	= '.doc_language',
 	$award   			= '.doc_award',
 	$project            	= '.doc_project',
@@ -90,10 +90,10 @@ var id_document    	= $('#id_document').val(),
 	$btnAddField 		= '.js_add-field',
 	$btnAddSections	= '.js_add-sections',
 	$btnDeleteElement= '.bt-delete';
-	var el_summary,el_interests, el_skills, el_education, el_experience,el_languages,el_activities,el_awards,el_references,el_projects,el_additional;
-	var first_load = true;
-	var height1pagePDF = 1122;
-	var Loaded = false;
+var el_summary,el_interests, el_skills, el_education, el_experience,el_languages,el_activities,el_awards,el_references,el_projects,el_additional;
+var first_load = true;
+var height1pagePDF = 1122;
+var Loaded = false;
 $(document).ready(function() {
 	var timeoutId1;
 	var timeoutId2;
@@ -126,19 +126,19 @@ $(document).ready(function() {
 		},
 		function(){
 			$(this).css('border','2px solid rgba(255, 255, 255, 0)');
-			$(this).find($btnAddField).css('display','none'); 
+			$(this).find($btnAddField).css('display','none');
 			$(this).parent().find($toolbar).css('display','none');
 		}
 	);
 	$($toolbar).hover(
 		function(){
 			$(this).parents(".onecv-block").find("section").css('border','2px solid #adb1b5');
-			$(this).parents(".onecv-block").find($btnAddField).css('display','block'); 
+			$(this).parents(".onecv-block").find($btnAddField).css('display','block');
 			$(this).css('display','block');
 		},
 		function(){
 			$(this).parents(".onecv-block").find("section").css('border','2px solid rgba(255, 255, 255, 0)');
-			$(this).parents(".onecv-block").find($btnAddField).css('display','none'); 
+			$(this).parents(".onecv-block").find($btnAddField).css('display','none');
 			$(this).css('display','none');
 		}
 	);
@@ -154,31 +154,31 @@ $(document).ready(function() {
 	$(document).on('click', $btnAddSections, function(){
 		addSections();
 	});
-	 /*======= add element cv *=======*/
+	/*======= add element cv *=======*/
 	$(document).on('click',$btnAddField, function(){
 		let section = $(this).parents(".onecv-block").data("section");
-		if(section === 'education'){  
-			 let pos          		= $($listEducation + ' ' + $item).length +1;
-			 let schoolname 	= $($listEducation + ' ' + $item).eq(pos-2).find($schoolname).html();
-			 let degree       		= $($listEducation + ' ' + $item).eq(pos-2).find($degree).html();
-			 let description  	= $($listEducation + ' ' + $item).eq(pos-2).find($description).html();
-			 let monthFromEdu = $($listEducation + ' ' + $item).eq(pos-2).find($monthFromEdu).html();
-			 let yearFromEdu  	= $($listEducation + ' ' + $item).eq(pos-2).find($yearFromEdu).html();
-			 let monthToEdu   	= $($listEducation + ' ' + $item).eq(pos-2).find($monthToEdu).html();
-			 let yearToEdu    	= $($listEducation + ' ' + $item).eq(pos-2).find($yearToEdu).html();
-			 $($listEducation).append(el_education);
-			 $($listEducation + ' ' + $item).eq(pos-1).find($schoolname).html(schoolname);
-			 $($listEducation + ' ' + $item).eq(pos-1).find($degree).html(degree);
-			 $($listEducation + ' ' + $item).eq(pos-1).find($description).html(description);
-			 $($listEducation + ' ' + $item).eq(pos-1).find($monthFromEdu).text(monthFromEdu);
-			 $($listEducation + ' ' + $item).eq(pos-1).find($yearFromEdu).text(yearFromEdu);
-			 $($listEducation + ' ' + $item).eq(pos-1).find($monthToEdu).text(monthToEdu);
-			 $($listEducation + ' ' + $item).eq(pos-1).find($yearToEdu).text(yearToEdu);
-			 $($listEducation + ' ' + $item).eq(pos-1).removeData('pos');
-			 $($listEducation + ' ' + $item).eq(pos-1).removeData('uniqid');
-			 $($listEducation + ' ' + $item).eq(pos-1).attr('data-pos',pos);
-			 $($listEducation + ' ' + $item).eq(pos-1).attr('data-uniqid',guid());
-			 $($listEducation + ' ' + $item).eq(pos-1).click();
+		if(section === 'education'){
+			let pos          		= $($listEducation + ' ' + $item).length +1;
+			let schoolname 	= $($listEducation + ' ' + $item).eq(pos-2).find($schoolname).html();
+			let degree       		= $($listEducation + ' ' + $item).eq(pos-2).find($degree).html();
+			let description  	= $($listEducation + ' ' + $item).eq(pos-2).find($description).html();
+			let monthFromEdu = $($listEducation + ' ' + $item).eq(pos-2).find($monthFromEdu).html();
+			let yearFromEdu  	= $($listEducation + ' ' + $item).eq(pos-2).find($yearFromEdu).html();
+			let monthToEdu   	= $($listEducation + ' ' + $item).eq(pos-2).find($monthToEdu).html();
+			let yearToEdu    	= $($listEducation + ' ' + $item).eq(pos-2).find($yearToEdu).html();
+			$($listEducation).append(el_education);
+			$($listEducation + ' ' + $item).eq(pos-1).find($schoolname).html(schoolname);
+			$($listEducation + ' ' + $item).eq(pos-1).find($degree).html(degree);
+			$($listEducation + ' ' + $item).eq(pos-1).find($description).html(description);
+			$($listEducation + ' ' + $item).eq(pos-1).find($monthFromEdu).text(monthFromEdu);
+			$($listEducation + ' ' + $item).eq(pos-1).find($yearFromEdu).text(yearFromEdu);
+			$($listEducation + ' ' + $item).eq(pos-1).find($monthToEdu).text(monthToEdu);
+			$($listEducation + ' ' + $item).eq(pos-1).find($yearToEdu).text(yearToEdu);
+			$($listEducation + ' ' + $item).eq(pos-1).removeData('pos');
+			$($listEducation + ' ' + $item).eq(pos-1).removeData('uniqid');
+			$($listEducation + ' ' + $item).eq(pos-1).attr('data-pos',pos);
+			$($listEducation + ' ' + $item).eq(pos-1).attr('data-uniqid',guid());
+			$($listEducation + ' ' + $item).eq(pos-1).click();
 		}
 		else  if(section==='experience'){
 			let pos          = $($listExperience + ' ' + $item).length +1;
@@ -200,10 +200,10 @@ $(document).ready(function() {
 			$($listExperience + ' ' + $item).eq(pos-1).removeData('pos');
 			$($listExperience + ' ' + $item).eq(pos-1).removeData('uniqid');
 			$($listExperience + ' ' + $item).eq(pos-1).attr('data-pos',pos);
-			$($listExperience + ' ' + $item).eq(pos-1).attr('data-uniqid',guid());	
+			$($listExperience + ' ' + $item).eq(pos-1).attr('data-uniqid',guid());
 			$($listExperience + ' ' + $item).eq(pos-1).click();
 		}
-		else  if(section==='interests'){    
+		else  if(section==='interests'){
 			let pos      = $($listInterests    + ' ' + $item).length +1;
 			let interest = $($listInterests  + ' ' + $item).eq(pos-2).find($interest).html();
 			$($listInterests).append(el_interests);
@@ -211,7 +211,7 @@ $(document).ready(function() {
 			$($listInterests  + ' ' + $item).eq(pos-1).removeData('pos');
 			$($listInterests  + ' ' + $item).eq(pos-1).removeData('uniqid');
 			$($listInterests  + ' ' + $item).eq(pos-1).attr('data-pos',pos);
-			$($listInterests  + ' ' + $item).eq(pos-1).attr('data-uniqid',guid());	
+			$($listInterests  + ' ' + $item).eq(pos-1).attr('data-uniqid',guid());
 			$($listInterests  + ' ' + $item).eq(pos-1).click();
 		}
 		else  if(section==='skills'){
@@ -226,14 +226,14 @@ $(document).ready(function() {
 				for(i=0;i<loop;i++){
 					$($listSkill + ' ' + $item).eq(pos-1).find($skillLevel + ' span').eq(i).addClass('checked_rating');
 				}
-			}	
+			}
 			else if($($skillLevel).hasClass('stylebar')){
-				$($listSkill + ' ' + $item).eq(pos-1).find($skillLevel).animate({width: 50+"%"}, 800, 'swing'); 
+				$($listSkill + ' ' + $item).eq(pos-1).find($skillLevel).animate({width: 50+"%"}, 800, 'swing');
 			}
 			$($listSkill + ' ' + $item).eq(pos-1).removeData('pos');
 			$($listSkill + ' ' + $item).eq(pos-1).removeData('uniqid');
 			$($listSkill + ' ' + $item).eq(pos-1).attr('data-pos',pos);
-			$($listSkill + ' ' + $item).eq(pos-1).attr('data-uniqid',guid());	
+			$($listSkill + ' ' + $item).eq(pos-1).attr('data-uniqid',guid());
 			$($listSkill + ' ' + $item).eq(pos-1).click();
 		}
 		else  if(section==='languages'){
@@ -313,29 +313,29 @@ $(document).ready(function() {
 		let section = $(this).parents(".onecv-block").data("section");
 
 		if(section==='education'){
-			let schoolname 	= $(this).find($schoolname).html(); 
+			let schoolname 	= $(this).find($schoolname).html();
 			let description  	= $(this).find($description).html();
 			let degree         	= $(this).find($degree).html();
 			let month_from = $(this).find($monthFromEdu).text();
 			let year_from   	= $(this).find($yearFromEdu).text();
 			let month_to    	= $(this).find($monthToEdu).text();
 			let year_to       	= $(this).find($yearToEdu).text();
-						if(!$(this).find($schoolname).length){
-							fieldNull.push('schoolname');
-						}
-						if(!$(this).find($description).length){
-							fieldNull.push('description');
-						}
-						if(!$(this).find($degree).length){
-							fieldNull.push('degree');
-						}
+			if(!$(this).find($schoolname).length){
+				fieldNull.push('schoolname');
+			}
+			if(!$(this).find($description).length){
+				fieldNull.push('description');
+			}
+			if(!$(this).find($degree).length){
+				fieldNull.push('degree');
+			}
 			var object = {'schoolname':schoolname,'degree':degree,'description':description,'month_from':month_from,'year_from':year_from,'month_to':month_to,'year_to':year_to};
-			
+
 			if($($listEducation + ' ' + $item).length ===1)
 			{
 				bl_delete =1;
 			}
-			parent.OpenModal('EducationModal',pos,uniqid,bl_delete,object,fieldNull);		
+			parent.OpenModal('EducationModal',pos,uniqid,bl_delete,object,fieldNull);
 		}
 		else  if(section==='experience'){
 			let position 		= $(this).find($position).html();
@@ -347,19 +347,19 @@ $(document).ready(function() {
 			let year_to       	= $(this).find($yearToExp).text();
 			var object = {'position':position,'company':company,'experience':experience,'month_from':month_from,'year_from':year_from,'month_to':month_to,'year_to':year_to};
 			if(!$(this).find($position).length){
-						fieldNull.push('positionExp');
-					}
-					if(!$(this).find($company).length){
-						fieldNull.push('companyExp');
-					}
-					if(!$(this).find($experience).length){
-						fieldNull.push('experienceExp');
-					}
+				fieldNull.push('positionExp');
+			}
+			if(!$(this).find($company).length){
+				fieldNull.push('companyExp');
+			}
+			if(!$(this).find($experience).length){
+				fieldNull.push('experienceExp');
+			}
 			if($($listExperience + ' ' + $item).length ===1)
 			{
 				bl_delete =1;
-			}	
-			parent.OpenModal('ExperienceModal',pos,uniqid,bl_delete,object,fieldNull);		
+			}
+			parent.OpenModal('ExperienceModal',pos,uniqid,bl_delete,object,fieldNull);
 		}
 		else  if(section==='interests'){
 			let interest 		= $(this).find($interest).html();
@@ -370,12 +370,12 @@ $(document).ready(function() {
 			}
 			parent.OpenModal('InterestsModal',pos,uniqid,bl_delete,object,fieldNull);
 		}
-		else  if(section==='skills'){      
-			let skill 			= $(this).find($skill).html(); 
+		else  if(section==='skills'){
+			let skill 			= $(this).find($skill).html();
 			let rating 			= $(this).find($skillLevel).data('level');
 			if(!$(this).find($skillLevel).length){
-						fieldNull.push('level');
-					}
+				fieldNull.push('level');
+			}
 			var object = {'skill':skill,'rating':rating};
 			if($($listSkill + ' ' + $item).length ===1)
 			{
@@ -383,7 +383,7 @@ $(document).ready(function() {
 			}
 			parent.OpenModal('SkillsModal',pos,uniqid,bl_delete,object,fieldNull);
 		}
-		else  if(section==='personal_info'){    
+		else  if(section==='personal_info'){
 			let uniqid          = $($block_personal).data('uniqid');
 			let name 			= $($name).text();
 			let profession 		= $($profession).text();
@@ -398,87 +398,87 @@ $(document).ready(function() {
 			let marital 		= $($marital).text();
 			let citizenship 	= $($citizenship).text();
 			if(!$($name).length){
-						fieldNull.push('name');
-					}
-					if(!$($profession).length){
-						fieldNull.push('profession');
-					}
-					if(!$($address).length){
-						fieldNull.push('address');
-					}
-					if(!$($phone).length){
-						fieldNull.push('phone');
-					}
-					if(!$($email).length){
-						fieldNull.push('email');
-					}
-					if(!$($website).length){
-						fieldNull.push('website');
-					}
-					if(!$($placeofbirth).length){
-						fieldNull.push('placeofbirth');
-					}
-					if(!$($dateofbirth).length){
-						fieldNull.push('dateofbirth');
-					}
-					if(!$($linkedin).length){
-						fieldNull.push('linkedin');
-					}
-					if(!$($facebook).length){
-						fieldNull.push('facebook');
-					}
-					if(!$($marital).length){
-						fieldNull.push('marital');
-					}
-					if(!$($citizenship).length){
-						fieldNull.push('citizenship');
-					}
+				fieldNull.push('name');
+			}
+			if(!$($profession).length){
+				fieldNull.push('profession');
+			}
+			if(!$($address).length){
+				fieldNull.push('address');
+			}
+			if(!$($phone).length){
+				fieldNull.push('phone');
+			}
+			if(!$($email).length){
+				fieldNull.push('email');
+			}
+			if(!$($website).length){
+				fieldNull.push('website');
+			}
+			if(!$($placeofbirth).length){
+				fieldNull.push('placeofbirth');
+			}
+			if(!$($dateofbirth).length){
+				fieldNull.push('dateofbirth');
+			}
+			if(!$($linkedin).length){
+				fieldNull.push('linkedin');
+			}
+			if(!$($facebook).length){
+				fieldNull.push('facebook');
+			}
+			if(!$($marital).length){
+				fieldNull.push('marital');
+			}
+			if(!$($citizenship).length){
+				fieldNull.push('citizenship');
+			}
 			var object = {'name': name, 'profession':profession, 'address':address, 'phone':phone, 'email':email, 'website':website,'placeofbirth':placeofbirth, 'dateofbirth':dateofbirth, 'linkedin':linkedin, 'facebook':facebook, 'marital':marital, 'citizenship':citizenship};
 			parent.OpenModal('ContactModal',pos,uniqid,bl_delete,object,fieldNull);
-		} 
-		else  if(section==='summary'){    
+		}
+		else  if(section==='summary'){
 			let summary 		= $(this).find($summary).html();
 			var object 			= {'summary':summary};
-			parent.OpenModal('SummaryModal',pos,uniqid,bl_delete,object,fieldNull); 
+			parent.OpenModal('SummaryModal',pos,uniqid,bl_delete,object,fieldNull);
 		}
-		else  if(section==='letter_content'){    
+		else  if(section==='letter_content'){
 			let citydate 		= $(this).find($citydate).html();
 			let recipient 		= $(this).find($recipient).html();
 			let content 		= $(this).find($content).html();
 			var object 			= {'citydate':citydate,'recipient':recipient,'content':content};
-			parent.OpenModal('Letter_ContentModal',pos,uniqid,bl_delete,object,fieldNull); 
+			parent.OpenModal('Letter_ContentModal',pos,uniqid,bl_delete,object,fieldNull);
 		}
-		else  if(section==='projects'){    
+		else  if(section==='projects'){
 			let project 		= $(this).find($project).html();
 			var object 			= {'project':project};
 			if($($listProjects + ' ' + $item).length ===1)
 			{
 				bl_delete =1;
 			}
-			parent.OpenModal('ProjectsModal',pos,uniqid,bl_delete,object,fieldNull); 
+			parent.OpenModal('ProjectsModal',pos,uniqid,bl_delete,object,fieldNull);
 		}
-		else  if(section==='awards'){    
+		else  if(section==='awards'){
 			let award  = $(this).find($award).html();
 			var object = {'award':award};
 			if($($listAwards + ' ' + $item).length ===1){
 				bl_delete =1;
 			}
-			parent.OpenModal('AwardsModal',pos,uniqid,bl_delete,object,fieldNull); 
+			parent.OpenModal('AwardsModal',pos,uniqid,bl_delete,object,fieldNull);
 		}
-		else  if(section==='languages' ){  
+		else  if(section==='languages' ){
 			let language 		= $(this).find($language).html();
 			let fluency 		= $(this).find($fluency).html();
 			if(! $(this).find($fluency).length ){
-						fieldNull.push('fluency');
-					}
+				fieldNull.push('fluency');
+			}
 			var object 			= {'language':language,'fluency':fluency};
 			if($($listLanguages + ' ' + $item).length ===1)
 			{
 				bl_delete =1;
 			}
-			parent.OpenModal('LanguagesModal',pos,uniqid,bl_delete,object,fieldNull); 
+			parent.OpenModal('LanguagesModal',pos,uniqid,bl_delete,object,fieldNull);
 		}
-		else  if(section==='references'){    
+		else  if(section==='references'){
 			let refer_name 	    = $(this).find($refer_name).html();
 			let refer_phone     = $(this).find($refer_phone).html();
 			let refer_profession= $(this).find($refer_profession).html();
@@ -488,24 +488,24 @@ $(document).ready(function() {
 			{
 				bl_delete =1;
 			}
-			parent.OpenModal('ReferencesModal',pos,uniqid,bl_delete,object,fieldNull); 
+			parent.OpenModal('ReferencesModal',pos,uniqid,bl_delete,object,fieldNull);
 		}
-		else  if(section==='activities'){    
+		else  if(section==='activities'){
 			let activity 		= $(this).find($activity).html();
 			let achievement     = $(this).find($achievement).html();
 			var object 			= {'achievement':achievement,'activity':activity};
 			if(!$(this).find($achievement).length){
-						fieldNull.push('achievement');
-					}
+				fieldNull.push('achievement');
+			}
 			if($($listActivities + ' ' + $item).length ===1){
 				bl_delete =1;
 			}
-			parent.OpenModal('ActivitiesModal',pos,uniqid,bl_delete,object,fieldNull); 
+			parent.OpenModal('ActivitiesModal',pos,uniqid,bl_delete,object,fieldNull);
 		}
-		else  if(section==='additional'){    
+		else  if(section==='additional'){
 			let additional 		= $(this).find($additional).html();
 			var object 			= {'additional':additional};
-			parent.OpenModal('AdditionalModal',pos,uniqid,bl_delete,object,fieldNull); 
+			parent.OpenModal('AdditionalModal',pos,uniqid,bl_delete,object,fieldNull);
 		}
 	});
 	//upload images
@@ -523,16 +523,16 @@ $(document).ready(function() {
 	//Auto save
 	$('#cv-layout-viewer').bind("DOMNodeInserted DOMNodeRemoved",function(){
 		clearTimeout(timeoutId1);
-					timeoutId1 = setTimeout(function() {
-						if(first_load === false){
-							parent.getAutoSaveJson();
-							parent.AutoSaveData();
-				}
-				else{
-					first_load = false;
-				} 
-						
-					}, ( 500));
+		timeoutId1 = setTimeout(function() {
+			if(first_load === false){
+				parent.getAutoSaveJson();
+				parent.AutoSaveData();
+			}
+			else{
+				first_load = false;
+			}
+
+		}, ( 500));
 		clearTimeout(timeoutId2);
 		timeoutId2 = setTimeout(function() {
 			$($id_side).css('min-height',height1pagePDF);
@@ -545,23 +545,23 @@ $(document).ready(function() {
 			a = $('#onecv-main').height();
 
 			heightMax = heightMax + ($('#onecv-main').height() - (heightMax +25));
-			
+
 			while(heightMax > height){
 				height=height+height1pagePDF;
 			}
-			
+
 			if (typeof $($id_side).html() !== 'undefined'){
 				$($id_side).css('min-height',height - $($id_side).css('margin-top').substring(0, $($id_side).css('margin-top').length -2));
 			}
 			if (typeof $($id_main).html() !== 'undefined'){
-				$($id_main).css('min-height',height - $($id_main).css('margin-top').substring(0, $($id_main).css('margin-top').length -2));	
+				$($id_main).css('min-height',height - $($id_main).css('margin-top').substring(0, $($id_main).css('margin-top').length -2));
 			}
 			distance = $('#onecv-main').height() - height;
 			if (typeof $($id_side).html() !== 'undefined'){
 				$($id_side).css('min-height', $($id_side).css('min-height').substring(0, $($id_side).css('min-height').length -2) - distance );
 			}
 			if (typeof $($id_main).html() !== 'undefined'){
-				$($id_main).css('min-height',$($id_main).css('min-height').substring(0, $($id_main).css('min-height').length -2) - distance );	
+				$($id_main).css('min-height',$($id_main).css('min-height').substring(0, $($id_main).css('min-height').length -2) - distance );
 			}
 		}, ( 700));
 	});
@@ -569,9 +569,9 @@ $(document).ready(function() {
 	clearTimeout(timeoutId1);
 	timeoutId1 = setTimeout(function() {
 		var datafromlocalstorage = localStorage.getItem(id_document);
-				datafromlocalstorage = JSON.parse(datafromlocalstorage);
-		if(1){	
-				console.log(datafromlocalstorage);
+		datafromlocalstorage = JSON.parse(datafromlocalstorage);
+		if(1){
+			console.log(datafromlocalstorage);
 		}
 		if (typeof jsonResume !== 'undefined') {
 			renderResume();
@@ -615,36 +615,36 @@ function saveAll(id_document,edit_page,name,check) {
 			json = create_JsonCL(id_document);
 		}
 		$.ajax({
-			 method: "post",
-			 url: url,
-			 dataType: "json",
-			 contentType: "application/json; charset=utf-8",
-			 data: JSON.stringify({
-					'id': id_document,
-					'json' : json,
-					'edit_page':edit_page,
-					'html': css + '\f'+$("#cv-layout-viewer").html(),
-					'name':name,
-					'check':check
+			method: "post",
+			url: url,
+			dataType: "json",
+			contentType: "application/json; charset=utf-8",
+			data: JSON.stringify({
+				'id': id_document,
+				'json' : json,
+				'edit_page':edit_page,
+				'html': css + '\f'+$("#cv-layout-viewer").html(),
+				'name':name,
+				'check':check
 			}),
 			beforeSend: function(){
 				if(check === 'true'){
 					parent.loadingtask(true);
-				}    
-					},
-					complete: function(){
-						let timeoutId;
-						clearTimeout(timeoutId);
-						timeoutId = setTimeout(function() {
-							if(check === 'true'){
-								parent.loadingtask(false);
-							}
-						}, ( 2000));	
-					},
+				}
+			},
+			complete: function(){
+				let timeoutId;
+				clearTimeout(timeoutId);
+				timeoutId = setTimeout(function() {
+					if(check === 'true'){
+						parent.loadingtask(false);
+					}
+				}, ( 2000));
+			},
 			success:function(data){
-				parent.createAlert('','',Lang.get('label.Alert.Save.success'),'info',false,true,'pageMessages');  
+				parent.createAlert('','',Lang.get('label.Alert.Save.success'),'info',false,true,'pageMessages');
 				localStorage.removeItem(name);
-			},  
+			},
 			error: function (error) {
 				parent.createAlert('','',Lang.get('label.Alert.Save.fail'),'warning',false,true,'pageMessages');
 			}
@@ -663,19 +663,19 @@ function AutoSaveJson(id_document,edit_page) {
 		/*url = root+"/my-cover-letter/UpdateJson";*/
 	}
 	if (typeof(Storage) !== "undefined") {
-			localStorage.setItem(name, json);
+		localStorage.setItem(name, json);
 	} else {
-			console.log('Không hỗ trợ local storage');
+		console.log('Không hỗ trợ local storage');
 	}
 }
 function guid() {
-		return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
-	s4() + '-' + s4() + s4() + s4();
+	return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+		s4() + '-' + s4() + s4() + s4();
 }
 function s4() {
 	return Math.floor((1 + Math.random()) * 0x10000)
-		 .toString(16)
-		 .substring(1);  
+		.toString(16)
+		.substring(1);
 }
 function renderCoverLetter(){
 	jsonCoverLetter['letter_content'].forEach(function(currentValue, index, arr) {
@@ -686,31 +686,31 @@ function renderCoverLetter(){
 		$($listLetter_Content + ' ' + $item).eq(index).removeData('uniqid');
 		$($listLetter_Content + ' ' + $item).eq(index).attr('data-pos',currentValue['pos']);
 		if(currentValue['uniqid'] === ""){
-			$($listLetter_Content + ' ' + $item).eq(index).attr('data-uniqid',guid());	
+			$($listLetter_Content + ' ' + $item).eq(index).attr('data-uniqid',guid());
 		}else{
 			$($listLetter_Content + ' ' + $item).eq(index).attr('data-uniqid',currentValue['uniqid']);
 		}
 	});
 	if(jsonCoverLetter['personal_info']['uniqid'] === ""){
-		$($block_personal).attr('data-uniqid',guid());	
+		$($block_personal).attr('data-uniqid',guid());
 	}else{
 		$($block_personal).attr('data-uniqid',jsonCoverLetter['personal_info']['uniqid']);
 	}
-	var object = {  'images':jsonCoverLetter['personal_info']['images'], 
-			'name':jsonCoverLetter['personal_info']['name'], 
-			'profession':jsonCoverLetter['personal_info']['profession'], 
-			'address':jsonCoverLetter['personal_info']['address'], 
-			'phone':jsonCoverLetter['personal_info']['phone'], 
-			'email':jsonCoverLetter['personal_info']['email'], 
-			'website':jsonCoverLetter['personal_info']['website'],
-			'placeofbirth':jsonCoverLetter['personal_info']['placeofbirth'], 
-			'dateofbirth':jsonCoverLetter['personal_info']['dateofbirth'], 
-			'linkedin':jsonCoverLetter['personal_info']['linkedin'], 
-			'facebook':jsonCoverLetter['personal_info']['facebook'], 
-			'marital':jsonCoverLetter['personal_info']['marital'], 
-			'citizenship':jsonCoverLetter['personal_info']['citizenship']};
+	var object = {  'images':jsonCoverLetter['personal_info']['images'],
+		'name':jsonCoverLetter['personal_info']['name'],
+		'profession':jsonCoverLetter['personal_info']['profession'],
+		'address':jsonCoverLetter['personal_info']['address'],
+		'phone':jsonCoverLetter['personal_info']['phone'],
+		'email':jsonCoverLetter['personal_info']['email'],
+		'website':jsonCoverLetter['personal_info']['website'],
+		'placeofbirth':jsonCoverLetter['personal_info']['placeofbirth'],
+		'dateofbirth':jsonCoverLetter['personal_info']['dateofbirth'],
+		'linkedin':jsonCoverLetter['personal_info']['linkedin'],
+		'facebook':jsonCoverLetter['personal_info']['facebook'],
+		'marital':jsonCoverLetter['personal_info']['marital'],
+		'citizenship':jsonCoverLetter['personal_info']['citizenship']};
 	Object.keys(object).map(function(objectKey, index) {
-			var value = object[objectKey];
+		var value = object[objectKey];
 		if(value === ""){
 			$(".doc_"+objectKey).parent().hide();
 		}else{
@@ -718,19 +718,19 @@ function renderCoverLetter(){
 			{
 				if(value === ""){
 					value = root+'/avatar.png' ;
-				} 
+				}
 				try {
-						document.getElementById("doc_" + objectKey).style.backgroundImage = "url("+value+")";
+					document.getElementById("doc_" + objectKey).style.backgroundImage = "url("+value+")";
 				}
 				catch(err) {
-						console.log('cv do not images');
+					console.log('cv do not images');
 				}
 			}
 			else{
 				$(".doc_"+objectKey).text(value);
 			}
 		}
-	});      
+	});
 }
 function renderResume(){
 	if (jsonResume['my_resume']['sections'].indexOf('summary') !== -1) {
@@ -747,7 +747,7 @@ function renderResume(){
 			$($listSummary + ' ' + $item).eq(index).removeData('uniqid');
 			$($listSummary + ' ' + $item).eq(index).attr('data-pos',currentValue['pos']);
 			if(currentValue['uniqid'] === ""){
-				$($listSummary + ' ' + $item).eq(index).attr('data-uniqid',guid());	
+				$($listSummary + ' ' + $item).eq(index).attr('data-uniqid',guid());
 			}else{
 				$($listSummary + ' ' + $item).eq(index).attr('data-uniqid',currentValue['uniqid']);
 			}
@@ -772,7 +772,7 @@ function renderResume(){
 			$($listInterests + ' ' + $item).eq(index).removeData('uniqid');
 			$($listInterests + ' ' + $item).eq(index).attr('data-pos',currentValue['pos']);
 			if(currentValue['uniqid'] === ""){
-				$($listInterests + ' ' + $item).eq(index).attr('data-uniqid',guid());	
+				$($listInterests + ' ' + $item).eq(index).attr('data-uniqid',guid());
 			}else{
 				$($listInterests + ' ' + $item).eq(index).attr('data-uniqid',currentValue['uniqid']);
 			}
@@ -798,7 +798,7 @@ function renderResume(){
 			$($listLanguages + ' ' + $item).eq(index).removeData('uniqid');
 			$($listLanguages + ' ' + $item).eq(index).attr('data-pos',currentValue['pos']);
 			if(currentValue['uniqid'] === ""){
-				$($listLanguages + ' ' + $item).eq(index).attr('data-uniqid',guid());	
+				$($listLanguages + ' ' + $item).eq(index).attr('data-uniqid',guid());
 			}else{
 				$($listLanguages + ' ' + $item).eq(index).attr('data-uniqid',currentValue['uniqid']);
 			}
@@ -825,7 +825,7 @@ function renderResume(){
 			$($listActivities + ' ' + $item).eq(index).removeData('uniqid');
 			$($listActivities + ' ' + $item).eq(index).attr('data-pos',currentValue['pos']);
 			if(currentValue['uniqid'] === ""){
-				$($listActivities + ' ' + $item).eq(index).attr('data-uniqid',guid());	
+				$($listActivities + ' ' + $item).eq(index).attr('data-uniqid',guid());
 			}else{
 				$($listActivities + ' ' + $item).eq(index).attr('data-uniqid',currentValue['uniqid']);
 			}
@@ -851,7 +851,7 @@ function renderResume(){
 			$($listAwards + ' ' + $item).eq(index).removeData('uniqid');
 			$($listAwards + ' ' + $item).eq(index).attr('data-pos',currentValue['pos']);
 			if(currentValue['uniqid'] === ""){
-				$($listAwards + ' ' + $item).eq(index).attr('data-uniqid',guid());	
+				$($listAwards + ' ' + $item).eq(index).attr('data-uniqid',guid());
 			}else{
 				$($listAwards + ' ' + $item).eq(index).attr('data-uniqid',currentValue['uniqid']);
 			}
@@ -880,7 +880,7 @@ function renderResume(){
 			$($listReferences + ' ' + $item).eq(index).removeData('uniqid');
 			$($listReferences + ' ' + $item).eq(index).attr('data-pos',currentValue['pos']);
 			if(currentValue['uniqid'] === ""){
-				$($listReferences + ' ' + $item).eq(index).attr('data-uniqid',guid());	
+				$($listReferences + ' ' + $item).eq(index).attr('data-uniqid',guid());
 			}else{
 				$($listReferences + ' ' + $item).eq(index).attr('data-uniqid',currentValue['uniqid']);
 			}
@@ -906,7 +906,7 @@ function renderResume(){
 			$($listProjects + ' ' + $item).eq(index).removeData('uniqid');
 			$($listProjects + ' ' + $item).eq(index).attr('data-pos',currentValue['pos']);
 			if(currentValue['uniqid'] === ""){
-				$($listProjects + ' ' + $item).eq(index).attr('data-uniqid',guid());	
+				$($listProjects + ' ' + $item).eq(index).attr('data-uniqid',guid());
 			}else{
 				$($listProjects + ' ' + $item).eq(index).attr('data-uniqid',currentValue['uniqid']);
 			}
@@ -932,7 +932,7 @@ function renderResume(){
 			$($listAdditional + ' ' + $item).eq(index).removeData('uniqid');
 			$($listAdditional + ' ' + $item).eq(index).attr('data-pos',currentValue['pos']);
 			if(currentValue['uniqid'] === ""){
-				$($listAdditional + ' ' + $item).eq(index).attr('data-uniqid',guid());	
+				$($listAdditional + ' ' + $item).eq(index).attr('data-uniqid',guid());
 			}else{
 				$($listAdditional + ' ' + $item).eq(index).attr('data-uniqid',currentValue['uniqid']);
 			}
@@ -968,14 +968,14 @@ function renderResume(){
 			$($listSkill + ' ' + $item).eq(index).removeData('uniqid');
 			$($listSkill + ' ' + $item).eq(index).attr('data-pos',currentValue['pos']);
 			if(currentValue['uniqid'] === ""){
-				$($listSkill + ' ' + $item).eq(index).attr('data-uniqid',guid());	
+				$($listSkill + ' ' + $item).eq(index).attr('data-uniqid',guid());
 			}else{
 				$($listSkill + ' ' + $item).eq(index).attr('data-uniqid',currentValue['uniqid']);
 			}
 			if(arr.length >index+1){
 				$($listSkill).append(el_skills);
 			}
-		});	
+		});
 	}else{
 		$($block_skills).remove();
 	}
@@ -987,7 +987,7 @@ function renderResume(){
 		jsonResume['education'].sort(function(a, b) {
 			return (a['pos']) - (b['pos']);
 		});
-		jsonResume['education'].forEach(function(currentValue, index, arr) {	
+		jsonResume['education'].forEach(function(currentValue, index, arr) {
 			$($listEducation + ' ' + $item).eq(index).find($schoolname).html(currentValue['schoolname']);
 			$($listEducation + ' ' + $item).eq(index).find($degree).html(currentValue['degree']);
 			$($listEducation + ' ' + $item).eq(index).find($description).html(currentValue['description']);
@@ -1005,7 +1005,7 @@ function renderResume(){
 			$($listEducation + ' ' + $item).eq(index).removeData('uniqid');
 			$($listEducation + ' ' + $item).eq(index).attr('data-pos',currentValue['pos']);
 			if(currentValue['uniqid'] === ""){
-				$($listEducation + ' ' + $item).eq(index).attr('data-uniqid',guid());	
+				$($listEducation + ' ' + $item).eq(index).attr('data-uniqid',guid());
 			}else{
 				$($listEducation + ' ' + $item).eq(index).attr('data-uniqid',currentValue['uniqid']);
 			}
@@ -1024,7 +1024,7 @@ function renderResume(){
 		jsonResume['experience'].sort(function(a, b) {
 			return (a['pos']) - (b['pos']);
 		});
-		jsonResume['experience'].forEach(function(currentValue, index, arr) { 
+		jsonResume['experience'].forEach(function(currentValue, index, arr) {
 			$($listExperience + ' ' + $item).eq(index).find($position).html(currentValue['position']);
 			$($listExperience + ' ' + $item).eq(index).find($company).html(currentValue['company']);
 			$($listExperience + ' ' + $item).eq(index).find($experience).html(currentValue['experience']);
@@ -1039,7 +1039,7 @@ function renderResume(){
 			$($listExperience + ' ' + $item).eq(index).removeData('uniqid');
 			$($listExperience + ' ' + $item).eq(index).attr('data-pos',currentValue['pos']);
 			if(currentValue['uniqid'] === ""){
-				$($listExperience + ' ' + $item).eq(index).attr('data-uniqid',guid());	
+				$($listExperience + ' ' + $item).eq(index).attr('data-uniqid',guid());
 			}else{
 				$($listExperience + ' ' + $item).eq(index).attr('data-uniqid',currentValue['uniqid']);
 			}
@@ -1051,25 +1051,25 @@ function renderResume(){
 		$($block_experience).remove();
 	}
 	if(jsonResume['personal_info']['uniqid'] === ""){
-		$($block_personal).attr('data-uniqid',guid());	
+		$($block_personal).attr('data-uniqid',guid());
 	}else{
 		$($block_personal).attr('data-uniqid',jsonResume['personal_info']['uniqid']);
 	}
-	var object = {	'images':jsonResume['personal_info']['images'], 
-					'name':jsonResume['personal_info']['name'], 
-					'profession':jsonResume['personal_info']['profession'], 
-					'address':jsonResume['personal_info']['address'], 
-					'phone':jsonResume['personal_info']['phone'], 
-					'email':jsonResume['personal_info']['email'], 
-					'website':jsonResume['personal_info']['website'],
-					'placeofbirth':jsonResume['personal_info']['placeofbirth'], 
-					'dateofbirth':jsonResume['personal_info']['dateofbirth'], 
-					'linkedin':jsonResume['personal_info']['linkedin'], 
-					'facebook':jsonResume['personal_info']['facebook'], 
-					'marital':jsonResume['personal_info']['marital'], 
-					'citizenship':jsonResume['personal_info']['citizenship']};
+	var object = {	'images':jsonResume['personal_info']['images'],
+		'name':jsonResume['personal_info']['name'],
+		'profession':jsonResume['personal_info']['profession'],
+		'address':jsonResume['personal_info']['address'],
+		'phone':jsonResume['personal_info']['phone'],
+		'email':jsonResume['personal_info']['email'],
+		'website':jsonResume['personal_info']['website'],
+		'placeofbirth':jsonResume['personal_info']['placeofbirth'],
+		'dateofbirth':jsonResume['personal_info']['dateofbirth'],
+		'linkedin':jsonResume['personal_info']['linkedin'],
+		'facebook':jsonResume['personal_info']['facebook'],
+		'marital':jsonResume['personal_info']['marital'],
+		'citizenship':jsonResume['personal_info']['citizenship']};
 	Object.keys(object).map(function(objectKey, index) {
-			 var value = object[objectKey];
+		var value = object[objectKey];
 		if(value === "" && objectKey !== "images"){
 			$(".doc_"+objectKey).parent().hide();
 		}else{
@@ -1079,17 +1079,17 @@ function renderResume(){
 					value = root+'/avatar.png' ;
 				}
 				try {
-						document.getElementById("doc_" + objectKey).style.backgroundImage = "url("+value+")";
+					document.getElementById("doc_" + objectKey).style.backgroundImage = "url("+value+")";
 				}
 				catch(err) {
-						console.log('cv do not images');
+					console.log('cv do not images');
 				}
 			}
 			else{
 				$(".doc_"+objectKey).text(value);
 			}
 		}
-	});     
+	});
 	$($btnAddSections).text(jsonResume['lang']['Button']['addSections']);
 	$($btnAddField).text(jsonResume['lang']['Button']['addField']);
 	sortElement($($id_main).find('div.onecv-block'),$($id_main));
@@ -1112,7 +1112,7 @@ function saveModal(section,pos,object){
 			if($(el).data('pos')===pos){
 				$(el).find($summary).html(object['summary']) ;
 			}
-		 });
+		});
 	}
 	else if(section  === "experience"){
 		$($listExperience + ' ' + $item).each(function(i,el){
@@ -1132,7 +1132,7 @@ function saveModal(section,pos,object){
 				}
 				$(el).find($monthToExp).text(object['month_to']) ;
 				$(el).find($yearToExp).text(object['year_to']) ;
-			} 
+			}
 		});
 	}
 	else if(section  === "education"){
@@ -1152,7 +1152,7 @@ function saveModal(section,pos,object){
 					$(el).find($monthToEdu).hide();
 				}
 				$(el).find($monthToEdu).text(object['month_to']);
-				$(el).find($yearToEdu).text(object['year_to']) ;  
+				$(el).find($yearToEdu).text(object['year_to']) ;
 			}
 		});
 	}
@@ -1162,7 +1162,7 @@ function saveModal(section,pos,object){
 				$(el).find($skill).html(object['skill']) ;
 				$(el).find($skillLevel).removeData('level');
 				$(el).find($skillLevel).attr("data-level",object['rating']) ;
-				
+
 				if($($skillLevel).hasClass('stylestar')){
 					let loop = object['rating']/20;
 					for(i=0;i<5;i++){
@@ -1173,7 +1173,7 @@ function saveModal(section,pos,object){
 					}
 				}
 				else if($($skillLevel).hasClass('stylebar')){
-					$(el).find($skillLevel).animate({width: object['rating']+"%"}, 800, 'swing'); 
+					$(el).find($skillLevel).animate({width: object['rating']+"%"}, 800, 'swing');
 				}
 			}
 		});
@@ -1184,7 +1184,7 @@ function saveModal(section,pos,object){
 				$(el).find($interest).html(object['interest']) ;
 			}
 		});
-	} 
+	}
 	else if(section  === "projects"){
 		$($listProjects + ' ' + $item).each(function(i,el){
 			if($(el).data('pos')===pos){
@@ -1262,7 +1262,7 @@ function saveModal(section,pos,object){
 		$($facebook).text(object['facebook']);
 		$($marital).text(object['marital']);
 		$($citizenship).text(object['citizenship']);
-		$(this).parents(".onv_modal").fadeOut("slow"); 
+		$(this).parents(".onv_modal").fadeOut("slow");
 	}
 	else if(section  === "crop"){
 		parent.AutoSaveData();
@@ -1279,20 +1279,20 @@ function sort_EditorCV(target, select, attr){
 			placeholder: "portlet-placeholder ui-corner-all",
 			handle: handle,
 		}).disableSelection();
-		 $( target ).sortable({
-		 	scroll: true, scrollSensitivity: 100, scrollSpeed: 10,
-				connectWith: target,
-				start: function(e,ui){
-					ui.placeholder.height(ui.item.height());
-				},
-				stop: function(event, ui){
+		$( target ).sortable({
+			scroll: true, scrollSensitivity: 100, scrollSpeed: 10,
+			connectWith: target,
+			start: function(e,ui){
+				ui.placeholder.height(ui.item.height());
+			},
+			stop: function(event, ui){
 				$(target+" "+select).each(function(i, el){
 					$(el).removeData(attr);
 					$(el).attr('data-'+attr,$(el).index()+1);
 				});
 			}
 		});
-	});	
+	});
 }
 function sortElement(cont,contacts){
 	cont.detach().sort(function(a, b) {
@@ -1413,7 +1413,7 @@ function create_JsonCV(id_document){
 	//Position
 	jsonObjPosition = [];
 	item = {   }
-	item ["summary"]      			= $($block_summary).data("pos"); 
+	item ["summary"]      			= $($block_summary).data("pos");
 	item ["education"]      			= $($block_education).data("pos");
 	item ["skills"]              		= $($block_skills).data("pos");
 	item ["experience"]    			= $($block_experience).data("pos");
@@ -1423,7 +1423,7 @@ function create_JsonCV(id_document){
 	item ["references"]    			= $($block_references).data("pos");
 	item ["projects"]    			= $($block_projects).data("pos");
 	item ["additional"]    			= $($block_additional).data("pos");
-	
+
 	jsonObjPosition.push(item);
 	//Personal_info
 	jsonObjPersonal = [];
@@ -1447,7 +1447,7 @@ function create_JsonCV(id_document){
 	catch(err) {
 		item ["images"]          = jsonResume['personal_info']['images'];
 	}
-	
+
 	jsonObjPersonal.push(item);
 	var JsonFile = JSON.stringify({
 		"skills" :jsonObjSkills,
@@ -1485,7 +1485,7 @@ function create_JsonCL(id_document){
 		item ["images"]          	=  getURLimages($images);
 	}
 	catch(err) {
-			item ["images"]             = "";
+		item ["images"]             = "";
 	}
 	jsonObjPersonal.push(item);
 	jsonObjLetter_Content = [];
@@ -1507,15 +1507,15 @@ function create_JsonCL(id_document){
 function downloadpdf(id_document,name){
 	$.ajax({
 		headers: {
-					 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-			 },
-		 method: "post",
-		 url: ajaxURL+'is_checkfilepdf',
-		 dataType: "json",
-		 contentType: "application/json; charset=utf-8",
-		 data: JSON.stringify({
-				'id': id_document,
-				'name':name
+			'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+		},
+		method: "post",
+		url: ajaxURL+'is_checkfilepdf',
+		dataType: "json",
+		contentType: "application/json; charset=utf-8",
+		data: JSON.stringify({
+			'id': id_document,
+			'name':name
 		}),
 		success:function(data){
 			message = JSON.stringify(data.message);
@@ -1525,7 +1525,7 @@ function downloadpdf(id_document,name){
 			else if(message.indexOf("fails") !== -1){
 				parent.showerrodown();
 			}
-		},  
+		},
 		error: function (error) {
 		}
 	});
@@ -1541,7 +1541,7 @@ function getURLimages(id){
 	// Display the url to the user
 	return bi;
 }
-function changeFontSize(size){    
+function changeFontSize(size){
 	$("#cv-layout-viewer").find('.doc_city_date,.doc_recipient,.doc_content,.doc_degree,.doc_skill,.doc_level,.section-title,.js_add-field,.doc_description,.doc_schoolname,.doc_MonthFromEdu,.doc_YearFromEdu,.doc_MonthToEdu,.doc_YearToEdu,.doc_position,.doc_MonthFromExp,.doc_YearFromExp,.doc_MonthToExp,.doc_YearToExp,.doc_company,.doc_experience,.doc_summary,.doc_interest,.doc_name,.doc_profession,.doc_address,.doc_email,.doc_phone,.doc_website,.doc_placeofbirth,.doc_dateofbirth,.doc_linkedin,.doc_facebook,.doc_marital,.doc_citizenship,.doc_additional,.doc_activity,.doc_fluency,.doc_language,.doc_award,.doc_project,.doc_refer_profession,.doc_refer_phone,.doc_refer_name,.doc_refer_email,.doc_achievement').animate({'font-size': '+='+size});
 }
 function changeLineSpacing(size){
@@ -1555,18 +1555,18 @@ function changeFontFamily(font){
 	}
 }
 function changeColor(mainColor,fontColor, sideColor){
-	$('.setMainColor').css('background-color', mainColor); 
-	$('.level-bar-inner').css({'background-color': sideColor}); 
+	$('.setMainColor').css('background-color', mainColor);
+	$('.level-bar-inner').css({'background-color': sideColor});
 	$('.setTitleColor').css('color', sideColor);
 	$('.setFontColor').css('color', fontColor);
 	sideColor = sideColor.substring(4, sideColor.length-1)
-				 .replace(/ /g, '')
-				 .split(',');
-		mainColor = mainColor.substring(4, mainColor.length-1)
-				 .replace(/ /g, '')
-				 .split(',');
-		fontColor = fontColor.substring(4, fontColor.length-1)
-				 .replace(/ /g, '')
-				 .split(',');
+		.replace(/ /g, '')
+		.split(',');
+	mainColor = mainColor.substring(4, mainColor.length-1)
+		.replace(/ /g, '')
+		.split(',');
+	fontColor = fontColor.substring(4, fontColor.length-1)
+		.replace(/ /g, '')
+		.split(',');
 	$('.setPressColor').css({'background-color': 'rgba('+sideColor+', 0.8)'});
 }

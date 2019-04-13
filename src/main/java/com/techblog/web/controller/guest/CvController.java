@@ -9,7 +9,17 @@ public class CvController {
     @GetMapping({"/create-cv"})
     public String get(){
 
-
         return "guest/cv/cv-doan-quang-hoa";
+    }
+
+    @GetMapping({"/cv-preview"})
+
+    public String preview(){
+        return "guest/cv/green-blur";
+    }
+
+    @GetMapping({"/index"})
+    public String index(){
+        return "guest/cv/index";
     }
 }
