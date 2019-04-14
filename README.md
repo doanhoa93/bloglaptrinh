@@ -47,3 +47,8 @@ $ heroku stack
 [0]: http://devcenter.heroku.com/articles/buildpacks
 [1]: http://wkhtmltopdf.org/
 [2]: https://devcenter.heroku.com/articles/using-multiple-buildpacks-for-an-app
+`heroku stack:set  heroku-16 --app wkhtmltopdf-api`
+`heroku buildpacks:add heroku/java --app wkhtmltopdf-api`
+`heroku buildpacks:add --index=1 https://github.com/doanhoa93/heroku-buildpack-wkhtmltopdf.git --app wkhtmltopdf-api`
+`heroku plugins:install https://github.com/heroku/heroku-repo.git`
+`heroku repo:purge_cache -a wkhtmltopdf-api`
